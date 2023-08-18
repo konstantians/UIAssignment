@@ -83,19 +83,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Private_Pool.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Private_Pool.Designer.cs">
-      <DependentUpon>Private_Pool.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RealMenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RealMenuForm.Designer.cs">
-      <DependentUpon>RealMenuForm.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
@@ -130,21 +123,10 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Private_Pool.resx">
-      <DependentUpon>Private_Pool.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="RealMenuForm.resx">
-      <DependentUpon>RealMenuForm.cs</DependentUpon>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -165,20 +147,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\images %2811%29.jpg" />
-    <None Include="Resources\240_F_409866481_j85uJa9rpaiuqX8eai73XVAMKbuBMEUw.jpg" />
-    <None Include="Resources\images %281%29.png" />
     <None Include="Resources\caesars-palace-forum-shops1_lg.jpg" />
-    <None Include="Resources\Lobby-Caesars-Palace.jpg" />
-    <None Include="Resources\02-salon-villa-kerylos.jpg" />
-    <None Include="Resources\greek-apha.jpg" />
-    <None Include="Resources\download %282%29.jpg" />
-    <None Include="Resources\imagess.jpg" />
-    <None Include="Resources\double-bed.png" />
-    <None Include="Resources\cutlery.png" />
-    <None Include="Resources\trojan-horse.png" />
-    <None Include="Resources\pool.png" />
-    <None Include="Resources\parthenon.png" />
+    <None Include="Resources\AreasImages\Lobby-Caesars-Palace.jpg" />
+    <None Include="Resources\AreasImages\ApartmentImage.jpg" />
+    <None Include="Resources\AreasImages\RestaurantImage.jpg" />
+    <None Include="Resources\AreasImages\TrojanHorseImage.jpg" />
+    <None Include="Resources\AreasImages\PoolImage.jpg" />
+    <None Include="Resources\Icons\DoubleBedIcon.png" />
+    <None Include="Resources\Icons\CutleryIcon.png" />
+    <None Include="Resources\Icons\TrojanHorseIcon.png" />
+    <None Include="Resources\Icons\PoolIcon.png" />
+    <Content Include="Resources\BlackMarbleBackground.jpg" />
+    <Content Include="Resources\LogoImages\FullLogo.PNG" />
+    <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
+    <Content Include="Resources\LogoImages\TranspareWithoutTextLogo.png" />
+    <Content Include="Resources\LogoImages\WithoutSloganLogo.png" />
+    <Content Include="Resources\potentional logo.png" />
+    <Content Include="Resources\LogoImages\WithoutTextLogo.PNG" />
+    <Content Include="Resources\WhiteMarbleBackground.jpg" />
     <Content Include="UIAssignmentDatabase.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -187,8 +173,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\download.png" />
-    <Content Include="Images\maiandros.jpg" />
+    <Content Include="Resources\maiandros.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
@@ -196,5 +181,6 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

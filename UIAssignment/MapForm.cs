@@ -1,91 +1,128 @@
-﻿using DataAccess.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UIAssignment
 {
     public partial class MapForm : Form
     {
+        private Form activeForm = null;
+
         public MapForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            //apartmentIconPictureBox.BringToFront();
+            openChildForm(new Menu());
         }
 
-        private void MapForm_Load(object sender, EventArgs e)
+        private void apartmentSectionButton_MouseEnter(object sender, EventArgs e)
         {
-
+            hiddenApartmentPanel.Visible = true;
+            apartmentSectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            apartmentSectionButton.TextColor = Color.White;
+            hiddenApartmentPanel.BringToFront();
         }
 
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        private void apartmentSectionButton_MouseLeave(object sender, EventArgs e)
         {
-
+            hiddenApartmentPanel.Visible = false;
+            apartmentSectionButton.BackgroundImage = null;
+            apartmentSectionButton.TextColor = Color.Black;
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        private void restaurantSectionButton_MouseEnter(object sender, EventArgs e)
         {
-
+            hiddenRestaurantPanel.Visible = true;
+            restaurantSectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            restaurantSectionButton.TextColor = Color.White;
+            hiddenRestaurantPanel.BringToFront();
         }
 
-        private void cool_button1_Click(object sender, EventArgs e)
+        private void restaurantSectionButton_MouseLeave(object sender, EventArgs e)
         {
-
+            hiddenRestaurantPanel.Visible = false;
+            restaurantSectionButton.BackgroundImage = null;
+            restaurantSectionButton.TextColor = Color.Black;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void poolSectionButton_MouseEnter(object sender, EventArgs e)
         {
-
+            hiddenPoolPanel.Visible = true;
+            poolSectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            poolSectionButton.TextColor = Color.White;
+            hiddenPoolPanel.BringToFront();
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void poolSectionButton_MouseLeave(object sender, EventArgs e)
         {
-
+            hiddenPoolPanel.Visible = false;
+            poolSectionButton.BackgroundImage = null;
+            poolSectionButton.TextColor = Color.Black;
         }
 
-        private void Apartment_MouseHover(object sender, EventArgs e)
+        private void trojanHorseSectionButton_MouseEnter(object sender, EventArgs e)
         {
-            panel2.Visible = true;
+            hiddenTroyanHorsePanel.Visible = true;
+            trojanHorseSectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            trojanHorseSectionButton.TextColor = Color.White;
+            hiddenTroyanHorsePanel.BringToFront();
         }
 
-        private void Apartment_MouseLeave(object sender, EventArgs e)
+        private void trojanHorseSectionButton_MouseLeave(object sender, EventArgs e)
         {
-            panel2.Visible=false;
+            hiddenTroyanHorsePanel.Visible = false;
+            trojanHorseSectionButton.BackgroundImage = null;
+            trojanHorseSectionButton.TextColor = Color.Black;
         }
 
-        private void Restaurant_MouseHover(object sender, EventArgs e)
+        private void logoutSectionButton_Click(object sender, EventArgs e)
         {
-            panel3.Visible = true;
+            Application.OpenForms[0].Show();
+            this.Close();
         }
 
-        private void Restaurant_MouseLeave(object sender, EventArgs e)
+        private void openChildForm(Form childForm)
         {
-            panel3.Visible=false;
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            foreignFormPanel.Controls.Add(childForm);
+            foreignFormPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void Pool_MouseHover(object sender, EventArgs e)
+        private void apartmentSectionButton_Click(object sender, EventArgs e)
         {
-            panel4.Visible= true;
+            
         }
 
-        private void Pool_MouseLeave(object sender, EventArgs e)
+        private void logoutSectionButton_MouseEnter(object sender, EventArgs e)
         {
-            panel4.Visible= false;
+            logoutSectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            logoutSectionButton.TextColor = Color.White;
         }
 
-        private void TrojanHorse_MouseHover(object sender, EventArgs e)
+        private void logoutSectionButton_MouseLeave(object sender, EventArgs e)
         {
-            panel5.Visible= true;
+            logoutSectionButton.BackgroundImage = null;
+            logoutSectionButton.TextColor = Color.Black;
         }
 
-        private void TrojanHorse_MouseLeave(object sender, EventArgs e)
+        private void helpSectionButton_MouseEnter(object sender, EventArgs e)
         {
-            panel5.Visible= false;
+            helpSectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            helpSectionButton.TextColor = Color.White;
+        }
+
+        private void helpSectionButton_MouseLeave(object sender, EventArgs e)
+        {
+            helpSectionButton.BackgroundImage = null;
+            helpSectionButton.TextColor = Color.Black;
         }
     }
 }

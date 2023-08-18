@@ -29,6 +29,7 @@ namespace UIAssignment
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.logoPicturebox = new System.Windows.Forms.PictureBox();
@@ -52,29 +53,29 @@ namespace UIAssignment
             // 
             // leftPanel
             // 
-            this.leftPanel.BackgroundImage = global::UIAssignment.Properties.Resources.maiandros;
+            this.leftPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leftPanel.BackgroundImage")));
             this.leftPanel.Location = new System.Drawing.Point(16, 15);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(103, 892);
             this.leftPanel.TabIndex = 11;
             // 
             // rightPanel
             // 
-            this.rightPanel.BackgroundImage = global::UIAssignment.Properties.Resources.maiandros;
+            this.rightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightPanel.BackgroundImage")));
             this.rightPanel.Location = new System.Drawing.Point(847, 15);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(4);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(103, 892);
             this.rightPanel.TabIndex = 12;
             // 
             // logoPicturebox
             // 
-            this.logoPicturebox.BackgroundImage = global::UIAssignment.Properties.Resources.download;
+            this.logoPicturebox.BackgroundImage = global::UIAssignment.Properties.Resources.potentional_logo;
             this.logoPicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logoPicturebox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.logoPicturebox.Location = new System.Drawing.Point(376, 15);
-            this.logoPicturebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoPicturebox.Margin = new System.Windows.Forms.Padding(4);
             this.logoPicturebox.Name = "logoPicturebox";
             this.logoPicturebox.Size = new System.Drawing.Size(223, 176);
             this.logoPicturebox.TabIndex = 13;
@@ -96,7 +97,7 @@ namespace UIAssignment
             // 
             this.usernameTextbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextbox.Location = new System.Drawing.Point(284, 252);
-            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(388, 31);
             this.usernameTextbox.TabIndex = 1;
@@ -119,7 +120,7 @@ namespace UIAssignment
             // 
             this.passwordTextbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextbox.Location = new System.Drawing.Point(284, 356);
-            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.Size = new System.Drawing.Size(388, 31);
             this.passwordTextbox.TabIndex = 2;
@@ -142,7 +143,7 @@ namespace UIAssignment
             // 
             this.repeatPasswordTextbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repeatPasswordTextbox.Location = new System.Drawing.Point(284, 457);
-            this.repeatPasswordTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.repeatPasswordTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.repeatPasswordTextbox.Name = "repeatPasswordTextbox";
             this.repeatPasswordTextbox.Size = new System.Drawing.Size(388, 31);
             this.repeatPasswordTextbox.TabIndex = 3;
@@ -169,7 +170,7 @@ namespace UIAssignment
             this.cancelButton.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
             this.cancelButton.Location = new System.Drawing.Point(284, 849);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(163, 58);
             this.cancelButton.TabIndex = 8;
@@ -189,7 +190,7 @@ namespace UIAssignment
             this.registerButton.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.Black;
             this.registerButton.Location = new System.Drawing.Point(511, 849);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(4);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(163, 58);
             this.registerButton.TabIndex = 9;
@@ -229,7 +230,7 @@ namespace UIAssignment
             // 
             this.recoveryAnswerTextbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recoveryAnswerTextbox.Location = new System.Drawing.Point(284, 667);
-            this.recoveryAnswerTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.recoveryAnswerTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.recoveryAnswerTextbox.Name = "recoveryAnswerTextbox";
             this.recoveryAnswerTextbox.Size = new System.Drawing.Size(388, 31);
             this.recoveryAnswerTextbox.TabIndex = 5;
@@ -247,7 +248,7 @@ namespace UIAssignment
             "What is your favourite food?",
             "What is your favourite sport?"});
             this.recoveryQuestionCombobox.Location = new System.Drawing.Point(284, 565);
-            this.recoveryQuestionCombobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.recoveryQuestionCombobox.Margin = new System.Windows.Forms.Padding(4);
             this.recoveryQuestionCombobox.Name = "recoveryQuestionCombobox";
             this.recoveryQuestionCombobox.Size = new System.Drawing.Size(388, 31);
             this.recoveryQuestionCombobox.TabIndex = 4;
@@ -259,7 +260,7 @@ namespace UIAssignment
             this.employeeRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.employeeRadioButton.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeRadioButton.Location = new System.Drawing.Point(480, 770);
-            this.employeeRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.employeeRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.employeeRadioButton.Name = "employeeRadioButton";
             this.employeeRadioButton.Size = new System.Drawing.Size(132, 27);
             this.employeeRadioButton.TabIndex = 7;
@@ -275,7 +276,7 @@ namespace UIAssignment
             this.customerRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerRadioButton.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerRadioButton.Location = new System.Drawing.Point(277, 770);
-            this.customerRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customerRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.customerRadioButton.Name = "customerRadioButton";
             this.customerRadioButton.Size = new System.Drawing.Size(131, 27);
             this.customerRadioButton.TabIndex = 6;
@@ -308,7 +309,7 @@ namespace UIAssignment
             this.Controls.Add(this.logoPicturebox);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.leftPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
