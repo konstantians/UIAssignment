@@ -1,7 +1,7 @@
 ﻿
-namespace UIAssignment
+namespace UIAssignment.Forms.CustomerForms
 {
-    partial class MapForm
+    partial class SidebarCustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,41 +29,41 @@ namespace UIAssignment
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SidebarCustomerForm));
             this.foreignFormPanel = new System.Windows.Forms.Panel();
             this.hiddenTroyanHorsePanel = new System.Windows.Forms.Panel();
-            this.troyanHorsePictureBox = new System.Windows.Forms.PictureBox();
             this.hiddenPoolPanel = new System.Windows.Forms.Panel();
-            this.PoolPictureBox = new System.Windows.Forms.PictureBox();
             this.hiddenRestaurantPanel = new System.Windows.Forms.Panel();
-            this.restaurantPictureBox = new System.Windows.Forms.PictureBox();
             this.hiddenApartmentPanel = new System.Windows.Forms.Panel();
+            this.troyanHorsePictureBox = new System.Windows.Forms.PictureBox();
+            this.PoolPictureBox = new System.Windows.Forms.PictureBox();
+            this.restaurantPictureBox = new System.Windows.Forms.PictureBox();
             this.apartmentPictureBox = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.LogoutAndHelpSectionPanel = new System.Windows.Forms.Panel();
-            this.helpSectionButton = new UIAssignment.Resources.Cool_button();
-            this.logoutSectionButton = new UIAssignment.Resources.Cool_button();
             this.troyanHorseSectionPanel = new System.Windows.Forms.Panel();
             this.trojanHorseIconPictureBox = new System.Windows.Forms.PictureBox();
-            this.trojanHorseSectionButton = new UIAssignment.Resources.Cool_button();
             this.poolSectionPanel = new System.Windows.Forms.Panel();
             this.poolIconPictureBox = new System.Windows.Forms.PictureBox();
-            this.poolSectionButton = new UIAssignment.Resources.Cool_button();
             this.restaurantSectionPanel = new System.Windows.Forms.Panel();
             this.restaurantIconPictureBox = new System.Windows.Forms.PictureBox();
-            this.restaurantSectionButton = new UIAssignment.Resources.Cool_button();
             this.apartmentSectionPanel = new System.Windows.Forms.Panel();
             this.apartmentIconPictureBox = new System.Windows.Forms.PictureBox();
-            this.apartmentSectionButton = new UIAssignment.Resources.Cool_button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.helpSectionButton = new UIAssignment.Resources.Cool_button();
+            this.logoutSectionButton = new UIAssignment.Resources.Cool_button();
+            this.trojanHorseSectionButton = new UIAssignment.Resources.Cool_button();
+            this.poolSectionButton = new UIAssignment.Resources.Cool_button();
+            this.restaurantSectionButton = new UIAssignment.Resources.Cool_button();
+            this.apartmentSectionButton = new UIAssignment.Resources.Cool_button();
             this.foreignFormPanel.SuspendLayout();
             this.hiddenTroyanHorsePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.troyanHorsePictureBox)).BeginInit();
             this.hiddenPoolPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PoolPictureBox)).BeginInit();
             this.hiddenRestaurantPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantPictureBox)).BeginInit();
             this.hiddenApartmentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.troyanHorsePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PoolPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apartmentPictureBox)).BeginInit();
             this.panelSideMenu.SuspendLayout();
             this.LogoutAndHelpSectionPanel.SuspendLayout();
@@ -100,6 +100,33 @@ namespace UIAssignment
             this.hiddenTroyanHorsePanel.TabIndex = 3;
             this.hiddenTroyanHorsePanel.Visible = false;
             // 
+            // hiddenPoolPanel
+            // 
+            this.hiddenPoolPanel.Controls.Add(this.PoolPictureBox);
+            this.hiddenPoolPanel.Location = new System.Drawing.Point(6, 250);
+            this.hiddenPoolPanel.Name = "hiddenPoolPanel";
+            this.hiddenPoolPanel.Size = new System.Drawing.Size(200, 100);
+            this.hiddenPoolPanel.TabIndex = 2;
+            this.hiddenPoolPanel.Visible = false;
+            // 
+            // hiddenRestaurantPanel
+            // 
+            this.hiddenRestaurantPanel.Controls.Add(this.restaurantPictureBox);
+            this.hiddenRestaurantPanel.Location = new System.Drawing.Point(6, 180);
+            this.hiddenRestaurantPanel.Name = "hiddenRestaurantPanel";
+            this.hiddenRestaurantPanel.Size = new System.Drawing.Size(200, 100);
+            this.hiddenRestaurantPanel.TabIndex = 1;
+            this.hiddenRestaurantPanel.Visible = false;
+            // 
+            // hiddenApartmentPanel
+            // 
+            this.hiddenApartmentPanel.Controls.Add(this.apartmentPictureBox);
+            this.hiddenApartmentPanel.Location = new System.Drawing.Point(6, 110);
+            this.hiddenApartmentPanel.Name = "hiddenApartmentPanel";
+            this.hiddenApartmentPanel.Size = new System.Drawing.Size(200, 100);
+            this.hiddenApartmentPanel.TabIndex = 0;
+            this.hiddenApartmentPanel.Visible = false;
+            // 
             // troyanHorsePictureBox
             // 
             this.troyanHorsePictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -110,15 +137,6 @@ namespace UIAssignment
             this.troyanHorsePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.troyanHorsePictureBox.TabIndex = 7;
             this.troyanHorsePictureBox.TabStop = false;
-            // 
-            // hiddenPoolPanel
-            // 
-            this.hiddenPoolPanel.Controls.Add(this.PoolPictureBox);
-            this.hiddenPoolPanel.Location = new System.Drawing.Point(6, 250);
-            this.hiddenPoolPanel.Name = "hiddenPoolPanel";
-            this.hiddenPoolPanel.Size = new System.Drawing.Size(200, 100);
-            this.hiddenPoolPanel.TabIndex = 2;
-            this.hiddenPoolPanel.Visible = false;
             // 
             // PoolPictureBox
             // 
@@ -131,15 +149,6 @@ namespace UIAssignment
             this.PoolPictureBox.TabIndex = 6;
             this.PoolPictureBox.TabStop = false;
             // 
-            // hiddenRestaurantPanel
-            // 
-            this.hiddenRestaurantPanel.Controls.Add(this.restaurantPictureBox);
-            this.hiddenRestaurantPanel.Location = new System.Drawing.Point(6, 180);
-            this.hiddenRestaurantPanel.Name = "hiddenRestaurantPanel";
-            this.hiddenRestaurantPanel.Size = new System.Drawing.Size(200, 100);
-            this.hiddenRestaurantPanel.TabIndex = 1;
-            this.hiddenRestaurantPanel.Visible = false;
-            // 
             // restaurantPictureBox
             // 
             this.restaurantPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -150,15 +159,6 @@ namespace UIAssignment
             this.restaurantPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restaurantPictureBox.TabIndex = 5;
             this.restaurantPictureBox.TabStop = false;
-            // 
-            // hiddenApartmentPanel
-            // 
-            this.hiddenApartmentPanel.Controls.Add(this.apartmentPictureBox);
-            this.hiddenApartmentPanel.Location = new System.Drawing.Point(6, 110);
-            this.hiddenApartmentPanel.Name = "hiddenApartmentPanel";
-            this.hiddenApartmentPanel.Size = new System.Drawing.Size(200, 100);
-            this.hiddenApartmentPanel.TabIndex = 0;
-            this.hiddenApartmentPanel.Visible = false;
             // 
             // apartmentPictureBox
             // 
@@ -199,6 +199,97 @@ namespace UIAssignment
             this.LogoutAndHelpSectionPanel.Name = "LogoutAndHelpSectionPanel";
             this.LogoutAndHelpSectionPanel.Size = new System.Drawing.Size(268, 90);
             this.LogoutAndHelpSectionPanel.TabIndex = 4;
+            // 
+            // troyanHorseSectionPanel
+            // 
+            this.troyanHorseSectionPanel.Controls.Add(this.trojanHorseIconPictureBox);
+            this.troyanHorseSectionPanel.Controls.Add(this.trojanHorseSectionButton);
+            this.troyanHorseSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.troyanHorseSectionPanel.Location = new System.Drawing.Point(0, 310);
+            this.troyanHorseSectionPanel.Name = "troyanHorseSectionPanel";
+            this.troyanHorseSectionPanel.Size = new System.Drawing.Size(268, 70);
+            this.troyanHorseSectionPanel.TabIndex = 4;
+            // 
+            // trojanHorseIconPictureBox
+            // 
+            this.trojanHorseIconPictureBox.Image = global::UIAssignment.Properties.Resources.TrojanHorseIcon;
+            this.trojanHorseIconPictureBox.Location = new System.Drawing.Point(28, 19);
+            this.trojanHorseIconPictureBox.Name = "trojanHorseIconPictureBox";
+            this.trojanHorseIconPictureBox.Size = new System.Drawing.Size(38, 31);
+            this.trojanHorseIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.trojanHorseIconPictureBox.TabIndex = 5;
+            this.trojanHorseIconPictureBox.TabStop = false;
+            // 
+            // poolSectionPanel
+            // 
+            this.poolSectionPanel.Controls.Add(this.poolIconPictureBox);
+            this.poolSectionPanel.Controls.Add(this.poolSectionButton);
+            this.poolSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.poolSectionPanel.Location = new System.Drawing.Point(0, 240);
+            this.poolSectionPanel.Name = "poolSectionPanel";
+            this.poolSectionPanel.Size = new System.Drawing.Size(268, 70);
+            this.poolSectionPanel.TabIndex = 4;
+            // 
+            // poolIconPictureBox
+            // 
+            this.poolIconPictureBox.Image = global::UIAssignment.Properties.Resources.PoolIcon;
+            this.poolIconPictureBox.Location = new System.Drawing.Point(28, 18);
+            this.poolIconPictureBox.Name = "poolIconPictureBox";
+            this.poolIconPictureBox.Size = new System.Drawing.Size(38, 31);
+            this.poolIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.poolIconPictureBox.TabIndex = 5;
+            this.poolIconPictureBox.TabStop = false;
+            // 
+            // restaurantSectionPanel
+            // 
+            this.restaurantSectionPanel.Controls.Add(this.restaurantIconPictureBox);
+            this.restaurantSectionPanel.Controls.Add(this.restaurantSectionButton);
+            this.restaurantSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.restaurantSectionPanel.Location = new System.Drawing.Point(0, 170);
+            this.restaurantSectionPanel.Name = "restaurantSectionPanel";
+            this.restaurantSectionPanel.Size = new System.Drawing.Size(268, 70);
+            this.restaurantSectionPanel.TabIndex = 8;
+            // 
+            // restaurantIconPictureBox
+            // 
+            this.restaurantIconPictureBox.Image = global::UIAssignment.Properties.Resources.CutleryIcon;
+            this.restaurantIconPictureBox.Location = new System.Drawing.Point(28, 20);
+            this.restaurantIconPictureBox.Name = "restaurantIconPictureBox";
+            this.restaurantIconPictureBox.Size = new System.Drawing.Size(38, 31);
+            this.restaurantIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.restaurantIconPictureBox.TabIndex = 5;
+            this.restaurantIconPictureBox.TabStop = false;
+            // 
+            // apartmentSectionPanel
+            // 
+            this.apartmentSectionPanel.Controls.Add(this.apartmentIconPictureBox);
+            this.apartmentSectionPanel.Controls.Add(this.apartmentSectionButton);
+            this.apartmentSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.apartmentSectionPanel.Location = new System.Drawing.Point(0, 100);
+            this.apartmentSectionPanel.Name = "apartmentSectionPanel";
+            this.apartmentSectionPanel.Size = new System.Drawing.Size(268, 70);
+            this.apartmentSectionPanel.TabIndex = 7;
+            // 
+            // apartmentIconPictureBox
+            // 
+            this.apartmentIconPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.apartmentIconPictureBox.Image = global::UIAssignment.Properties.Resources.DoubleBedIcon;
+            this.apartmentIconPictureBox.Location = new System.Drawing.Point(28, 19);
+            this.apartmentIconPictureBox.Name = "apartmentIconPictureBox";
+            this.apartmentIconPictureBox.Size = new System.Drawing.Size(38, 31);
+            this.apartmentIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.apartmentIconPictureBox.TabIndex = 4;
+            this.apartmentIconPictureBox.TabStop = false;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackgroundImage = global::UIAssignment.Properties.Resources.TranspareFullLogo;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(268, 100);
+            this.panelLogo.TabIndex = 0;
             // 
             // helpSectionButton
             // 
@@ -251,26 +342,6 @@ namespace UIAssignment
             this.logoutSectionButton.MouseEnter += new System.EventHandler(this.logoutSectionButton_MouseEnter);
             this.logoutSectionButton.MouseLeave += new System.EventHandler(this.logoutSectionButton_MouseLeave);
             // 
-            // troyanHorseSectionPanel
-            // 
-            this.troyanHorseSectionPanel.Controls.Add(this.trojanHorseIconPictureBox);
-            this.troyanHorseSectionPanel.Controls.Add(this.trojanHorseSectionButton);
-            this.troyanHorseSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.troyanHorseSectionPanel.Location = new System.Drawing.Point(0, 310);
-            this.troyanHorseSectionPanel.Name = "troyanHorseSectionPanel";
-            this.troyanHorseSectionPanel.Size = new System.Drawing.Size(268, 70);
-            this.troyanHorseSectionPanel.TabIndex = 4;
-            // 
-            // trojanHorseIconPictureBox
-            // 
-            this.trojanHorseIconPictureBox.Image = global::UIAssignment.Properties.Resources.TrojanHorseIcon;
-            this.trojanHorseIconPictureBox.Location = new System.Drawing.Point(28, 19);
-            this.trojanHorseIconPictureBox.Name = "trojanHorseIconPictureBox";
-            this.trojanHorseIconPictureBox.Size = new System.Drawing.Size(38, 31);
-            this.trojanHorseIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.trojanHorseIconPictureBox.TabIndex = 5;
-            this.trojanHorseIconPictureBox.TabStop = false;
-            // 
             // trojanHorseSectionButton
             // 
             this.trojanHorseSectionButton.BackColor = System.Drawing.Color.Transparent;
@@ -295,26 +366,6 @@ namespace UIAssignment
             this.trojanHorseSectionButton.MouseEnter += new System.EventHandler(this.trojanHorseSectionButton_MouseEnter);
             this.trojanHorseSectionButton.MouseLeave += new System.EventHandler(this.trojanHorseSectionButton_MouseLeave);
             // 
-            // poolSectionPanel
-            // 
-            this.poolSectionPanel.Controls.Add(this.poolIconPictureBox);
-            this.poolSectionPanel.Controls.Add(this.poolSectionButton);
-            this.poolSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.poolSectionPanel.Location = new System.Drawing.Point(0, 240);
-            this.poolSectionPanel.Name = "poolSectionPanel";
-            this.poolSectionPanel.Size = new System.Drawing.Size(268, 70);
-            this.poolSectionPanel.TabIndex = 4;
-            // 
-            // poolIconPictureBox
-            // 
-            this.poolIconPictureBox.Image = global::UIAssignment.Properties.Resources.PoolIcon;
-            this.poolIconPictureBox.Location = new System.Drawing.Point(28, 18);
-            this.poolIconPictureBox.Name = "poolIconPictureBox";
-            this.poolIconPictureBox.Size = new System.Drawing.Size(38, 31);
-            this.poolIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.poolIconPictureBox.TabIndex = 5;
-            this.poolIconPictureBox.TabStop = false;
-            // 
             // poolSectionButton
             // 
             this.poolSectionButton.BackColor = System.Drawing.Color.Transparent;
@@ -336,28 +387,9 @@ namespace UIAssignment
             this.poolSectionButton.Text = "Πισίνα";
             this.poolSectionButton.TextColor = System.Drawing.Color.Black;
             this.poolSectionButton.UseVisualStyleBackColor = false;
+            this.poolSectionButton.Click += new System.EventHandler(this.poolSectionButton_Click);
             this.poolSectionButton.MouseEnter += new System.EventHandler(this.poolSectionButton_MouseEnter);
             this.poolSectionButton.MouseLeave += new System.EventHandler(this.poolSectionButton_MouseLeave);
-            // 
-            // restaurantSectionPanel
-            // 
-            this.restaurantSectionPanel.Controls.Add(this.restaurantIconPictureBox);
-            this.restaurantSectionPanel.Controls.Add(this.restaurantSectionButton);
-            this.restaurantSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.restaurantSectionPanel.Location = new System.Drawing.Point(0, 170);
-            this.restaurantSectionPanel.Name = "restaurantSectionPanel";
-            this.restaurantSectionPanel.Size = new System.Drawing.Size(268, 70);
-            this.restaurantSectionPanel.TabIndex = 8;
-            // 
-            // restaurantIconPictureBox
-            // 
-            this.restaurantIconPictureBox.Image = global::UIAssignment.Properties.Resources.CutleryIcon;
-            this.restaurantIconPictureBox.Location = new System.Drawing.Point(28, 20);
-            this.restaurantIconPictureBox.Name = "restaurantIconPictureBox";
-            this.restaurantIconPictureBox.Size = new System.Drawing.Size(38, 31);
-            this.restaurantIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.restaurantIconPictureBox.TabIndex = 5;
-            this.restaurantIconPictureBox.TabStop = false;
             // 
             // restaurantSectionButton
             // 
@@ -381,27 +413,6 @@ namespace UIAssignment
             this.restaurantSectionButton.UseVisualStyleBackColor = false;
             this.restaurantSectionButton.MouseEnter += new System.EventHandler(this.restaurantSectionButton_MouseEnter);
             this.restaurantSectionButton.MouseLeave += new System.EventHandler(this.restaurantSectionButton_MouseLeave);
-            // 
-            // apartmentSectionPanel
-            // 
-            this.apartmentSectionPanel.Controls.Add(this.apartmentIconPictureBox);
-            this.apartmentSectionPanel.Controls.Add(this.apartmentSectionButton);
-            this.apartmentSectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.apartmentSectionPanel.Location = new System.Drawing.Point(0, 100);
-            this.apartmentSectionPanel.Name = "apartmentSectionPanel";
-            this.apartmentSectionPanel.Size = new System.Drawing.Size(268, 70);
-            this.apartmentSectionPanel.TabIndex = 7;
-            // 
-            // apartmentIconPictureBox
-            // 
-            this.apartmentIconPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.apartmentIconPictureBox.Image = global::UIAssignment.Properties.Resources.DoubleBedIcon;
-            this.apartmentIconPictureBox.Location = new System.Drawing.Point(28, 19);
-            this.apartmentIconPictureBox.Name = "apartmentIconPictureBox";
-            this.apartmentIconPictureBox.Size = new System.Drawing.Size(38, 31);
-            this.apartmentIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.apartmentIconPictureBox.TabIndex = 4;
-            this.apartmentIconPictureBox.TabStop = false;
             // 
             // apartmentSectionButton
             // 
@@ -429,16 +440,6 @@ namespace UIAssignment
             this.apartmentSectionButton.MouseEnter += new System.EventHandler(this.apartmentSectionButton_MouseEnter);
             this.apartmentSectionButton.MouseLeave += new System.EventHandler(this.apartmentSectionButton_MouseLeave);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.BackgroundImage = global::UIAssignment.Properties.Resources.TranspareFullLogo;
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(268, 100);
-            this.panelLogo.TabIndex = 0;
-            // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -455,12 +456,12 @@ namespace UIAssignment
             this.Text = "MapForm";
             this.foreignFormPanel.ResumeLayout(false);
             this.hiddenTroyanHorsePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.troyanHorsePictureBox)).EndInit();
             this.hiddenPoolPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PoolPictureBox)).EndInit();
             this.hiddenRestaurantPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantPictureBox)).EndInit();
             this.hiddenApartmentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.troyanHorsePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PoolPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apartmentPictureBox)).EndInit();
             this.panelSideMenu.ResumeLayout(false);
             this.LogoutAndHelpSectionPanel.ResumeLayout(false);

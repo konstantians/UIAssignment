@@ -1,5 +1,5 @@
 ﻿
-namespace UIAssignment
+namespace UIAssignment.Forms.CommonForms
 {
     partial class SmallUsernameDialogForm
     {

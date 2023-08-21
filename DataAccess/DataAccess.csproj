@@ -79,7 +79,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccessOperations.cs" />
+    <Compile Include="ConnectionClass.cs" />
+    <Compile Include="Logic\HelperMethods.cs" />
+    <Compile Include="Logic\OrderDataAccess.cs" />
+    <Compile Include="Logic\PoolDataAccess.cs" />
+    <Compile Include="Logic\RoomDataAccess.cs" />
+    <Compile Include="Logic\TroyanHorseDataAccess.cs" />
+    <Compile Include="Logic\UserDataAccess.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Pool.cs" />
+    <Compile Include="Models\PoolAlert.cs" />
+    <Compile Include="Models\Radio.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\TroyanHorse.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

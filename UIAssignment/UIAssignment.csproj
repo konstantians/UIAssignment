@@ -65,23 +65,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="ActiveUser.cs" />
+    <Compile Include="CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\CommonForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MapForm.cs">
+    <Compile Include="Forms\CustomerForms\SidebarCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MapForm.Designer.cs">
-      <DependentUpon>MapForm.cs</DependentUpon>
+    <Compile Include="Forms\CustomerForms\SidebarCustomerForm.Designer.cs">
+      <DependentUpon>SidebarCustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Forms\CommonForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Forms\CommonForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CommonForms\PrivatePoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\PrivatePoolForm.Designer.cs">
+      <DependentUpon>PrivatePoolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\SidebarEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\SidebarEmployeeForm.Designer.cs">
+      <DependentUpon>SidebarEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,51 +106,54 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="Forms\CommonForms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="Forms\CommonForms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResetPasswordForm.cs">
+    <Compile Include="Forms\CommonForms\ResetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResetPasswordForm.Designer.cs">
+    <Compile Include="Forms\CommonForms\ResetPasswordForm.Designer.cs">
       <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Cool_button.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SmallUsernameDialogForm.cs">
+    <Compile Include="Forms\CommonForms\SmallUsernameDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SmallUsernameDialogForm.Designer.cs">
+    <Compile Include="Forms\CommonForms\SmallUsernameDialogForm.Designer.cs">
       <DependentUpon>SmallUsernameDialogForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Cool_button.resx">
       <DependentUpon>Cool_button.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\CommonForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MapForm.resx">
-      <DependentUpon>MapForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerForms\SidebarCustomerForm.resx">
+      <DependentUpon>SidebarCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CommonForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\PrivatePoolForm.resx">
+      <DependentUpon>PrivatePoolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="Forms\CommonForms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResetPasswordForm.resx">
+    <EmbeddedResource Include="Forms\CommonForms\ResetPasswordForm.resx">
       <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SmallUsernameDialogForm.resx">
+    <EmbeddedResource Include="Forms\CommonForms\SmallUsernameDialogForm.resx">
       <DependentUpon>SmallUsernameDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -162,6 +181,19 @@
     <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
     <Content Include="Resources\LogoImages\TranspareWithoutTextLogo.png" />
     <Content Include="Resources\LogoImages\WithoutSloganLogo.png" />
+    <Content Include="Resources\MaiandrosSquareBlackImage.png" />
+    <Content Include="Resources\MaiandrosSquareImage.png" />
+    <Content Include="Resources\PoolImages\Pool0Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool100Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool10Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool20Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool30Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool40Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool50Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool60Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool70Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool80Percent.jpg" />
+    <Content Include="Resources\PoolImages\Pool90Percent.jpg" />
     <Content Include="Resources\potentional logo.png" />
     <Content Include="Resources\LogoImages\WithoutTextLogo.PNG" />
     <Content Include="Resources\WhiteMarbleBackground.jpg" />

@@ -1,17 +1,16 @@
-﻿using DataAccess;
+﻿using DataAccess.Logic;
 using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIAssignment;
+using UIAssignment.Forms;
+using UIAssignment.Forms.CommonForms;
+using UIAssignment.Forms.CustomerForms;
+using UIAssignment.Resources;
 
-namespace UIAssignment
+
+namespace UIAssignment.Forms.CommonForms
 {
     public partial class LoginForm : Form
     {
@@ -153,8 +152,18 @@ namespace UIAssignment
                 return;
             }
 
-            User user = DataAccessOperations.GetUser(usernameTextbox.Text);
-            if(user.Username == null)
+            if(UserDataAccess.GetUser(usernameTextbox.Text).Item2 == "Customer")
+            {
+                ActiveUser.User = UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+                ActiveUser.Customer = (Customer)UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+            }
+            else
+            {
+                ActiveUser.User = UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+                ActiveUser.Employee = (Employee)UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+            }
+
+            if(ActiveUser.User == null)
             {
                 MessageBox.Show("There is no account with the given username.","Account Does Not Exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernameTextbox.Text = "";
@@ -163,7 +172,7 @@ namespace UIAssignment
                 employeeRadioButton.Checked = false;
                 return;
             }
-            else if(user.Password != passwordTextbox.Text)
+            else if(ActiveUser.User.Password != passwordTextbox.Text)
             {
                 MessageBox.Show("Incorrect password or account type.","False Credentionals",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 passwordTextbox.Text = "";
@@ -171,7 +180,7 @@ namespace UIAssignment
                 employeeRadioButton.Checked = false;
                 return;
             }
-            else if (user.UserRole == "Customer" && employeeRadioButton.Checked == true)
+            else if (ActiveUser.User.GetType() == typeof(Customer) && employeeRadioButton.Checked == true)
             {
                 MessageBox.Show("Incorrect password or account type.","False Credentionals",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 passwordTextbox.Text = "";
@@ -179,7 +188,7 @@ namespace UIAssignment
                 employeeRadioButton.Checked = false;
                 return;
             }
-            else if (user.UserRole == "Employee" && customerRadioButton.Checked == true)
+            else if (ActiveUser.User.GetType() == typeof(Employee) && customerRadioButton.Checked == true)
             {
                 MessageBox.Show("Incorrect password or account type.","False Credentionals", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 passwordTextbox.Text = "";
@@ -188,82 +197,18 @@ namespace UIAssignment
                 return;
             }
 
-            MessageBox.Show($"Welcome back {user.Username}!");
+            MessageBox.Show($"Welcome back {ActiveUser.User.Username}!");
             
             this.Hide();
-            MapForm mapForm = new MapForm();
-            mapForm.Show();
-        }
-    }
+            if (ActiveUser.Customer == null)
+            {
 
-    class CustomRadioButton : RadioButton
-    {
-        private Color checkedColor = Color.FromArgb(150, 53, 41);
-        private Color unCheckedColor = Color.Black;
-        public Color CheckedColor
-        {
-            get { return checkedColor; }
-            set
-            {
-                checkedColor = value;
-                this.Invalidate();
             }
-        }
-        public Color UnCheckedColor
-        {
-            get { return unCheckedColor; }
-            set
+            else
             {
-                unCheckedColor = value;
-                this.Invalidate();
-            }
-        }
-
-        //Overridden methods
-        protected override void OnPaint(PaintEventArgs pevent)
-        {
-            //Fields
-            Graphics graphics = pevent.Graphics;
-            graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            float rbBorderSize = 14F;
-            float rbCheckSize = 7F;
-            RectangleF rectRbBorder = new RectangleF()
-            {
-                X = 0.5F,
-                Y = (this.Height - rbBorderSize) / 2, //Center
-                Width = rbBorderSize,
-                Height = rbBorderSize
-            };
-            RectangleF rectRbCheck = new RectangleF()
-            {
-                X = rectRbBorder.X + ((rectRbBorder.Width - rbCheckSize) / 2), //Center
-                Y = (this.Height - rbCheckSize) / 2, //Center
-                Width = rbCheckSize,
-                Height = rbCheckSize
-            };
-            //Drawing
-            using (Pen penBorder = new Pen(checkedColor, 1.6F))
-            using (SolidBrush brushRbCheck = new SolidBrush(checkedColor))
-            using (SolidBrush brushText = new SolidBrush(this.ForeColor))
-            {
-                //Draw surface
-                graphics.Clear(this.BackColor);
-                //Draw Radio Button
-                if (this.Checked)
-                {
-                    graphics.DrawEllipse(penBorder, rectRbBorder);//Circle border
-                    graphics.FillEllipse(brushRbCheck, rectRbCheck); //Circle Radio Check
-                }
-                else
-                {
-                    penBorder.Color = unCheckedColor;
-                    graphics.DrawEllipse(penBorder, rectRbBorder); //Circle border
-                }
-                //Draw text
-                graphics.DrawString(this.Text, this.Font, brushText,
-                    rbBorderSize + 8, (this.Height - TextRenderer.MeasureText(this.Text, this.Font).Height) / 2);//Y=Center
+                SidebarCustomerForm mapForm = new SidebarCustomerForm();
+                mapForm.Show();
             }
         }
     }
-
 }

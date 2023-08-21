@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using UIAssignment.Forms.CommonForms;
 
-namespace UIAssignment
+namespace UIAssignment.Forms.CustomerForms
 {
-    public partial class MapForm : Form
+    public partial class SidebarCustomerForm : Form
     {
         private Form activeForm = null;
 
-        public MapForm()
+        public SidebarCustomerForm()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             //apartmentIconPictureBox.BringToFront();
-            openChildForm(new Menu());
+            openChildForm(new MainForm());
         }
 
         private void apartmentSectionButton_MouseEnter(object sender, EventArgs e)
@@ -78,6 +79,9 @@ namespace UIAssignment
 
         private void logoutSectionButton_Click(object sender, EventArgs e)
         {
+            ActiveUser.User = null;
+            ActiveUser.Customer = null;
+            ActiveUser.Employee = null;
             Application.OpenForms[0].Show();
             this.Close();
         }
@@ -94,11 +98,6 @@ namespace UIAssignment
             foreignFormPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        private void apartmentSectionButton_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void logoutSectionButton_MouseEnter(object sender, EventArgs e)
@@ -123,6 +122,16 @@ namespace UIAssignment
         {
             helpSectionButton.BackgroundImage = null;
             helpSectionButton.TextColor = Color.Black;
+        }
+
+        private void apartmentSectionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void poolSectionButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PrivatePoolForm());
         }
     }
 }

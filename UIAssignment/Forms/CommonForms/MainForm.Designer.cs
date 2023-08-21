@@ -1,6 +1,6 @@
-﻿namespace UIAssignment
+﻿namespace UIAssignment.Forms.CommonForms
 {
-    partial class Menu
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.cool_button4 = new UIAssignment.Resources.Cool_button();
             this.cool_button3 = new UIAssignment.Resources.Cool_button();
             this.cool_button1 = new UIAssignment.Resources.Cool_button();

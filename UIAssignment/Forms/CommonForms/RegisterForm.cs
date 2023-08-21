@@ -1,16 +1,11 @@
-﻿using DataAccess;
+﻿using DataAccess.Logic;
 using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIAssignment
+namespace UIAssignment.Forms.CommonForms
 {
     public partial class RegisterForm : Form
     {
@@ -251,24 +246,32 @@ namespace UIAssignment
             }
 
             //that means that another user with that username exist
-            if(DataAccessOperations.GetUser(usernameTextbox.Text).Username != null)
+            if(UserDataAccess.GetUser(usernameTextbox.Text).Item1 != null)
             {
                 MessageBox.Show($"There is another user with that username. Please pick a different username",
                     "Duplicate Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            User user = new User();
-            user.Username = usernameTextbox.Text;
-            user.Password = passwordTextbox.Text;
-            user.RecoveryQuestion = recoveryQuestionCombobox.Text;
-            user.RecoveryAnswer = recoveryAnswerTextbox.Text;
-            if (customerRadioButton.Checked)
-                user.UserRole = "Customer";
+            
+            if (customerRadioButton.Checked) {
+                Customer customer = new Customer();
+                customer.Username = usernameTextbox.Text;
+                customer.Password = passwordTextbox.Text;
+                customer.RecoveryQuestion = recoveryQuestionCombobox.Text;
+                customer.RecoveryAnswer = recoveryAnswerTextbox.Text;
+                UserDataAccess.CreateUser(customer);
+                RoomDataAccess.ConnectUserToRoom(customer.Username);
+            }
             else
-                user.UserRole = "Employee";
-
-            DataAccessOperations.CreateUser(user);
+            {
+                Employee employee = new Employee();
+                employee.Username = usernameTextbox.Text;
+                employee.Password = passwordTextbox.Text;
+                employee.RecoveryQuestion = recoveryQuestionCombobox.Text;
+                employee.RecoveryAnswer = recoveryAnswerTextbox.Text;
+                UserDataAccess.CreateUser(employee);
+            }
 
             MessageBox.Show("Your account has been succesfully created!","Account Created Successfully!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             Application.OpenForms[0].Show();
