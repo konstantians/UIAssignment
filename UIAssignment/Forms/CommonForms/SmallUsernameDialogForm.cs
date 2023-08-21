@@ -1,16 +1,10 @@
-﻿using DataAccess;
+﻿using DataAccess.Logic;
 using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIAssignment
+namespace UIAssignment.Forms.CommonForms
 {
     public partial class SmallUsernameDialogForm : Form
     {
@@ -127,14 +121,15 @@ namespace UIAssignment
                 return;
             }
             //if there is no account with the given username
-            else if(DataAccessOperations.GetUser(accountUsernameTextbox.Text).Username == null)
+            else if(UserDataAccess.GetUser(accountUsernameTextbox.Text).Item1 == null)
             {
                 MessageBox.Show($"The username you have typed does not belong to any account.{Environment.NewLine}Please try again.", "Account Does Not Exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                User user = DataAccessOperations.GetUser(accountUsernameTextbox.Text);
+                //TODO fix that
+                User user = UserDataAccess.GetUser(accountUsernameTextbox.Text).Item1;
                 this.Hide();
                 Application.OpenForms[0].Hide();
                 ResetPasswordForm resetPasswordForm = new ResetPasswordForm(user);

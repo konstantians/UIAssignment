@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIAssignment
+namespace UIAssignment.Forms.EmployeeForms
 {
-    public partial class Menu : Form
+    public partial class SidebarEmployeeForm : Form
     {
-        public Menu()
+        public SidebarEmployeeForm()
         {
             InitializeComponent();
         }

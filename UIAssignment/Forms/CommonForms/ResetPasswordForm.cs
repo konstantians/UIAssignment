@@ -1,16 +1,11 @@
-﻿using DataAccess;
+﻿using DataAccess.Logic;
 using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIAssignment
+namespace UIAssignment.Forms.CommonForms
 {
     public partial class ResetPasswordForm : Form
     {
@@ -25,7 +20,6 @@ namespace UIAssignment
             User.Password = user.Password;
             User.RecoveryQuestion = user.RecoveryQuestion;
             User.RecoveryAnswer = user.RecoveryAnswer;
-            User.UserRole = user.UserRole;
 
             usernameTextbox.Text = user.Username;
             recoveryQuestionLabel.Text = user.RecoveryQuestion;
@@ -227,7 +221,7 @@ namespace UIAssignment
 
             //else
             User.Password = passwordTextbox.Text;
-            DataAccessOperations.UpdateUser(User);
+            UserDataAccess.UpdateUser(User);
 
             MessageBox.Show("Your password has been successfully updated.", "Successful Password Reset!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.OpenForms[0].Show();

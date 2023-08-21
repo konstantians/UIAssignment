@@ -169,4 +169,43 @@
   <data name="WithoutSloganLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoImages\WithoutSloganLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pool0Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool0Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaiandrosSquareBlackImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaiandrosSquareBlackImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaiandrosSquareImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaiandrosSquareImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool100Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool100Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool10Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool10Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool20Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool20Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool30Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool30Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool40Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool40Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool50Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool50Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool60Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool60Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool70Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool70Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool80Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool80Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool90Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool90Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

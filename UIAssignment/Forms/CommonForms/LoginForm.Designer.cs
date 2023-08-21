@@ -1,5 +1,6 @@
-﻿
-namespace UIAssignment
+﻿using UIAssignment.Forms.CommonForms;
+
+namespace UIAssignment.Forms.CommonForms
 {
     partial class LoginForm
     {
@@ -42,8 +43,8 @@ namespace UIAssignment
             this.accountTypeLabel = new System.Windows.Forms.Label();
             this.registerLabel = new System.Windows.Forms.Label();
             this.forgotPasswordLabel = new System.Windows.Forms.Label();
-            this.employeeRadioButton = new UIAssignment.CustomRadioButton();
-            this.customerRadioButton = new UIAssignment.CustomRadioButton();
+            this.employeeRadioButton = new CustomRadioButton();
+            this.customerRadioButton = new CustomRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicturebox)).BeginInit();
             this.SuspendLayout();
             // 

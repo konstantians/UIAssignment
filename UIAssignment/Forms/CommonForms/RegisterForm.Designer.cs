@@ -1,5 +1,5 @@
 ﻿
-namespace UIAssignment
+namespace UIAssignment.Forms.CommonForms
 {
     partial class RegisterForm
     {
@@ -169,7 +169,7 @@ namespace UIAssignment
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelButton.Location = new System.Drawing.Point(284, 849);
+            this.cancelButton.Location = new System.Drawing.Point(284, 805);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(163, 58);
@@ -189,7 +189,7 @@ namespace UIAssignment
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.Black;
-            this.registerButton.Location = new System.Drawing.Point(511, 849);
+            this.registerButton.Location = new System.Drawing.Point(509, 805);
             this.registerButton.Margin = new System.Windows.Forms.Padding(4);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(163, 58);
@@ -290,7 +290,7 @@ namespace UIAssignment
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(217)))), ((int)(((byte)(194)))));
-            this.ClientSize = new System.Drawing.Size(965, 922);
+            this.ClientSize = new System.Drawing.Size(965, 1053);
             this.Controls.Add(this.recoveryQuestionCombobox);
             this.Controls.Add(this.recoveryAnswerTextbox);
             this.Controls.Add(this.recoveryAnswerLabel);
