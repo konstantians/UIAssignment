@@ -7,7 +7,8 @@ namespace UIAssignment.Forms.CustomerForms
 {
     public partial class SidebarCustomerForm : Form
     {
-        private Form activeForm = null;
+        private ChildForm activeForm = null;
+        private bool closedFromLogOut = false;
 
         public SidebarCustomerForm()
         {
@@ -79,14 +80,18 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void logoutSectionButton_Click(object sender, EventArgs e)
         {
+            if (activeForm.UnsavedChangesDetected())
+              return;
+            closedFromLogOut = true;
+            activeForm.Close();
+            this.Close();
             ActiveUser.User = null;
             ActiveUser.Customer = null;
             ActiveUser.Employee = null;
             Application.OpenForms[0].Show();
-            this.Close();
         }
 
-        private void openChildForm(Form childForm)
+        private void openChildForm(ChildForm childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -129,9 +134,36 @@ namespace UIAssignment.Forms.CustomerForms
 
         }
 
+        private void restaurantSectionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void poolSectionButton_Click(object sender, EventArgs e)
         {
             openChildForm(new PrivatePoolForm());
         }
+        private void trojanHorseSectionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SidebarCustomerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //check if the user pressed the x button and they pressed the cancel button on the unsaved changes warning
+            if (!closedFromLogOut && activeForm.UnsavedChangesDetected())
+            {
+                // If they pressed cancel then prevent the app from closing
+                e.Cancel = true; 
+                return;
+            }
+            //check if the user logged out
+            if(!closedFromLogOut)
+                //if not close the app
+                Application.OpenForms[0].Close();
+
+        }
+
+        
     }
 }

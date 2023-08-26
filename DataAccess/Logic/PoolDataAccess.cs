@@ -215,7 +215,7 @@ namespace DataAccess.Logic
         public static void UpdatePoolAlert(PoolAlert poolAlert)
         {
             ConnectionClass.connection.Open();
-            string sqlQuery = "UPDATE PoolAlert SET [From] = @from, Until = @until, SoundTrack = @soundTrack, @IsPoolAlertOn = @isPoolAlertOn " +
+            string sqlQuery = "UPDATE PoolAlert SET [From] = @from, Until = @until, SoundTrack = @soundTrack, IsPoolAlertOn = @isPoolAlertOn " +
                               "WHERE PoolAlertId = @poolAlertId;";
 
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);

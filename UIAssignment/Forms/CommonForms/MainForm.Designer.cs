@@ -52,7 +52,7 @@
             this.cool_button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cool_button4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cool_button4.ForeColor = System.Drawing.Color.Black;
-            this.cool_button4.Location = new System.Drawing.Point(697, 541);
+            this.cool_button4.Location = new System.Drawing.Point(697, 591);
             this.cool_button4.Name = "cool_button4";
             this.cool_button4.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.cool_button4.Size = new System.Drawing.Size(260, 135);
@@ -77,7 +77,7 @@
             this.cool_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cool_button3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cool_button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.cool_button3.Location = new System.Drawing.Point(1002, 541);
+            this.cool_button3.Location = new System.Drawing.Point(1002, 591);
             this.cool_button3.Name = "cool_button3";
             this.cool_button3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.cool_button3.Size = new System.Drawing.Size(260, 135);
@@ -102,7 +102,7 @@
             this.cool_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cool_button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cool_button1.ForeColor = System.Drawing.Color.Black;
-            this.cool_button1.Location = new System.Drawing.Point(697, 373);
+            this.cool_button1.Location = new System.Drawing.Point(697, 402);
             this.cool_button1.Name = "cool_button1";
             this.cool_button1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.cool_button1.Size = new System.Drawing.Size(260, 135);
@@ -127,7 +127,7 @@
             this.cool_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cool_button2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cool_button2.ForeColor = System.Drawing.Color.Black;
-            this.cool_button2.Location = new System.Drawing.Point(1002, 373);
+            this.cool_button2.Location = new System.Drawing.Point(1002, 402);
             this.cool_button2.Name = "cool_button2";
             this.cool_button2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.cool_button2.Size = new System.Drawing.Size(260, 135);
@@ -150,21 +150,21 @@
             this.logoPictureBox.TabIndex = 21;
             this.logoPictureBox.TabStop = false;
             // 
-            // Menu
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1310, 700);
+            this.ClientSize = new System.Drawing.Size(1310, 750);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.cool_button4);
             this.Controls.Add(this.cool_button3);
             this.Controls.Add(this.cool_button1);
             this.Controls.Add(this.cool_button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Menu";
+            this.Name = "MainForm";
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);

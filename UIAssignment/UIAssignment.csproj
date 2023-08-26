@@ -66,7 +66,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveUser.cs" />
+    <Compile Include="ChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\CommonForms\LoginForm.cs">
@@ -127,6 +139,12 @@
     <Compile Include="Forms\CommonForms\SmallUsernameDialogForm.Designer.cs">
       <DependentUpon>SmallUsernameDialogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransparentPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransparentTrackbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Cool_button.resx">
       <DependentUpon>Cool_button.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,7 +194,11 @@
     <None Include="Resources\Icons\CutleryIcon.png" />
     <None Include="Resources\Icons\TrojanHorseIcon.png" />
     <None Include="Resources\Icons\PoolIcon.png" />
+    <Content Include="Resources\AlarmSounds\basicAlarm.wav" />
+    <Content Include="Resources\AlarmSounds\criticalAlarm.wav" />
+    <Content Include="Resources\AlarmSounds\scifyAlarm.wav" />
     <Content Include="Resources\BlackMarbleBackground.jpg" />
+    <Content Include="Resources\ColumnTransparent.png" />
     <Content Include="Resources\LogoImages\FullLogo.PNG" />
     <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
     <Content Include="Resources\LogoImages\TranspareWithoutTextLogo.png" />
@@ -196,6 +218,8 @@
     <Content Include="Resources\PoolImages\Pool90Percent.jpg" />
     <Content Include="Resources\potentional logo.png" />
     <Content Include="Resources\LogoImages\WithoutTextLogo.PNG" />
+    <Content Include="Resources\TemperatureDecreaseImage.png" />
+    <Content Include="Resources\TemperatureIncreaseImage.png" />
     <Content Include="Resources\WhiteMarbleBackground.jpg" />
     <Content Include="UIAssignmentDatabase.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

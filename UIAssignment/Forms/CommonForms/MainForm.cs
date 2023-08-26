@@ -1,12 +1,16 @@
-﻿using System.Windows.Forms;
-
-namespace UIAssignment.Forms.CommonForms
+﻿namespace UIAssignment.Forms.CommonForms
 {
-    public partial class MainForm : Form
+    public partial class MainForm : ChildForm
     {
         public MainForm()
         {
             InitializeComponent();
         }
+
+        public override bool UnsavedChangesDetected()
+        {
+            return false;
+        }
+            
     }
 }
