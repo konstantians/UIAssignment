@@ -71,6 +71,15 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream basicAlarm {
+            get {
+                return ResourceManager.GetStream("basicAlarm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap BlackMarbleBackground {
@@ -87,6 +96,25 @@ namespace UIAssignment.Properties {
             get {
                 object obj = ResourceManager.GetObject("caesars-palace-forum-shops1_lg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColumnTransparent {
+            get {
+                object obj = ResourceManager.GetObject("ColumnTransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream criticalAlarm {
+            get {
+                return ResourceManager.GetStream("criticalAlarm", resourceCulture);
             }
         }
         
@@ -296,6 +324,35 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap RestaurantImage {
             get {
                 object obj = ResourceManager.GetObject("RestaurantImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream scifyAlarm {
+            get {
+                return ResourceManager.GetStream("scifyAlarm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TemperatureDecreaseImage {
+            get {
+                object obj = ResourceManager.GetObject("TemperatureDecreaseImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TemperatureIncreaseImage {
+            get {
+                object obj = ResourceManager.GetObject("TemperatureIncreaseImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
