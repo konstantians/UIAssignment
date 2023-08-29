@@ -71,6 +71,66 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ApartmentImageAirCoditionOn {
+            get {
+                object obj = ResourceManager.GetObject("ApartmentImageAirCoditionOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ApartmentImageAirCoditionOnAndTVOn {
+            get {
+                object obj = ResourceManager.GetObject("ApartmentImageAirCoditionOnAndTVOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ApartmentImageAirCoditionOnAndTVOnNetflix {
+            get {
+                object obj = ResourceManager.GetObject("ApartmentImageAirCoditionOnAndTVOnNetflix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ApartmentImageDefault {
+            get {
+                object obj = ResourceManager.GetObject("ApartmentImageDefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ApartmentImageTVOn {
+            get {
+                object obj = ResourceManager.GetObject("ApartmentImageTVOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ApartmentImageTVOnNetflix {
+            get {
+                object obj = ResourceManager.GetObject("ApartmentImageTVOnNetflix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream basicAlarm {
@@ -95,6 +155,16 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap caesars_palace_forum_shops1_lg {
             get {
                 object obj = ResourceManager.GetObject("caesars-palace-forum-shops1_lg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColumnHorizontalTransparent {
+            get {
+                object obj = ResourceManager.GetObject("ColumnHorizontalTransparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -139,6 +209,24 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream EnasAetos {
+            get {
+                return ResourceManager.GetStream("EnasAetos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Itia {
+            get {
+                return ResourceManager.GetStream("Itia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Lobby_Caesars_Palace {
@@ -175,6 +263,15 @@ namespace UIAssignment.Properties {
             get {
                 object obj = ResourceManager.GetObject("MaiandrosSquareImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MiloMouKokkino {
+            get {
+                return ResourceManager.GetStream("MiloMouKokkino", resourceCulture);
             }
         }
         
@@ -314,6 +411,26 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap potentional_logo {
             get {
                 object obj = ResourceManager.GetObject("potentional_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap radioOff {
+            get {
+                object obj = ResourceManager.GetObject("radioOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap radioOn {
+            get {
+                object obj = ResourceManager.GetObject("radioOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

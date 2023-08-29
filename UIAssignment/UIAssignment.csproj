@@ -87,6 +87,12 @@
     <Compile Include="Forms\CommonForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CommonForms\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerForms\SidebarCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="Forms\CommonForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\SidebarCustomerForm.resx">
       <DependentUpon>SidebarCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +207,7 @@
     <Content Include="Resources\AlarmSounds\criticalAlarm.wav" />
     <Content Include="Resources\AlarmSounds\scifyAlarm.wav" />
     <Content Include="Resources\BlackMarbleBackground.jpg" />
+    <Content Include="Resources\ColumnHorizontalTransparent.png" />
     <Content Include="Resources\ColumnTransparent.png" />
     <Content Include="Resources\LogoImages\FullLogo.PNG" />
     <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
@@ -218,6 +228,17 @@
     <Content Include="Resources\PoolImages\Pool90Percent.jpg" />
     <Content Include="Resources\potentional logo.png" />
     <Content Include="Resources\LogoImages\WithoutTextLogo.PNG" />
+    <Content Include="Resources\RadioSongs\EnasAetos.wav" />
+    <Content Include="Resources\RadioSongs\Itia.wav" />
+    <Content Include="Resources\RadioSongs\MiloMouKokkino.wav" />
+    <Content Include="Resources\RoomImages\ApartmentImageAirCoditionOn.jpg" />
+    <Content Include="Resources\RoomImages\ApartmentImageAirCoditionOnAndTVOn.jpg" />
+    <Content Include="Resources\RoomImages\ApartmentImageAirCoditionOnAndTVOnNetflix.jpg" />
+    <Content Include="Resources\RoomImages\ApartmentImageDefault.jpg" />
+    <Content Include="Resources\RoomImages\ApartmentImageTVOn.jpg" />
+    <Content Include="Resources\RoomImages\ApartmentImageTVOnNetflix.jpg" />
+    <Content Include="Resources\RoomImages\radioOff.png" />
+    <Content Include="Resources\RoomImages\radioOn.png" />
     <Content Include="Resources\TemperatureDecreaseImage.png" />
     <Content Include="Resources\TemperatureIncreaseImage.png" />
     <Content Include="Resources\WhiteMarbleBackground.jpg" />

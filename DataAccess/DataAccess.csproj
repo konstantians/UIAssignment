@@ -94,6 +94,7 @@
     <Compile Include="Models\PoolAlert.cs" />
     <Compile Include="Models\Radio.cs" />
     <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Television.cs" />
     <Compile Include="Models\TroyanHorse.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

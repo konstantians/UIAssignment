@@ -226,4 +226,40 @@
   <data name="scifyAlarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AlarmSounds\scifyAlarm.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ApartmentImageDefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\ApartmentImageDefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColumnHorizontalTransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColumnHorizontalTransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ApartmentImageAirCoditionOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\ApartmentImageAirCoditionOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ApartmentImageAirCoditionOnAndTVOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\ApartmentImageAirCoditionOnAndTVOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ApartmentImageAirCoditionOnAndTVOnNetflix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\ApartmentImageAirCoditionOnAndTVOnNetflix.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ApartmentImageTVOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\ApartmentImageTVOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ApartmentImageTVOnNetflix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\ApartmentImageTVOnNetflix.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radioOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\radioOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radioOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomImages\radioOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MiloMouKokkino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RadioSongs\MiloMouKokkino.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EnasAetos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RadioSongs\EnasAetos.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Itia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RadioSongs\Itia.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

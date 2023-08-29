@@ -17,14 +17,6 @@ namespace UIAssignment.Forms.CommonForms
         {
             InitializeComponent();
 
-            //set the pool value of the slider
-            translationHelper();
-            poolTemperature = ActiveUser.Customer.Room.Pool.PoolTemperature;
-
-            //set the water level value of the slider
-            poolWaterLevelTrackBar.Value = ActiveUser.Customer.Room.Pool.WaterLevel;
-            checkWaterLevel();
-
             fromAlertCustomDateTimePicker.Format = DateTimePickerFormat.Custom;
             fromAlertCustomDateTimePicker.CustomFormat = "HH:mm";
             fromAlertCustomDateTimePicker.ShowUpDown = true;
@@ -36,6 +28,14 @@ namespace UIAssignment.Forms.CommonForms
             //set the alarm
             if (ActiveUser.Customer != null)
             {
+                //set the pool value of the slider
+                translationHelper();
+                poolTemperature = ActiveUser.Customer.Room.Pool.PoolTemperature;
+
+                //set the water level value of the slider
+                poolWaterLevelTrackBar.Value = ActiveUser.Customer.Room.Pool.WaterLevel;
+                checkWaterLevel();
+
                 fromAlertCustomDateTimePicker.Value = ActiveUser.Customer.Room.Pool.PoolAlert.From;
                 untilAlertCustomDateTimePicker.Value = ActiveUser.Customer.Room.Pool.PoolAlert.Until;
                 if (ActiveUser.Customer.Room.Pool.PoolAlert.SoundTrack == "Simple")

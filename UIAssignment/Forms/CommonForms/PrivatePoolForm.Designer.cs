@@ -38,7 +38,7 @@
             this.poolTemperatureLabel = new System.Windows.Forms.Label();
             this.poolWaterLevelTitle = new System.Windows.Forms.Label();
             this.privatePoolPictureBox = new System.Windows.Forms.PictureBox();
-            this.poolUtilitiesPanelOne = new System.Windows.Forms.Panel();
+            this.poolUtilitiesOnePanel = new System.Windows.Forms.Panel();
             this.poolUtilitiesTwoPanel = new System.Windows.Forms.Panel();
             this.soundtrackCheckButton = new UIAssignment.Resources.Cool_button();
             this.untilAlertCustomDateTimePicker = new UIAssignment.CustomDateTimePicker();
@@ -92,7 +92,7 @@
             this.hiddenTemperaturePictureBox = new UIAssignment.TransparentPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.privatePoolPictureBox)).BeginInit();
-            this.poolUtilitiesPanelOne.SuspendLayout();
+            this.poolUtilitiesOnePanel.SuspendLayout();
             this.poolUtilitiesTwoPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poolTemperatureTrackBar)).BeginInit();
@@ -117,7 +117,7 @@
             this.panel1.Controls.Add(this.poolWaterLevelTitle);
             this.panel1.Location = new System.Drawing.Point(26, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 83);
+            this.panel1.Size = new System.Drawing.Size(324, 79);
             this.panel1.TabIndex = 9;
             // 
             // poolAlarmTitleValueLabel
@@ -195,16 +195,16 @@
             this.privatePoolPictureBox.TabIndex = 0;
             this.privatePoolPictureBox.TabStop = false;
             // 
-            // poolUtilitiesPanelOne
+            // poolUtilitiesOnePanel
             // 
-            this.poolUtilitiesPanelOne.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
-            this.poolUtilitiesPanelOne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.poolUtilitiesPanelOne.Controls.Add(this.poolUtilitiesTwoPanel);
-            this.poolUtilitiesPanelOne.Location = new System.Drawing.Point(368, 21);
-            this.poolUtilitiesPanelOne.Margin = new System.Windows.Forms.Padding(2);
-            this.poolUtilitiesPanelOne.Name = "poolUtilitiesPanelOne";
-            this.poolUtilitiesPanelOne.Size = new System.Drawing.Size(562, 527);
-            this.poolUtilitiesPanelOne.TabIndex = 5;
+            this.poolUtilitiesOnePanel.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
+            this.poolUtilitiesOnePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.poolUtilitiesOnePanel.Controls.Add(this.poolUtilitiesTwoPanel);
+            this.poolUtilitiesOnePanel.Location = new System.Drawing.Point(368, 21);
+            this.poolUtilitiesOnePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.poolUtilitiesOnePanel.Name = "poolUtilitiesOnePanel";
+            this.poolUtilitiesOnePanel.Size = new System.Drawing.Size(562, 527);
+            this.poolUtilitiesOnePanel.TabIndex = 5;
             // 
             // poolUtilitiesTwoPanel
             // 
@@ -867,14 +867,14 @@
             this.Controls.Add(this.privatePoolPictureBox);
             this.Controls.Add(this.hiddenTemperaturePictureBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.poolUtilitiesPanelOne);
+            this.Controls.Add(this.poolUtilitiesOnePanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrivatePoolForm";
             this.Text = "PrivatePoolForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.privatePoolPictureBox)).EndInit();
-            this.poolUtilitiesPanelOne.ResumeLayout(false);
+            this.poolUtilitiesOnePanel.ResumeLayout(false);
             this.poolUtilitiesTwoPanel.ResumeLayout(false);
             this.poolUtilitiesTwoPanel.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -894,7 +894,7 @@
         private System.Windows.Forms.Panel poolUtilitiesTwoPanel;
         private System.Windows.Forms.TrackBar poolWaterLevelTrackBar;
         private System.Windows.Forms.Label poolWaterLevelOneLabel;
-        private System.Windows.Forms.Panel poolUtilitiesPanelOne;
+        private System.Windows.Forms.Panel poolUtilitiesOnePanel;
         private System.Windows.Forms.Label PoolUtilitiesLabel;
         private Resources.Cool_button saveChangesButton;
         private System.Windows.Forms.Panel panel4;

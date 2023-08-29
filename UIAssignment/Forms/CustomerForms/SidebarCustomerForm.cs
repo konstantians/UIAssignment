@@ -93,6 +93,8 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void openChildForm(ChildForm childForm)
         {
+            if (activeForm != null && activeForm.UnsavedChangesDetected())
+                return;
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
@@ -131,7 +133,7 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void apartmentSectionButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new RoomForm());
         }
 
         private void restaurantSectionButton_Click(object sender, EventArgs e)
