@@ -166,6 +166,20 @@ namespace UIAssignment.Forms.CustomerForms
 
         }
 
-        
+        private void helpSectionButton_Click(object sender, EventArgs e)
+        {
+            if (activeForm.GetType() == typeof(PrivatePoolForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs30.htm");
+            }
+            else if (activeForm.GetType() == typeof(RoomForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs20.htm");
+            }
+            else
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs17.htm");
+            }
+        }
     }
 }
