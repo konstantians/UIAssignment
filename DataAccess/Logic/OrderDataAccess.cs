@@ -2,10 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Logic
 {
@@ -137,19 +133,22 @@ namespace DataAccess.Logic
 
             bool shouldClose = HelperMethods.CheckConnectionAndOpenIfNecessary();
 
-            string sqlQuery = "SELECT FoodName, Price, FoodImage FROM Food;";
+            string sqlQuery = "SELECT FoodName, Price, Category, Description, PreparationTime, FoodImage FROM Food;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
             SQLiteDataReader reader = command.ExecuteReader();
 
             List<Food> foods = new List<Food>();
 
-            if (reader.Read())
+            while (reader.Read())
             {
                 Food food = new Food();
                 food.FoodName = reader.GetString(0);
                 food.PricePerUnit = reader.GetDouble(1);
-                food.FoodImage = reader.GetString(2);
+                food.Category = reader.GetString(2);
+                food.Description = reader.GetString(3);
+                food.PreparationTime = reader.GetInt32(4);
+                food.FoodImage = reader.GetString(5);
 
                 foods.Add(food);
             }
@@ -165,7 +164,7 @@ namespace DataAccess.Logic
 
             bool shouldClose = HelperMethods.CheckConnectionAndOpenIfNecessary();
 
-            string sqlQuery = "SELECT FoodName, Price, FoodImage FROM PoolAlert WHERE foodName = @foodName;";
+            string sqlQuery = "SELECT FoodName, Price, Category, Description, PreparationTime, FoodImage FROM Food WHERE foodName = @foodName;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
             command.Parameters.AddWithValue("@foodName", foodName);
@@ -177,7 +176,10 @@ namespace DataAccess.Logic
             {
                 food.FoodName = reader.GetString(0);
                 food.PricePerUnit = reader.GetDouble(1);
-                food.FoodImage = reader.GetString(2);
+                food.Category = reader.GetString(2);
+                food.Description = reader.GetString(3);
+                food.PreparationTime = reader.GetInt32(4);
+                food.FoodImage = reader.GetString(5);
             }
 
             HelperMethods.CloseConnectionOrDoNothing(shouldClose);
@@ -188,13 +190,16 @@ namespace DataAccess.Logic
         public static void CreateFood(Food food)
         {
             ConnectionClass.connection.Open();
-            string sqlQuery = "INSERT INTO PoolAlert(FoodName, Price, FoodImage) " +
-                 "VALUES(@foodName, @price, @foodImage);";
+            string sqlQuery = "INSERT INTO Food(FoodName, Price, Category, Description, PreparationTime, FoodImage) " +
+                 "VALUES(@foodName, @price, @category, @description, @preparationTime, @foodImage);";
 
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
             command.Parameters.AddWithValue("@foodName", food.FoodName);
             command.Parameters.AddWithValue("@price", food.PricePerUnit);
+            command.Parameters.AddWithValue("@price", food.Category);
+            command.Parameters.AddWithValue("@description", food.Description);
+            command.Parameters.AddWithValue("@preparationTime", food.PreparationTime);
             command.Parameters.AddWithValue("@foodImage", food.FoodImage);
             command.ExecuteNonQuery();
 

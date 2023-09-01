@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace UIAssignment.Resources
 {
-    /*internal*/ public class Cool_button : Button
+    public class Cool_button : Button
     {
         private int borderSize = 0;
         private int borderRadius = 40;

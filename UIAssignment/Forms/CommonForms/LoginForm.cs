@@ -3,11 +3,7 @@ using DataAccess.Models;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using UIAssignment;
-using UIAssignment.Forms;
-using UIAssignment.Forms.CommonForms;
 using UIAssignment.Forms.CustomerForms;
-using UIAssignment.Resources;
 
 
 namespace UIAssignment.Forms.CommonForms
