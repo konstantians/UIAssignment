@@ -138,7 +138,7 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void restaurantSectionButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new RestaurantForm());
         }
 
         private void poolSectionButton_Click(object sender, EventArgs e)

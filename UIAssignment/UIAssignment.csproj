@@ -78,14 +78,35 @@
     <Compile Include="CustomRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomRadioButtonTransparentBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomToggleButton.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\AddFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\AddFoodForm.Designer.cs">
+      <DependentUpon>AddFoodForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CommonForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CommonForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CommonForms\RestaurantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\RestaurantForm.Designer.cs">
+      <DependentUpon>RestaurantForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CommonForms\RoomForm.cs">
       <SubType>Form</SubType>
@@ -154,8 +175,17 @@
     <EmbeddedResource Include="Cool_button.resx">
       <DependentUpon>Cool_button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\AddFoodForm.resx">
+      <DependentUpon>AddFoodForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\RestaurantForm.resx">
+      <DependentUpon>RestaurantForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
@@ -209,6 +239,28 @@
     <Content Include="Resources\BlackMarbleBackground.jpg" />
     <Content Include="Resources\ColumnHorizontalTransparent.png" />
     <Content Include="Resources\ColumnTransparent.png" />
+    <Content Include="Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο.PNG" />
+    <Content Include="Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιο.PNG" />
+    <Content Include="Resources\FoodImages\Burgers\ClubSandwichClassic.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\PepsiMax330ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\AmstelΦιάλη500ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\CocaCola330ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\CocaColaZero330ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\Corona330ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\Pepsi330ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\ΆλφαΦιάλη500ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\Νερό1.5lt.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδα.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδα.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΚαλαμάκιΧοιρινόΜερίδα.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδα.PNG" />
+    <Content Include="Resources\FoodImages\Salads\Caesars.PNG" />
+    <Content Include="Resources\FoodImages\Salads\ΑπόΤοΧωριό.PNG" />
+    <Content Include="Resources\FoodImages\Salads\ΕποχήςΜεΛάχανοΚαρότο.PNG" />
+    <Content Include="Resources\FoodImages\Salads\ΕποχήςΜεΜαρούλι.PNG" />
+    <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίτα.PNG" />
+    <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίτα.PNG" />
+    <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίτα.PNG" />
     <Content Include="Resources\LogoImages\FullLogo.PNG" />
     <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
     <Content Include="Resources\LogoImages\TranspareWithoutTextLogo.png" />
@@ -239,6 +291,7 @@
     <Content Include="Resources\RoomImages\ApartmentImageTVOnNetflix.jpg" />
     <Content Include="Resources\RoomImages\radioOff.png" />
     <Content Include="Resources\RoomImages\radioOn.png" />
+    <Content Include="Resources\Icons\ShoppingCart.png" />
     <Content Include="Resources\TemperatureDecreaseImage.png" />
     <Content Include="Resources\TemperatureIncreaseImage.png" />
     <Content Include="Resources\WhiteMarbleBackground.jpg" />

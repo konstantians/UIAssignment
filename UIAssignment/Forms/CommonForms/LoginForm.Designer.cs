@@ -43,18 +43,17 @@ namespace UIAssignment.Forms.CommonForms
             this.accountTypeLabel = new System.Windows.Forms.Label();
             this.registerLabel = new System.Windows.Forms.Label();
             this.forgotPasswordLabel = new System.Windows.Forms.Label();
-            this.employeeRadioButton = new CustomRadioButton();
-            this.customerRadioButton = new CustomRadioButton();
+            this.employeeRadioButton = new UIAssignment.CustomRadioButton();
+            this.customerRadioButton = new UIAssignment.CustomRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // usernameTextbox
             // 
             this.usernameTextbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextbox.Location = new System.Drawing.Point(288, 265);
-            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameTextbox.Location = new System.Drawing.Point(216, 215);
             this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(388, 31);
+            this.usernameTextbox.Size = new System.Drawing.Size(292, 26);
             this.usernameTextbox.TabIndex = 0;
             this.usernameTextbox.Enter += new System.EventHandler(this.usernameTextbox_Enter);
             this.usernameTextbox.Leave += new System.EventHandler(this.usernameTextbox_Leave);
@@ -64,10 +63,9 @@ namespace UIAssignment.Forms.CommonForms
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.ForeColor = System.Drawing.Color.Black;
-            this.usernameLabel.Location = new System.Drawing.Point(283, 234);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usernameLabel.Location = new System.Drawing.Point(212, 190);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(133, 27);
+            this.usernameLabel.Size = new System.Drawing.Size(105, 22);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username";
             // 
@@ -76,10 +74,9 @@ namespace UIAssignment.Forms.CommonForms
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.ForeColor = System.Drawing.Color.Black;
-            this.passwordLabel.Location = new System.Drawing.Point(283, 325);
-            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passwordLabel.Location = new System.Drawing.Point(212, 264);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(131, 27);
+            this.passwordLabel.Size = new System.Drawing.Size(105, 22);
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Password";
             // 
@@ -90,10 +87,9 @@ namespace UIAssignment.Forms.CommonForms
             this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signInButton.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInButton.ForeColor = System.Drawing.Color.Black;
-            this.signInButton.Location = new System.Drawing.Point(371, 575);
-            this.signInButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signInButton.Location = new System.Drawing.Point(278, 467);
             this.signInButton.Name = "signInButton";
-            this.signInButton.Size = new System.Drawing.Size(224, 58);
+            this.signInButton.Size = new System.Drawing.Size(168, 47);
             this.signInButton.TabIndex = 3;
             this.signInButton.Text = "Sign In";
             this.signInButton.UseVisualStyleBackColor = false;
@@ -106,10 +102,9 @@ namespace UIAssignment.Forms.CommonForms
             // passwordTextbox
             // 
             this.passwordTextbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextbox.Location = new System.Drawing.Point(288, 356);
-            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordTextbox.Location = new System.Drawing.Point(216, 289);
             this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(388, 31);
+            this.passwordTextbox.Size = new System.Drawing.Size(292, 26);
             this.passwordTextbox.TabIndex = 1;
             this.passwordTextbox.Enter += new System.EventHandler(this.passwordTextbox_Enter);
             this.passwordTextbox.Leave += new System.EventHandler(this.passwordTextbox_Leave);
@@ -121,29 +116,26 @@ namespace UIAssignment.Forms.CommonForms
             this.registerLabelFake.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.registerLabelFake.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerLabelFake.ForeColor = System.Drawing.Color.Black;
-            this.registerLabelFake.Location = new System.Drawing.Point(299, 678);
-            this.registerLabelFake.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.registerLabelFake.Location = new System.Drawing.Point(224, 551);
             this.registerLabelFake.Name = "registerLabelFake";
-            this.registerLabelFake.Size = new System.Drawing.Size(341, 23);
+            this.registerLabelFake.Size = new System.Drawing.Size(274, 18);
             this.registerLabelFake.TabIndex = 4;
             this.registerLabelFake.Text = "Do you not have an account yet?";
             // 
             // rightPanel
             // 
             this.rightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightPanel.BackgroundImage")));
-            this.rightPanel.Location = new System.Drawing.Point(847, 15);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rightPanel.Location = new System.Drawing.Point(635, 12);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(103, 719);
+            this.rightPanel.Size = new System.Drawing.Size(77, 584);
             this.rightPanel.TabIndex = 11;
             // 
             // leftPanel
             // 
             this.leftPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leftPanel.BackgroundImage")));
-            this.leftPanel.Location = new System.Drawing.Point(16, 15);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftPanel.Location = new System.Drawing.Point(12, 12);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(103, 719);
+            this.leftPanel.Size = new System.Drawing.Size(77, 584);
             this.leftPanel.TabIndex = 10;
             // 
             // logoPicturebox
@@ -151,10 +143,9 @@ namespace UIAssignment.Forms.CommonForms
             this.logoPicturebox.BackgroundImage = global::UIAssignment.Properties.Resources.potentional_logo;
             this.logoPicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logoPicturebox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logoPicturebox.Location = new System.Drawing.Point(371, 15);
-            this.logoPicturebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoPicturebox.Location = new System.Drawing.Point(278, 12);
             this.logoPicturebox.Name = "logoPicturebox";
-            this.logoPicturebox.Size = new System.Drawing.Size(224, 176);
+            this.logoPicturebox.Size = new System.Drawing.Size(168, 143);
             this.logoPicturebox.TabIndex = 3;
             this.logoPicturebox.TabStop = false;
             // 
@@ -163,10 +154,9 @@ namespace UIAssignment.Forms.CommonForms
             this.accountTypeLabel.AutoSize = true;
             this.accountTypeLabel.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountTypeLabel.ForeColor = System.Drawing.Color.Black;
-            this.accountTypeLabel.Location = new System.Drawing.Point(283, 426);
-            this.accountTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.accountTypeLabel.Location = new System.Drawing.Point(212, 346);
             this.accountTypeLabel.Name = "accountTypeLabel";
-            this.accountTypeLabel.Size = new System.Drawing.Size(185, 27);
+            this.accountTypeLabel.Size = new System.Drawing.Size(148, 22);
             this.accountTypeLabel.TabIndex = 12;
             this.accountTypeLabel.Text = "Account Type";
             // 
@@ -177,10 +167,9 @@ namespace UIAssignment.Forms.CommonForms
             this.registerLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registerLabel.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
-            this.registerLabel.Location = new System.Drawing.Point(407, 711);
-            this.registerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.registerLabel.Location = new System.Drawing.Point(305, 578);
             this.registerLabel.Name = "registerLabel";
-            this.registerLabel.Size = new System.Drawing.Size(146, 23);
+            this.registerLabel.Size = new System.Drawing.Size(116, 18);
             this.registerLabel.TabIndex = 14;
             this.registerLabel.Text = "Sign Up Here!";
             this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
@@ -194,10 +183,9 @@ namespace UIAssignment.Forms.CommonForms
             this.forgotPasswordLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPasswordLabel.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
-            this.forgotPasswordLabel.Location = new System.Drawing.Point(284, 501);
-            this.forgotPasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.forgotPasswordLabel.Location = new System.Drawing.Point(213, 407);
             this.forgotPasswordLabel.Name = "forgotPasswordLabel";
-            this.forgotPasswordLabel.Size = new System.Drawing.Size(191, 23);
+            this.forgotPasswordLabel.Size = new System.Drawing.Size(154, 18);
             this.forgotPasswordLabel.TabIndex = 15;
             this.forgotPasswordLabel.Text = "Forgot Password?";
             this.forgotPasswordLabel.Click += new System.EventHandler(this.forgotPasswordLabel_Click);
@@ -210,10 +198,9 @@ namespace UIAssignment.Forms.CommonForms
             this.employeeRadioButton.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
             this.employeeRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.employeeRadioButton.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeRadioButton.Location = new System.Drawing.Point(485, 457);
-            this.employeeRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.employeeRadioButton.Location = new System.Drawing.Point(364, 371);
             this.employeeRadioButton.Name = "employeeRadioButton";
-            this.employeeRadioButton.Size = new System.Drawing.Size(132, 27);
+            this.employeeRadioButton.Size = new System.Drawing.Size(105, 22);
             this.employeeRadioButton.TabIndex = 3;
             this.employeeRadioButton.Text = "Employee";
             this.employeeRadioButton.UnCheckedColor = System.Drawing.Color.Black;
@@ -226,10 +213,9 @@ namespace UIAssignment.Forms.CommonForms
             this.customerRadioButton.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
             this.customerRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerRadioButton.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerRadioButton.Location = new System.Drawing.Point(288, 457);
-            this.customerRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.customerRadioButton.Location = new System.Drawing.Point(216, 371);
             this.customerRadioButton.Name = "customerRadioButton";
-            this.customerRadioButton.Size = new System.Drawing.Size(131, 27);
+            this.customerRadioButton.Size = new System.Drawing.Size(106, 22);
             this.customerRadioButton.TabIndex = 2;
             this.customerRadioButton.TabStop = true;
             this.customerRadioButton.Text = "Customer";
@@ -238,10 +224,10 @@ namespace UIAssignment.Forms.CommonForms
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(217)))), ((int)(((byte)(194)))));
-            this.ClientSize = new System.Drawing.Size(965, 748);
+            this.ClientSize = new System.Drawing.Size(724, 608);
             this.Controls.Add(this.forgotPasswordLabel);
             this.Controls.Add(this.registerLabel);
             this.Controls.Add(this.accountTypeLabel);
@@ -256,7 +242,6 @@ namespace UIAssignment.Forms.CommonForms
             this.Controls.Add(this.logoPicturebox);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.usernameTextbox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
