@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.hiddenTemperatureTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.poolStatusPanel = new System.Windows.Forms.Panel();
             this.poolAlarmTitleValueLabel = new System.Windows.Forms.Label();
             this.poolTemperatureTitleValueLabel = new System.Windows.Forms.Label();
             this.poolWaterLevelTitleValueLabel = new System.Windows.Forms.Label();
@@ -79,24 +79,24 @@
             this.poolZeroPercentWaterLevelLabel = new System.Windows.Forms.Label();
             this.poolTwentyEightCelciusTemperatureLabel = new System.Windows.Forms.Label();
             this.poolTwentyPercentWaterLevelLabel = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.temperatureControlPanel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.poolTemperatureTrackBar = new System.Windows.Forms.TrackBar();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.waterLevelControlPanel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.poolWaterLevelTrackBar = new System.Windows.Forms.TrackBar();
             this.hiddenTemperaturePictureBox = new UIAssignment.TransparentPictureBox();
-            this.panel1.SuspendLayout();
+            this.poolStatusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.privatePoolPictureBox)).BeginInit();
             this.poolUtilitiesOnePanel.SuspendLayout();
             this.poolUtilitiesTwoPanel.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.temperatureControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poolTemperatureTrackBar)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.waterLevelControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poolWaterLevelTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hiddenTemperaturePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -106,19 +106,19 @@
             this.hiddenTemperatureTimer.Interval = 50;
             this.hiddenTemperatureTimer.Tick += new System.EventHandler(this.hiddenTemperatureTimer_Tick);
             // 
-            // panel1
+            // poolStatusPanel
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.poolAlarmTitleValueLabel);
-            this.panel1.Controls.Add(this.poolTemperatureTitleValueLabel);
-            this.panel1.Controls.Add(this.poolWaterLevelTitleValueLabel);
-            this.panel1.Controls.Add(this.poolAlarmTitleLabel);
-            this.panel1.Controls.Add(this.poolTemperatureLabel);
-            this.panel1.Controls.Add(this.poolWaterLevelTitle);
-            this.panel1.Location = new System.Drawing.Point(26, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 79);
-            this.panel1.TabIndex = 9;
+            this.poolStatusPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.poolStatusPanel.Controls.Add(this.poolAlarmTitleValueLabel);
+            this.poolStatusPanel.Controls.Add(this.poolTemperatureTitleValueLabel);
+            this.poolStatusPanel.Controls.Add(this.poolWaterLevelTitleValueLabel);
+            this.poolStatusPanel.Controls.Add(this.poolAlarmTitleLabel);
+            this.poolStatusPanel.Controls.Add(this.poolTemperatureLabel);
+            this.poolStatusPanel.Controls.Add(this.poolWaterLevelTitle);
+            this.poolStatusPanel.Location = new System.Drawing.Point(26, 21);
+            this.poolStatusPanel.Name = "poolStatusPanel";
+            this.poolStatusPanel.Size = new System.Drawing.Size(324, 79);
+            this.poolStatusPanel.TabIndex = 9;
             // 
             // poolAlarmTitleValueLabel
             // 
@@ -185,6 +185,8 @@
             // 
             // privatePoolPictureBox
             // 
+            this.privatePoolPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.privatePoolPictureBox.BackgroundImage = global::UIAssignment.Properties.Resources.Pool0Percent;
             this.privatePoolPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.privatePoolPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -197,6 +199,9 @@
             // 
             // poolUtilitiesOnePanel
             // 
+            this.poolUtilitiesOnePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.poolUtilitiesOnePanel.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
             this.poolUtilitiesOnePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.poolUtilitiesOnePanel.Controls.Add(this.poolUtilitiesTwoPanel);
@@ -208,6 +213,9 @@
             // 
             // poolUtilitiesTwoPanel
             // 
+            this.poolUtilitiesTwoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.poolUtilitiesTwoPanel.BackColor = System.Drawing.Color.Transparent;
             this.poolUtilitiesTwoPanel.BackgroundImage = global::UIAssignment.Properties.Resources.MaiandrosSquareBlackImage;
             this.poolUtilitiesTwoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -251,8 +259,8 @@
             this.poolUtilitiesTwoPanel.Controls.Add(this.poolZeroPercentWaterLevelLabel);
             this.poolUtilitiesTwoPanel.Controls.Add(this.poolTwentyEightCelciusTemperatureLabel);
             this.poolUtilitiesTwoPanel.Controls.Add(this.poolTwentyPercentWaterLevelLabel);
-            this.poolUtilitiesTwoPanel.Controls.Add(this.panel8);
-            this.poolUtilitiesTwoPanel.Controls.Add(this.panel6);
+            this.poolUtilitiesTwoPanel.Controls.Add(this.temperatureControlPanel);
+            this.poolUtilitiesTwoPanel.Controls.Add(this.waterLevelControlPanel);
             this.poolUtilitiesTwoPanel.Location = new System.Drawing.Point(-1, -1);
             this.poolUtilitiesTwoPanel.Margin = new System.Windows.Forms.Padding(2);
             this.poolUtilitiesTwoPanel.Name = "poolUtilitiesTwoPanel";
@@ -261,6 +269,7 @@
             // 
             // soundtrackCheckButton
             // 
+            this.soundtrackCheckButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.soundtrackCheckButton.BackColor = System.Drawing.Color.Transparent;
             this.soundtrackCheckButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.soundtrackCheckButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -286,6 +295,7 @@
             // 
             // untilAlertCustomDateTimePicker
             // 
+            this.untilAlertCustomDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.untilAlertCustomDateTimePicker.BorderColor = System.Drawing.Color.DimGray;
             this.untilAlertCustomDateTimePicker.BorderSize = 1;
             this.untilAlertCustomDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -299,6 +309,7 @@
             // 
             // fromAlertCustomDateTimePicker
             // 
+            this.fromAlertCustomDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fromAlertCustomDateTimePicker.BorderColor = System.Drawing.Color.DimGray;
             this.fromAlertCustomDateTimePicker.BorderSize = 1;
             this.fromAlertCustomDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -312,6 +323,7 @@
             // 
             // alarmSoundTrackCustomComboBox
             // 
+            this.alarmSoundTrackCustomComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.alarmSoundTrackCustomComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.alarmSoundTrackCustomComboBox.BorderColor = System.Drawing.Color.DimGray;
             this.alarmSoundTrackCustomComboBox.BorderSize = 1;
@@ -336,6 +348,7 @@
             // 
             // activateDeactivateAlertLabel
             // 
+            this.activateDeactivateAlertLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.activateDeactivateAlertLabel.AutoSize = true;
             this.activateDeactivateAlertLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activateDeactivateAlertLabel.Location = new System.Drawing.Point(289, 350);
@@ -347,6 +360,7 @@
             // 
             // soundtrackLabel
             // 
+            this.soundtrackLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.soundtrackLabel.AutoSize = true;
             this.soundtrackLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soundtrackLabel.Location = new System.Drawing.Point(289, 279);
@@ -358,6 +372,7 @@
             // 
             // untilLabel
             // 
+            this.untilLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.untilLabel.AutoSize = true;
             this.untilLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.untilLabel.Location = new System.Drawing.Point(289, 237);
@@ -369,6 +384,7 @@
             // 
             // fromLabel
             // 
+            this.fromLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fromLabel.AutoSize = true;
             this.fromLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromLabel.Location = new System.Drawing.Point(289, 190);
@@ -380,6 +396,7 @@
             // 
             // activateDeactivateToggleButton
             // 
+            this.activateDeactivateToggleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.activateDeactivateToggleButton.AutoSize = true;
             this.activateDeactivateToggleButton.BackColor = System.Drawing.Color.Transparent;
             this.activateDeactivateToggleButton.Location = new System.Drawing.Point(428, 347);
@@ -397,6 +414,7 @@
             // 
             // PoolUtilitiesLabel
             // 
+            this.PoolUtilitiesLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PoolUtilitiesLabel.AutoSize = true;
             this.PoolUtilitiesLabel.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PoolUtilitiesLabel.Location = new System.Drawing.Point(180, 78);
@@ -408,6 +426,7 @@
             // 
             // saveChangesButton
             // 
+            this.saveChangesButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.saveChangesButton.BackColor = System.Drawing.Color.Transparent;
             this.saveChangesButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.saveChangesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -435,6 +454,7 @@
             // 
             // poolAlertTwoLabel
             // 
+            this.poolAlertTwoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.poolAlertTwoLabel.AutoSize = true;
             this.poolAlertTwoLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.poolAlertTwoLabel.Location = new System.Drawing.Point(352, 144);
@@ -446,6 +466,7 @@
             // 
             // poolAlertOneLabel
             // 
+            this.poolAlertOneLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.poolAlertOneLabel.AutoSize = true;
             this.poolAlertOneLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.poolAlertOneLabel.Location = new System.Drawing.Point(340, 127);
@@ -741,19 +762,19 @@
             this.poolTwentyPercentWaterLevelLabel.TabIndex = 12;
             this.poolTwentyPercentWaterLevelLabel.Text = "20%";
             // 
-            // panel8
+            // temperatureControlPanel
             // 
-            this.panel8.BackgroundImage = global::UIAssignment.Properties.Resources.ColumnTransparent;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.panel11);
-            this.panel8.Controls.Add(this.poolTemperatureTrackBar);
-            this.panel8.Location = new System.Drawing.Point(190, 164);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(56, 203);
-            this.panel8.TabIndex = 22;
+            this.temperatureControlPanel.BackgroundImage = global::UIAssignment.Properties.Resources.ColumnTransparent;
+            this.temperatureControlPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.temperatureControlPanel.Controls.Add(this.panel9);
+            this.temperatureControlPanel.Controls.Add(this.panel10);
+            this.temperatureControlPanel.Controls.Add(this.panel11);
+            this.temperatureControlPanel.Controls.Add(this.poolTemperatureTrackBar);
+            this.temperatureControlPanel.Location = new System.Drawing.Point(190, 164);
+            this.temperatureControlPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.temperatureControlPanel.Name = "temperatureControlPanel";
+            this.temperatureControlPanel.Size = new System.Drawing.Size(56, 203);
+            this.temperatureControlPanel.TabIndex = 22;
             // 
             // panel9
             // 
@@ -794,19 +815,19 @@
             this.poolTemperatureTrackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.poolTemperatureTrackBar.Scroll += new System.EventHandler(this.poolTemperatureTrackBar_Scroll);
             // 
-            // panel6
+            // waterLevelControlPanel
             // 
-            this.panel6.BackgroundImage = global::UIAssignment.Properties.Resources.ColumnTransparent;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Controls.Add(this.poolWaterLevelTrackBar);
-            this.panel6.Location = new System.Drawing.Point(85, 164);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(56, 203);
-            this.panel6.TabIndex = 11;
+            this.waterLevelControlPanel.BackgroundImage = global::UIAssignment.Properties.Resources.ColumnTransparent;
+            this.waterLevelControlPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.waterLevelControlPanel.Controls.Add(this.panel7);
+            this.waterLevelControlPanel.Controls.Add(this.panel5);
+            this.waterLevelControlPanel.Controls.Add(this.panel4);
+            this.waterLevelControlPanel.Controls.Add(this.poolWaterLevelTrackBar);
+            this.waterLevelControlPanel.Location = new System.Drawing.Point(85, 164);
+            this.waterLevelControlPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.waterLevelControlPanel.Name = "waterLevelControlPanel";
+            this.waterLevelControlPanel.Size = new System.Drawing.Size(56, 203);
+            this.waterLevelControlPanel.TabIndex = 11;
             // 
             // panel7
             // 
@@ -866,22 +887,23 @@
             this.ClientSize = new System.Drawing.Size(950, 571);
             this.Controls.Add(this.privatePoolPictureBox);
             this.Controls.Add(this.hiddenTemperaturePictureBox);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.poolStatusPanel);
             this.Controls.Add(this.poolUtilitiesOnePanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrivatePoolForm";
             this.Text = "PrivatePoolForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.poolStatusPanel.ResumeLayout(false);
+            this.poolStatusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.privatePoolPictureBox)).EndInit();
             this.poolUtilitiesOnePanel.ResumeLayout(false);
             this.poolUtilitiesTwoPanel.ResumeLayout(false);
             this.poolUtilitiesTwoPanel.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.temperatureControlPanel.ResumeLayout(false);
+            this.temperatureControlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poolTemperatureTrackBar)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.waterLevelControlPanel.ResumeLayout(false);
+            this.waterLevelControlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poolWaterLevelTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hiddenTemperaturePictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -899,7 +921,7 @@
         private Resources.Cool_button saveChangesButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel waterLevelControlPanel;
         private System.Windows.Forms.Label poolTenPercentWaterLevelLabel;
         private System.Windows.Forms.Label poolZeroPercentWaterLevelLabel;
         private System.Windows.Forms.Label poolTwentyPercentWaterLevelLabel;
@@ -926,7 +948,7 @@
         private System.Windows.Forms.Label poolTwentySevenPointFiveCelciusTemperatureLabel;
         private System.Windows.Forms.Label poolTwentySevenCelciusTemperatureLabel;
         private System.Windows.Forms.Label poolTwentyEightCelciusTemperatureLabel;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel temperatureControlPanel;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
@@ -941,7 +963,7 @@
         private CustomComboBox alarmSoundTrackCustomComboBox;
         private System.Windows.Forms.Timer hiddenTemperatureTimer;
         private TransparentPictureBox hiddenTemperaturePictureBox;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel poolStatusPanel;
         private System.Windows.Forms.Label poolWaterLevelTitle;
         private System.Windows.Forms.Label poolAlarmTitleLabel;
         private System.Windows.Forms.Label poolTemperatureLabel;

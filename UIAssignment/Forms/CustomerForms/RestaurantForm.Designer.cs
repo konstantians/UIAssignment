@@ -1,4 +1,4 @@
-﻿namespace UIAssignment.Forms.CommonForms
+﻿namespace UIAssignment.Forms.CustomerForms
 {
     partial class RestaurantForm
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.foodsPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.shoppingCartButtonIcon = new System.Windows.Forms.PictureBox();
             this.shoppingCartButton = new UIAssignment.Resources.Cool_button();
             this.thirdFoodPanel = new System.Windows.Forms.Panel();
             this.thirdFoodSectionTimeValueLabel = new System.Windows.Forms.Label();
@@ -105,7 +105,7 @@
             this.applyFiltersButton = new UIAssignment.Resources.Cool_button();
             this.filtersTitleLabel = new System.Windows.Forms.Label();
             this.foodsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartButtonIcon)).BeginInit();
             this.thirdFoodPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thirdFoodSectionPictureBox)).BeginInit();
             this.secondFoodPanel.SuspendLayout();
@@ -121,11 +121,14 @@
             // 
             // foodsPanel
             // 
+            this.foodsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.foodsPanel.BackColor = System.Drawing.Color.Transparent;
             this.foodsPanel.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
             this.foodsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.foodsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.foodsPanel.Controls.Add(this.pictureBox1);
+            this.foodsPanel.Controls.Add(this.shoppingCartButtonIcon);
             this.foodsPanel.Controls.Add(this.shoppingCartButton);
             this.foodsPanel.Controls.Add(this.thirdFoodPanel);
             this.foodsPanel.Controls.Add(this.secondFoodPanel);
@@ -147,19 +150,22 @@
             this.foodsPanel.Size = new System.Drawing.Size(610, 549);
             this.foodsPanel.TabIndex = 10;
             // 
-            // pictureBox1
+            // shoppingCartButtonIcon
             // 
-            this.pictureBox1.BackgroundImage = global::UIAssignment.Properties.Resources.ShoppingCart;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(490, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 23);
-            this.pictureBox1.TabIndex = 90;
-            this.pictureBox1.TabStop = false;
+            this.shoppingCartButtonIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.shoppingCartButtonIcon.BackgroundImage = global::UIAssignment.Properties.Resources.ShoppingCart;
+            this.shoppingCartButtonIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.shoppingCartButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shoppingCartButtonIcon.Location = new System.Drawing.Point(490, 13);
+            this.shoppingCartButtonIcon.Name = "shoppingCartButtonIcon";
+            this.shoppingCartButtonIcon.Size = new System.Drawing.Size(32, 23);
+            this.shoppingCartButtonIcon.TabIndex = 90;
+            this.shoppingCartButtonIcon.TabStop = false;
+            this.shoppingCartButtonIcon.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
             // shoppingCartButton
             // 
+            this.shoppingCartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.shoppingCartButton.BackColor = System.Drawing.Color.Transparent;
             this.shoppingCartButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.shoppingCartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -181,9 +187,12 @@
             this.shoppingCartButton.Text = "Καλάθι";
             this.shoppingCartButton.TextColor = System.Drawing.Color.Black;
             this.shoppingCartButton.UseVisualStyleBackColor = false;
+            this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
             // thirdFoodPanel
             // 
+            this.thirdFoodPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.thirdFoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thirdFoodPanel.Controls.Add(this.thirdFoodSectionTimeValueLabel);
             this.thirdFoodPanel.Controls.Add(this.thirdFoodSectionIngredientsValueLabel);
@@ -211,6 +220,7 @@
             this.thirdFoodSectionTimeValueLabel.Size = new System.Drawing.Size(87, 16);
             this.thirdFoodSectionTimeValueLabel.TabIndex = 82;
             this.thirdFoodSectionTimeValueLabel.Text = "Placeholder";
+            this.thirdFoodSectionTimeValueLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionIngredientsValueLabel
             // 
@@ -222,6 +232,7 @@
             this.thirdFoodSectionIngredientsValueLabel.Size = new System.Drawing.Size(87, 16);
             this.thirdFoodSectionIngredientsValueLabel.TabIndex = 81;
             this.thirdFoodSectionIngredientsValueLabel.Text = "Placeholder";
+            this.thirdFoodSectionIngredientsValueLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionPriceValueLabel
             // 
@@ -233,6 +244,7 @@
             this.thirdFoodSectionPriceValueLabel.Size = new System.Drawing.Size(87, 16);
             this.thirdFoodSectionPriceValueLabel.TabIndex = 80;
             this.thirdFoodSectionPriceValueLabel.Text = "Placeholder";
+            this.thirdFoodSectionPriceValueLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionTitleValueLabel
             // 
@@ -244,6 +256,7 @@
             this.thirdFoodSectionTitleValueLabel.Size = new System.Drawing.Size(87, 16);
             this.thirdFoodSectionTitleValueLabel.TabIndex = 79;
             this.thirdFoodSectionTitleValueLabel.Text = "Placeholder";
+            this.thirdFoodSectionTitleValueLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionTitleLabel
             // 
@@ -255,6 +268,7 @@
             this.thirdFoodSectionTitleLabel.Size = new System.Drawing.Size(62, 16);
             this.thirdFoodSectionTitleLabel.TabIndex = 78;
             this.thirdFoodSectionTitleLabel.Text = "Τίτλος :";
+            this.thirdFoodSectionTitleLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionIngredientsLabel
             // 
@@ -266,9 +280,11 @@
             this.thirdFoodSectionIngredientsLabel.Size = new System.Drawing.Size(58, 16);
             this.thirdFoodSectionIngredientsLabel.TabIndex = 77;
             this.thirdFoodSectionIngredientsLabel.Text = "Υλικά :";
+            this.thirdFoodSectionIngredientsLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionPictureBox
             // 
+            this.thirdFoodSectionPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.thirdFoodSectionPictureBox.BackgroundImage = global::UIAssignment.Properties.Resources.ΑπόΤοΧωριό;
             this.thirdFoodSectionPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.thirdFoodSectionPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -277,6 +293,7 @@
             this.thirdFoodSectionPictureBox.Size = new System.Drawing.Size(125, 103);
             this.thirdFoodSectionPictureBox.TabIndex = 71;
             this.thirdFoodSectionPictureBox.TabStop = false;
+            this.thirdFoodSectionPictureBox.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionTimeLabel
             // 
@@ -288,6 +305,7 @@
             this.thirdFoodSectionTimeLabel.Size = new System.Drawing.Size(64, 16);
             this.thirdFoodSectionTimeLabel.TabIndex = 74;
             this.thirdFoodSectionTimeLabel.Text = "Χρόνος :";
+            this.thirdFoodSectionTimeLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // thirdFoodSectionPriceLabel
             // 
@@ -299,9 +317,12 @@
             this.thirdFoodSectionPriceLabel.Size = new System.Drawing.Size(51, 16);
             this.thirdFoodSectionPriceLabel.TabIndex = 73;
             this.thirdFoodSectionPriceLabel.Text = "Τιμή :";
+            this.thirdFoodSectionPriceLabel.Click += new System.EventHandler(this.thirdFoodPanel_Click);
             // 
             // secondFoodPanel
             // 
+            this.secondFoodPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.secondFoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.secondFoodPanel.Controls.Add(this.secondFoodSectionTimeValueLabel);
             this.secondFoodPanel.Controls.Add(this.secondFoodSectionIngredientsValueLabel);
@@ -329,6 +350,7 @@
             this.secondFoodSectionTimeValueLabel.Size = new System.Drawing.Size(87, 16);
             this.secondFoodSectionTimeValueLabel.TabIndex = 82;
             this.secondFoodSectionTimeValueLabel.Text = "Placeholder";
+            this.secondFoodSectionTimeValueLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionIngredientsValueLabel
             // 
@@ -340,6 +362,7 @@
             this.secondFoodSectionIngredientsValueLabel.Size = new System.Drawing.Size(87, 16);
             this.secondFoodSectionIngredientsValueLabel.TabIndex = 81;
             this.secondFoodSectionIngredientsValueLabel.Text = "Placeholder";
+            this.secondFoodSectionIngredientsValueLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionPriceValueLabel
             // 
@@ -351,6 +374,7 @@
             this.secondFoodSectionPriceValueLabel.Size = new System.Drawing.Size(87, 16);
             this.secondFoodSectionPriceValueLabel.TabIndex = 80;
             this.secondFoodSectionPriceValueLabel.Text = "Placeholder";
+            this.secondFoodSectionPriceValueLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionTitleValueLabel
             // 
@@ -363,6 +387,7 @@
             this.secondFoodSectionTitleValueLabel.Size = new System.Drawing.Size(87, 16);
             this.secondFoodSectionTitleValueLabel.TabIndex = 79;
             this.secondFoodSectionTitleValueLabel.Text = "Placeholder";
+            this.secondFoodSectionTitleValueLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionTitleLabel
             // 
@@ -374,6 +399,7 @@
             this.secondFoodSectionTitleLabel.Size = new System.Drawing.Size(62, 16);
             this.secondFoodSectionTitleLabel.TabIndex = 78;
             this.secondFoodSectionTitleLabel.Text = "Τίτλος :";
+            this.secondFoodSectionTitleLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionIngredientsLabel
             // 
@@ -385,9 +411,11 @@
             this.secondFoodSectionIngredientsLabel.Size = new System.Drawing.Size(58, 16);
             this.secondFoodSectionIngredientsLabel.TabIndex = 77;
             this.secondFoodSectionIngredientsLabel.Text = "Υλικά :";
+            this.secondFoodSectionIngredientsLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionPictureBox
             // 
+            this.secondFoodSectionPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.secondFoodSectionPictureBox.BackgroundImage = global::UIAssignment.Properties.Resources.ΕποχήςΜεΛάχανοΚαρότο;
             this.secondFoodSectionPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.secondFoodSectionPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -396,6 +424,7 @@
             this.secondFoodSectionPictureBox.Size = new System.Drawing.Size(125, 103);
             this.secondFoodSectionPictureBox.TabIndex = 71;
             this.secondFoodSectionPictureBox.TabStop = false;
+            this.secondFoodSectionPictureBox.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionTimeLabel
             // 
@@ -407,6 +436,7 @@
             this.secondFoodSectionTimeLabel.Size = new System.Drawing.Size(64, 16);
             this.secondFoodSectionTimeLabel.TabIndex = 74;
             this.secondFoodSectionTimeLabel.Text = "Χρόνος :";
+            this.secondFoodSectionTimeLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // secondFoodSectionPriceLabel
             // 
@@ -418,9 +448,11 @@
             this.secondFoodSectionPriceLabel.Size = new System.Drawing.Size(51, 16);
             this.secondFoodSectionPriceLabel.TabIndex = 73;
             this.secondFoodSectionPriceLabel.Text = "Τιμή :";
+            this.secondFoodSectionPriceLabel.Click += new System.EventHandler(this.secondFoodPanel_Click);
             // 
             // fifthFoodSectionButton
             // 
+            this.fifthFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.fifthFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.fifthFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.fifthFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -445,6 +477,7 @@
             // 
             // sixthFoodSectionButton
             // 
+            this.sixthFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sixthFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.sixthFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.sixthFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -469,6 +502,7 @@
             // 
             // seventhFoodSectionButton
             // 
+            this.seventhFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.seventhFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.seventhFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.seventhFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -493,6 +527,7 @@
             // 
             // eighthFoodSectionButton
             // 
+            this.eighthFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.eighthFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.eighthFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.eighthFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -517,6 +552,7 @@
             // 
             // ninthFoodSectionButton
             // 
+            this.ninthFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ninthFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.ninthFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.ninthFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -541,6 +577,7 @@
             // 
             // tenthFoodSectionButton
             // 
+            this.tenthFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tenthFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.tenthFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.tenthFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -565,6 +602,7 @@
             // 
             // fourthFoodSectionButton
             // 
+            this.fourthFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.fourthFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.fourthFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.fourthFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -589,6 +627,7 @@
             // 
             // thirdFoodSectionButton
             // 
+            this.thirdFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.thirdFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.thirdFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.thirdFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -613,6 +652,7 @@
             // 
             // secondFoodSectionButton
             // 
+            this.secondFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.secondFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.secondFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.secondFoodSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -637,6 +677,7 @@
             // 
             // firstFoodSectionButton
             // 
+            this.firstFoodSectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.firstFoodSectionButton.BackColor = System.Drawing.Color.Transparent;
             this.firstFoodSectionButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.firstFoodSectionButton.BackgroundImage = global::UIAssignment.Properties.Resources.BlackMarbleBackground;
@@ -662,6 +703,8 @@
             // 
             // firstFoodPanel
             // 
+            this.firstFoodPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firstFoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.firstFoodPanel.Controls.Add(this.firstFoodSectionTimeValueLabel);
             this.firstFoodPanel.Controls.Add(this.firstFoodSectionIngredientsValueLabel);
@@ -689,6 +732,7 @@
             this.firstFoodSectionTimeValueLabel.Size = new System.Drawing.Size(87, 16);
             this.firstFoodSectionTimeValueLabel.TabIndex = 82;
             this.firstFoodSectionTimeValueLabel.Text = "Placeholder";
+            this.firstFoodSectionTimeValueLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionIngredientsValueLabel
             // 
@@ -700,6 +744,7 @@
             this.firstFoodSectionIngredientsValueLabel.Size = new System.Drawing.Size(87, 16);
             this.firstFoodSectionIngredientsValueLabel.TabIndex = 81;
             this.firstFoodSectionIngredientsValueLabel.Text = "Placeholder";
+            this.firstFoodSectionIngredientsValueLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionPriceValueLabel
             // 
@@ -711,6 +756,7 @@
             this.firstFoodSectionPriceValueLabel.Size = new System.Drawing.Size(87, 16);
             this.firstFoodSectionPriceValueLabel.TabIndex = 80;
             this.firstFoodSectionPriceValueLabel.Text = "Placeholder";
+            this.firstFoodSectionPriceValueLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionTitleValueLabel
             // 
@@ -722,6 +768,7 @@
             this.firstFoodSectionTitleValueLabel.Size = new System.Drawing.Size(87, 16);
             this.firstFoodSectionTitleValueLabel.TabIndex = 79;
             this.firstFoodSectionTitleValueLabel.Text = "Placeholder";
+            this.firstFoodSectionTitleValueLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionTitleLabel
             // 
@@ -733,6 +780,7 @@
             this.firstFoodSectionTitleLabel.Size = new System.Drawing.Size(62, 16);
             this.firstFoodSectionTitleLabel.TabIndex = 78;
             this.firstFoodSectionTitleLabel.Text = "Τίτλος :";
+            this.firstFoodSectionTitleLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionIngredientsLabel
             // 
@@ -744,9 +792,11 @@
             this.firstFoodSectionIngredientsLabel.Size = new System.Drawing.Size(58, 16);
             this.firstFoodSectionIngredientsLabel.TabIndex = 77;
             this.firstFoodSectionIngredientsLabel.Text = "Υλικά :";
+            this.firstFoodSectionIngredientsLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionPictureBox
             // 
+            this.firstFoodSectionPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.firstFoodSectionPictureBox.BackgroundImage = global::UIAssignment.Properties.Resources.ΕποχήςΜεΜαρούλι;
             this.firstFoodSectionPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.firstFoodSectionPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -755,6 +805,7 @@
             this.firstFoodSectionPictureBox.Size = new System.Drawing.Size(125, 103);
             this.firstFoodSectionPictureBox.TabIndex = 71;
             this.firstFoodSectionPictureBox.TabStop = false;
+            this.firstFoodSectionPictureBox.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionTimeLabel
             // 
@@ -766,6 +817,7 @@
             this.firstFoodSectionTimeLabel.Size = new System.Drawing.Size(64, 16);
             this.firstFoodSectionTimeLabel.TabIndex = 74;
             this.firstFoodSectionTimeLabel.Text = "Χρόνος :";
+            this.firstFoodSectionTimeLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // firstFoodSectionPriceLabel
             // 
@@ -777,9 +829,11 @@
             this.firstFoodSectionPriceLabel.Size = new System.Drawing.Size(51, 16);
             this.firstFoodSectionPriceLabel.TabIndex = 73;
             this.firstFoodSectionPriceLabel.Text = "Τιμή :";
+            this.firstFoodSectionPriceLabel.Click += new System.EventHandler(this.firstFoodPanel_Click);
             // 
             // foodsTitleLabel
             // 
+            this.foodsTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.foodsTitleLabel.AutoSize = true;
             this.foodsTitleLabel.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodsTitleLabel.Location = new System.Drawing.Point(257, 13);
@@ -791,6 +845,8 @@
             // 
             // filtersPanel
             // 
+            this.filtersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.filtersPanel.BackColor = System.Drawing.Color.Transparent;
             this.filtersPanel.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
             this.filtersPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1202,6 +1258,7 @@
             // 
             // applyFiltersButton
             // 
+            this.applyFiltersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.applyFiltersButton.BackColor = System.Drawing.Color.Transparent;
             this.applyFiltersButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.applyFiltersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1214,7 +1271,7 @@
             this.applyFiltersButton.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applyFiltersButton.ForeColor = System.Drawing.Color.Black;
             this.applyFiltersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.applyFiltersButton.Location = new System.Drawing.Point(69, 495);
+            this.applyFiltersButton.Location = new System.Drawing.Point(69, 488);
             this.applyFiltersButton.Margin = new System.Windows.Forms.Padding(2);
             this.applyFiltersButton.Name = "applyFiltersButton";
             this.applyFiltersButton.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -1224,6 +1281,8 @@
             this.applyFiltersButton.TextColor = System.Drawing.Color.Black;
             this.applyFiltersButton.UseVisualStyleBackColor = false;
             this.applyFiltersButton.Click += new System.EventHandler(this.applyFiltersButton_Click);
+            this.applyFiltersButton.MouseEnter += new System.EventHandler(this.applyFiltersButton_MouseEnter);
+            this.applyFiltersButton.MouseLeave += new System.EventHandler(this.applyFiltersButton_MouseLeave);
             // 
             // filtersTitleLabel
             // 
@@ -1243,11 +1302,12 @@
             this.ClientSize = new System.Drawing.Size(950, 571);
             this.Controls.Add(this.foodsPanel);
             this.Controls.Add(this.filtersPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RestaurantForm";
             this.Text = "RestaurantForm";
             this.foodsPanel.ResumeLayout(false);
             this.foodsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartButtonIcon)).EndInit();
             this.thirdFoodPanel.ResumeLayout(false);
             this.thirdFoodPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thirdFoodSectionPictureBox)).EndInit();
@@ -1348,6 +1408,6 @@
         private CustomRadioButton priceAscendingFilterRadioButton;
         private CustomTextBox searchCustomTextBox;
         private Resources.Cool_button shoppingCartButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox shoppingCartButtonIcon;
     }
 }

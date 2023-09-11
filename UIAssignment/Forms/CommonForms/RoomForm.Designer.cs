@@ -50,7 +50,7 @@
             this.roomPictureBox = new UIAssignment.TransparentPictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.hiddenRadioSoundImage = new UIAssignment.TransparentPictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.roomUtilitiesOnePanel = new System.Windows.Forms.Panel();
             this.roomUtilitiesTwoPanel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.roomPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hiddenRadioSoundImage)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.roomUtilitiesOnePanel.SuspendLayout();
             this.roomUtilitiesTwoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioSoundTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -308,6 +308,8 @@
             // 
             // roomPictureBoxPanel
             // 
+            this.roomPictureBoxPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.roomPictureBoxPanel.BackColor = System.Drawing.Color.Black;
             this.roomPictureBoxPanel.Controls.Add(this.roomPictureBox);
             this.roomPictureBoxPanel.Controls.Add(this.pictureBox5);
@@ -319,8 +321,11 @@
             // 
             // roomPictureBox
             // 
+            this.roomPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.roomPictureBox.BackgroundImage = global::UIAssignment.Properties.Resources.ApartmentImageDefault;
             this.roomPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roomPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.roomPictureBox.Location = new System.Drawing.Point(0, 0);
             this.roomPictureBox.Name = "roomPictureBox";
             this.roomPictureBox.Opacity = 0D;
@@ -330,6 +335,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(329, 175);
@@ -340,6 +346,7 @@
             // 
             // hiddenRadioSoundImage
             // 
+            this.hiddenRadioSoundImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.hiddenRadioSoundImage.BackColor = System.Drawing.SystemColors.Control;
             this.hiddenRadioSoundImage.BackgroundImage = global::UIAssignment.Properties.Resources.radioOn;
             this.hiddenRadioSoundImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -350,17 +357,23 @@
             this.hiddenRadioSoundImage.TabIndex = 27;
             this.hiddenRadioSoundImage.TabStop = false;
             // 
-            // panel5
+            // roomUtilitiesOnePanel
             // 
-            this.panel5.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
-            this.panel5.Controls.Add(this.roomUtilitiesTwoPanel);
-            this.panel5.Location = new System.Drawing.Point(405, 11);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(534, 549);
-            this.panel5.TabIndex = 11;
+            this.roomUtilitiesOnePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roomUtilitiesOnePanel.BackgroundImage = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
+            this.roomUtilitiesOnePanel.Controls.Add(this.roomUtilitiesTwoPanel);
+            this.roomUtilitiesOnePanel.Location = new System.Drawing.Point(405, 11);
+            this.roomUtilitiesOnePanel.Name = "roomUtilitiesOnePanel";
+            this.roomUtilitiesOnePanel.Size = new System.Drawing.Size(534, 549);
+            this.roomUtilitiesOnePanel.TabIndex = 11;
             // 
             // roomUtilitiesTwoPanel
             // 
+            this.roomUtilitiesTwoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.roomUtilitiesTwoPanel.BackColor = System.Drawing.Color.Transparent;
             this.roomUtilitiesTwoPanel.BackgroundImage = global::UIAssignment.Properties.Resources.MaiandrosSquareBlackImage;
             this.roomUtilitiesTwoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -417,6 +430,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(359, 309);
@@ -427,6 +441,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(293, 309);
@@ -437,6 +452,7 @@
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Location = new System.Drawing.Point(293, 265);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(132, 13);
@@ -444,6 +460,7 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Location = new System.Drawing.Point(290, 300);
             this.panel7.Name = "panel7";
@@ -452,6 +469,7 @@
             // 
             // panel14
             // 
+            this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel14.BackColor = System.Drawing.Color.Black;
             this.panel14.Location = new System.Drawing.Point(290, 278);
             this.panel14.Name = "panel14";
@@ -460,6 +478,7 @@
             // 
             // radioSoundTrackBar
             // 
+            this.radioSoundTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioSoundTrackBar.Location = new System.Drawing.Point(291, 269);
             this.radioSoundTrackBar.Maximum = 5;
             this.radioSoundTrackBar.Name = "radioSoundTrackBar";
@@ -470,6 +489,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImage = global::UIAssignment.Properties.Resources.ColumnHorizontalTransparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(276, 263);
@@ -543,6 +563,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(362, 191);
@@ -553,6 +574,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(293, 191);
@@ -563,6 +585,7 @@
             // 
             // panel8
             // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Location = new System.Drawing.Point(293, 147);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(132, 13);
@@ -570,6 +593,7 @@
             // 
             // panel9
             // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.Black;
             this.panel9.Location = new System.Drawing.Point(290, 182);
             this.panel9.Name = "panel9";
@@ -578,6 +602,7 @@
             // 
             // panel10
             // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.Black;
             this.panel10.Location = new System.Drawing.Point(290, 160);
             this.panel10.Name = "panel10";
@@ -586,6 +611,7 @@
             // 
             // roomTemperatureTrackBar
             // 
+            this.roomTemperatureTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.roomTemperatureTrackBar.Location = new System.Drawing.Point(291, 151);
             this.roomTemperatureTrackBar.Maximum = 5;
             this.roomTemperatureTrackBar.Name = "roomTemperatureTrackBar";
@@ -596,6 +622,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = global::UIAssignment.Properties.Resources.ColumnHorizontalTransparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(276, 145);
@@ -669,6 +696,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(312, 245);
@@ -741,6 +769,7 @@
             // 
             // radioSongLabel
             // 
+            this.radioSongLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioSongLabel.AutoSize = true;
             this.radioSongLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioSongLabel.Location = new System.Drawing.Point(290, 326);
@@ -752,6 +781,7 @@
             // 
             // radioSongsComboBox
             // 
+            this.radioSongsComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioSongsComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.radioSongsComboBox.BorderColor = System.Drawing.Color.DimGray;
             this.radioSongsComboBox.BorderSize = 1;
@@ -776,6 +806,7 @@
             // 
             // poolAlertOneLabel
             // 
+            this.poolAlertOneLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.poolAlertOneLabel.AutoSize = true;
             this.poolAlertOneLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.poolAlertOneLabel.Location = new System.Drawing.Point(299, 215);
@@ -810,6 +841,7 @@
             // 
             // radioTurnOnLabel
             // 
+            this.radioTurnOnLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioTurnOnLabel.AutoSize = true;
             this.radioTurnOnLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioTurnOnLabel.Location = new System.Drawing.Point(273, 387);
@@ -821,6 +853,7 @@
             // 
             // activateDeactivateRadioToggleButton
             // 
+            this.activateDeactivateRadioToggleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.activateDeactivateRadioToggleButton.AutoSize = true;
             this.activateDeactivateRadioToggleButton.BackColor = System.Drawing.Color.Transparent;
             this.activateDeactivateRadioToggleButton.Location = new System.Drawing.Point(408, 384);
@@ -838,6 +871,7 @@
             // 
             // roomUtilitiesLabel
             // 
+            this.roomUtilitiesLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roomUtilitiesLabel.AutoSize = true;
             this.roomUtilitiesLabel.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomUtilitiesLabel.Location = new System.Drawing.Point(158, 74);
@@ -849,6 +883,7 @@
             // 
             // saveChangesButton
             // 
+            this.saveChangesButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.saveChangesButton.BackColor = System.Drawing.Color.Transparent;
             this.saveChangesButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.saveChangesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -876,6 +911,7 @@
             // 
             // roomTemperatureLabel
             // 
+            this.roomTemperatureLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.roomTemperatureLabel.AutoSize = true;
             this.roomTemperatureLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomTemperatureLabel.Location = new System.Drawing.Point(279, 124);
@@ -907,7 +943,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 571);
             this.Controls.Add(this.roomPictureBoxPanel);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.roomUtilitiesOnePanel);
             this.Controls.Add(this.panel1);
             this.Name = "RoomForm";
             this.Text = "RoomForm";
@@ -917,7 +953,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.roomPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hiddenRadioSoundImage)).EndInit();
-            this.panel5.ResumeLayout(false);
+            this.roomUtilitiesOnePanel.ResumeLayout(false);
             this.roomUtilitiesTwoPanel.ResumeLayout(false);
             this.roomUtilitiesTwoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioSoundTrackBar)).EndInit();
@@ -965,7 +1001,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TrackBar roomTemperatureTrackBar;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel roomUtilitiesOnePanel;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel6;

@@ -918,4 +918,7 @@
         8Sk0jcOVJ4MfwRKi/MIPjBSmqkPG40kEFHx4jg1UlGHU/N//2Q==
 </value>
   </data>
+  <metadata name="checkStaticChangesTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

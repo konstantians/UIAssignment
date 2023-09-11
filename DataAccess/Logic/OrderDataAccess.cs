@@ -1,7 +1,10 @@
 ﻿using DataAccess.Models;
+using DataAccess.Models.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Linq;
+using System.Text;
 
 namespace DataAccess.Logic
 {
@@ -11,31 +14,52 @@ namespace DataAccess.Logic
         {
             bool shouldClose = HelperMethods.CheckConnectionAndOpenIfNecessary();
             
-            string sqlQuery = "SELECT FoodName, IssuedDate, QuantityOfFood, FinalPriceOfFood FROM [Order] " +
+            string sqlQuery = "SELECT FoodName, IssuedDate, QuantityOfFood, FinalPriceOfFood FROM FoodOrder " +
                               "WHERE UserUsername = @userUsername ORDER BY IssuedDate;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
             command.Parameters.AddWithValue("@userUsername", username);
             SQLiteDataReader reader = command.ExecuteReader();
 
-            List<Order> orders = new List<Order>();
-
-            Order order = null;
+            List<OrderDataModel> ordersDataModels = new List<OrderDataModel>();
             while (reader.Read())
             {
-                if(order == null || order.IssuedDate != DateTime.Parse(reader.GetString(1)))
-                {
-                    if(order != null) orders.Add(order);
+                OrderDataModel ordersDataModel = new OrderDataModel();
 
-                    order = new Order();
-                    order.IssuedDate = DateTime.Parse(reader.GetString(1));
-                    order.CustomerName = username;
-                }
-                order.FoodQuantities.Add(reader.GetString(0), reader.GetInt32(2));
-                order.FinalPrice += reader.GetDouble(3);
+                ordersDataModel.IssuedDate = DateTime.Parse(reader.GetString(1));
+                ordersDataModel.FoodQuantities.Add(reader.GetString(0), reader.GetInt32(2));
+                ordersDataModel.FinalPrice = reader.GetDouble(3);
+                ordersDataModel.Foods.Add(GetFood(reader.GetString(0)));
+                ordersDataModel.CustomerName = username;
+
+                ordersDataModels.Add(ordersDataModel);
             }
 
             HelperMethods.CloseConnectionOrDoNothing(shouldClose);
+
+            //think that is needed to fix the issue?
+            //stupid database lock
+
+            List<Order> orders = new List<Order>();
+            Order order = null;
+            foreach (OrderDataModel tempOrder in ordersDataModels)
+            {
+                //if the order is null or the order has a different issued date than the previous one it is a different order
+                if (order == null || tempOrder.IssuedDate != order.IssuedDate)
+                {
+                    if(order != null)
+                        orders.Add(order);
+                    order = new Order();
+                    order.IssuedDate = tempOrder.IssuedDate;
+                    order.CustomerName = tempOrder.CustomerName;
+                }
+                order.FoodQuantities.Add(tempOrder.FoodQuantities.FirstOrDefault().Key, tempOrder.FoodQuantities.FirstOrDefault().Value);
+                order.FinalPrice += tempOrder.FinalPrice;
+                order.Foods.Add(tempOrder.Foods.FirstOrDefault());
+            }
+            //this is used for the last order. If the user had no orders skip that step.
+            if (order != null)
+                orders.Add(order);
 
             return orders;
         }
@@ -58,7 +82,7 @@ namespace DataAccess.Logic
             ConnectionClass.connection.Open();
             foreach (Food food in foods)
             {
-                string sqlQuery = "INSERT INTO [Order](UserUsername, FoodName, IssuedDate, QuantityOfFood, FinalPriceOfFood) " +
+                string sqlQuery = "INSERT INTO FoodOrder(UserUsername, FoodName, IssuedDate, QuantityOfFood, FinalPriceOfFood) " +
                 "VALUES(@userUsername, @foodName, @issuedDate, @quantityOfFood, @finalPriceOfFood);";
 
                 
@@ -75,33 +99,61 @@ namespace DataAccess.Logic
             ConnectionClass.connection.Close();
         }
 
-        public static void CreateOrder(Order order)
+        public static bool CreateOrder(Order order)
         {
-            ConnectionClass.connection.Open();
-            foreach (Food food in order.Foods)
+            try
             {
-                string sqlQuery = "INSERT INTO [Order](UserUsername, FoodName, IssuedDate, QuantityOfFood, FinalPriceOfFood) " +
-                        "VALUES(@userUsername, @foodName, @issuedDate, @quantityOfFood, @finalPriceOfFood);";
+                ConnectionClass.connection.Open();
 
+                // Create a single INSERT statement with multiple rows of values
+                StringBuilder sqlQuery = new StringBuilder("INSERT INTO FoodOrder(UserUsername, FoodName, IssuedDate, QuantityOfFood, FinalPriceOfFood) VALUES ");
 
-                SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
+                using (SQLiteCommand command = new SQLiteCommand(ConnectionClass.connection))
+                {
+                    command.CommandTimeout = 5;
+                    int parameterCount = 0; // Counter for parameter names
 
-                command.Parameters.AddWithValue("@userUsername", order.CustomerName);
-                command.Parameters.AddWithValue("@foodName", food.FoodName);
-                command.Parameters.AddWithValue("@issuedDate", order.IssuedDate);
-                order.FoodQuantities.TryGetValue(food.FoodName,out int foodQuantity);
-                command.Parameters.AddWithValue("@quantityOfFood", foodQuantity);
-                command.Parameters.AddWithValue("@finalPriceOfFood", foodQuantity * food.PricePerUnit);
-                command.ExecuteNonQuery();
+                    foreach (Food food in order.Foods)
+                    {
+                        if (parameterCount > 0)
+                        {
+                            sqlQuery.Append(", ");
+                        }
+
+                        sqlQuery.Append(
+                            $"(@userUsername{parameterCount}, @foodName{parameterCount}, @issuedDate{parameterCount}, " +
+                            $"@quantityOfFood{parameterCount}, @finalPriceOfFood{parameterCount})");
+
+                        command.Parameters.AddWithValue($"@userUsername{parameterCount}", order.CustomerName);
+                        command.Parameters.AddWithValue($"@foodName{parameterCount}", food.FoodName);
+                        command.Parameters.AddWithValue($"@issuedDate{parameterCount}", order.IssuedDate.ToString());
+                        order.FoodQuantities.TryGetValue(food.FoodName, out int foodQuantity);
+                        command.Parameters.AddWithValue($"@quantityOfFood{parameterCount}", foodQuantity);
+                        command.Parameters.AddWithValue($"@finalPriceOfFood{parameterCount}", foodQuantity * food.PricePerUnit);
+
+                        parameterCount++;
+                    }
+
+                    // Append the SQL query with all rows and execute it
+                    command.CommandText = sqlQuery.ToString();
+                    command.ExecuteNonQuery();
+                }
+
+                ConnectionClass.connection.Close();
+                return true; // Success
             }
-
-            ConnectionClass.connection.Close();
+            catch (SQLiteException)
+            {
+                //this is for the stupid database locked error
+                ConnectionClass.connection.Close();
+                return false; 
+            }
         }
 
         public static void DeleteOrdersOfCustomer(string userUsername)
         {
             ConnectionClass.connection.Open();
-            string sqlQuery = "DELETE FROM [Order] WHERE UserUsername = @userUsername;";
+            string sqlQuery = "DELETE FROM FoodOrder WHERE UserUsername = @userUsername;";
 
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
@@ -114,12 +166,13 @@ namespace DataAccess.Logic
         public static void DeleteOrder(string userUsername, DateTime issuedDate)
         {
             ConnectionClass.connection.Open();
-            string sqlQuery = "DELETE FROM [Order] WHERE UserUsername = @userUsername AND IssuedDate = @issuedDate;";
 
+            string sqlQuery = "DELETE FROM FoodOrder WHERE UserUsername = @userUsername AND IssuedDate = @issuedDate;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
             command.Parameters.AddWithValue("@userUsername", userUsername);
             command.Parameters.AddWithValue("@issuedDate", issuedDate.ToString());
+
             command.ExecuteNonQuery();
 
             ConnectionClass.connection.Close();
@@ -189,18 +242,20 @@ namespace DataAccess.Logic
 
         public static void CreateFood(Food food)
         {
+            ConnectionClass.connection.Close();
             ConnectionClass.connection.Open();
             string sqlQuery = "INSERT INTO Food(FoodName, Price, Category, Description, PreparationTime, FoodImage) " +
-                 "VALUES(@foodName, @price, @category, @description, @preparationTime, @foodImage);";
+                    "VALUES(@foodName, @price, @category, @description, @preparationTime, @foodImage);";
 
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
             command.Parameters.AddWithValue("@foodName", food.FoodName);
             command.Parameters.AddWithValue("@price", food.PricePerUnit);
-            command.Parameters.AddWithValue("@price", food.Category);
+            command.Parameters.AddWithValue("@category", food.Category);
             command.Parameters.AddWithValue("@description", food.Description);
             command.Parameters.AddWithValue("@preparationTime", food.PreparationTime);
             command.Parameters.AddWithValue("@foodImage", food.FoodImage);
+
             command.ExecuteNonQuery();
 
             ConnectionClass.connection.Close();
@@ -215,7 +270,7 @@ namespace DataAccess.Logic
         public static void DeleteFood(string foodName)
         {
             ConnectionClass.connection.Open();
-            string sqlQuery = "DELETE FROM [Order] WHERE FoodName = @foodName;" +
+            string sqlQuery = "DELETE FROM FoodOrder WHERE FoodName = @foodName;" +
                               "DELETE FROM Food WHERE FoodName = @foodName;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 

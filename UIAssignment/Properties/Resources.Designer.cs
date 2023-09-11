@@ -73,6 +73,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AmstelΦιάλη500mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("AmstelΦιάλη500mlBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ApartmentImage {
             get {
                 object obj = ResourceManager.GetObject("ApartmentImage", resourceCulture);
@@ -151,6 +161,16 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger {
+            get {
+                object obj = ResourceManager.GetObject("BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream basicAlarm {
@@ -192,9 +212,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CaesarsBigger {
+            get {
+                object obj = ResourceManager.GetObject("CaesarsBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιο {
             get {
                 object obj = ResourceManager.GetObject("ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιο", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger {
+            get {
+                object obj = ResourceManager.GetObject("ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -212,6 +252,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ClubSandwichClassicBigger {
+            get {
+                object obj = ResourceManager.GetObject("ClubSandwichClassicBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CocaCola330ml {
             get {
                 object obj = ResourceManager.GetObject("CocaCola330ml", resourceCulture);
@@ -222,9 +272,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CocaCola330mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("CocaCola330mlBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CocaColaZero330ml {
             get {
                 object obj = ResourceManager.GetObject("CocaColaZero330ml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CocaColaZero330mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("CocaColaZero330mlBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -260,6 +330,16 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Corona330mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("Corona330mlBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream criticalAlarm {
@@ -289,11 +369,31 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditIcon {
+            get {
+                object obj = ResourceManager.GetObject("EditIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream EnasAetos {
             get {
                 return ResourceManager.GetStream("EnasAetos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hourglassLoadingScreen {
+            get {
+                object obj = ResourceManager.GetObject("hourglassLoadingScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -368,9 +468,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pepsi330mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("Pepsi330mlBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PepsiMax330ml {
             get {
                 object obj = ResourceManager.GetObject("PepsiMax330ml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PepsiMax330mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("PepsiMax330mlBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -587,6 +707,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap test {
+            get {
+                object obj = ResourceManager.GetObject("test", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TranspareFullLogo {
             get {
                 object obj = ResourceManager.GetObject("TranspareFullLogo", resourceCulture);
@@ -600,6 +730,16 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap TranspareWithoutTextLogo {
             get {
                 object obj = ResourceManager.GetObject("TranspareWithoutTextLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TrashIcon {
+            get {
+                object obj = ResourceManager.GetObject("TrashIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -657,9 +797,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ΆλφαΦιάλη500mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΆλφαΦιάλη500mlBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ΑπόΤοΧωριό {
             get {
                 object obj = ResourceManager.GetObject("ΑπόΤοΧωριό", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ΑπόΤοΧωριόBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΑπόΤοΧωριόBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -677,9 +837,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ΓύροςΚοτόπουλοΜερίδαBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΓύροςΚοτόπουλοΜερίδαBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ΓύροςΚοτόπουλοΣεΠίτα {
             get {
                 object obj = ResourceManager.GetObject("ΓύροςΚοτόπουλοΣεΠίτα", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ΓύροςΚοτόπουλοΣεΠίταBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΓύροςΚοτόπουλοΣεΠίταBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -697,9 +877,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ΓύροςΧοιρινόςΜερίδαBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΓύροςΧοιρινόςΜερίδαBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ΓύροςΧοιρινόςΣεΠίτα {
             get {
                 object obj = ResourceManager.GetObject("ΓύροςΧοιρινόςΣεΠίτα", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ΓύροςΧοιρινόςΣεΠίταBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΓύροςΧοιρινόςΣεΠίταBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -717,9 +917,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ΕποχήςΜεΛάχανοΚαρότοBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΕποχήςΜεΛάχανοΚαρότοBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ΕποχήςΜεΜαρούλι {
             get {
                 object obj = ResourceManager.GetObject("ΕποχήςΜεΜαρούλι", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ΕποχήςΜεΜαρούλιBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΕποχήςΜεΜαρούλιBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -737,9 +957,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ΚαλαμάκιΧοιρινόΜερίδαBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΚαλαμάκιΧοιρινόΜερίδαBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ΚαλαμάκιΧοιρινόΣεΠίτα {
             get {
                 object obj = ResourceManager.GetObject("ΚαλαμάκιΧοιρινόΣεΠίτα", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ΚαλαμάκιΧοιρινόΣεΠίταBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΚαλαμάκιΧοιρινόΣεΠίταBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -757,9 +997,29 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ΛουκάνικοΧωριάτικοΜερίδαBigger {
+            get {
+                object obj = ResourceManager.GetObject("ΛουκάνικοΧωριάτικοΜερίδαBigger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Νερό1_5lt {
             get {
                 object obj = ResourceManager.GetObject("Νερό1_5lt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Νερό1_5ltBigger {
+            get {
+                object obj = ResourceManager.GetObject("Νερό1_5ltBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

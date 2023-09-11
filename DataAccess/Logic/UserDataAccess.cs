@@ -6,7 +6,7 @@ namespace DataAccess.Logic
 {
     public static class UserDataAccess
     {
-        public static (User,string) GetUser(string username)
+        public static (User, string) GetUser(string username)
         {
             ConnectionClass.connection.Open();
             string sqlQuery = "SELECT Username, Password, Email, Phone, RecoveryQuestion, RecoveryAnswer, UserType FROM User WHERE Username = @username;";
@@ -48,8 +48,27 @@ namespace DataAccess.Logic
             ConnectionClass.connection.Close();
 
             if (customer == null)
-                return (employee,"Employee");
-            return (customer,"Customer");
+                return (employee, "Employee");
+            return (customer, "Customer");
+        }
+
+        public static string CheckTypeOfUser(string username)
+        {
+            ConnectionClass.connection.Open();
+            string sqlQuery = "SELECT UserType FROM User WHERE Username = @username;";
+            SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
+
+            command.Parameters.AddWithValue("@username", username);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            string userType = "";
+            if (reader.Read())
+            {
+                userType = reader.GetString(0);
+            }
+
+            ConnectionClass.connection.Close();
+            return userType;
         }
 
         public static List<string> GetCustomersUsernames()
@@ -157,7 +176,7 @@ namespace DataAccess.Logic
 
             //then delete any order that the user participates in and then delete the user
             ConnectionClass.connection.Open();
-            string sqlQuery = "DELETE FROM ORDER WHERE UserUsername = @username;" +
+            string sqlQuery = "DELETE FROM FoodOrder WHERE UserUsername = @username;" +
                               "DELETE FROM User WHERE Username = @username;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
