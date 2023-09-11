@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using UIAssignment.Forms.CommonForms;
 
@@ -13,8 +14,14 @@ namespace UIAssignment.Forms.CustomerForms
         public SidebarCustomerForm()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
-            //apartmentIconPictureBox.BringToFront();
+            DoubleBufferingForForms.SetDoubleBuffer(panelSideMenu, true);
+            DoubleBufferingForForms.SetDoubleBuffer(panelLogo, true);
+            DoubleBufferingForForms.SetDoubleBuffer(apartmentSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(restaurantSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(poolSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(trojanHorseSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(LogoutAndHelpSectionPanel, true);
+
             openChildForm(new MainForm());
         }
 
@@ -91,13 +98,36 @@ namespace UIAssignment.Forms.CustomerForms
             Application.OpenForms[0].Show();
         }
 
-        private void openChildForm(ChildForm childForm)
+        private async void openChildForm(ChildForm childForm)
         {
             if (activeForm != null && activeForm.UnsavedChangesDetected())
                 return;
             if (activeForm != null)
                 activeForm.Close();
+
             activeForm = childForm;
+            ActiveUser.OpenCartForm = false;
+            //ActiveUser.OpenMainForm = false;
+
+            if (typeof(MainForm) != childForm.GetType() && typeof(LoadingForm) != childForm.GetType())
+            {
+                LoadingForm loadingForm = new LoadingForm();
+                loadingForm.Size = this.Size;
+                loadingForm.Show();
+                await Task.Delay(200);
+
+                openChildFormHelperMethod(activeForm);
+
+                await Task.Delay(1600);
+                loadingForm.Close();
+                return;
+            }
+
+            openChildFormHelperMethod(activeForm);
+        }
+
+        private void openChildFormHelperMethod(ChildForm childForm)
+        {
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -147,7 +177,7 @@ namespace UIAssignment.Forms.CustomerForms
         }
         private void trojanHorseSectionButton_Click(object sender, EventArgs e)
         {
-
+            //openChildForm(new OrdersForm());
         }
 
         private void SidebarCustomerForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -180,6 +210,14 @@ namespace UIAssignment.Forms.CustomerForms
             {
                 Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs17.htm");
             }
+        }
+
+        private void checkStaticChangesTimer_Tick(object sender, EventArgs e)
+        {
+            if (ActiveUser.OpenCartForm)
+                openChildForm(new CartForm());
+            else if(ActiveUser.OpenOrderForm)
+                openChildForm(new OrdersForm());
         }
     }
 }

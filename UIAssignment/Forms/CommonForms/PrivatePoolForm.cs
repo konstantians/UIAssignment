@@ -4,6 +4,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Media;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace UIAssignment.Forms.CommonForms
@@ -15,6 +16,11 @@ namespace UIAssignment.Forms.CommonForms
         public PrivatePoolForm()
         {
             InitializeComponent();
+            DoubleBufferingForForms.SetDoubleBuffer(poolUtilitiesOnePanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(poolUtilitiesTwoPanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(waterLevelControlPanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(temperatureControlPanel, true);
+
 
             fromAlertCustomDateTimePicker.Format = DateTimePickerFormat.Custom;
             fromAlertCustomDateTimePicker.CustomFormat = "HH:mm";
@@ -356,5 +362,6 @@ namespace UIAssignment.Forms.CommonForms
             saveChangesButton.BackgroundImage = null;
             saveChangesButton.TextColor = Color.Black;
         }
+
     }
 }

@@ -331,4 +331,82 @@
   <data name="ShoppingCart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\ShoppingCart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hourglassLoadingScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hourglassLoadingScreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AmstelΦιάλη500mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\AmstelΦιάλη500mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaesarsBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Salads\CaesarsBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClubSandwichClassicBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\ClubSandwichClassicBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CocaCola330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\CocaCola330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CocaColaZero330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\CocaColaZero330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\Corona330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pepsi330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\Pepsi330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PepsiMax330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\PepsiMax330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΆλφαΦιάλη500mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\ΆλφαΦιάλη500mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΑπόΤοΧωριόBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Salads\ΑπόΤοΧωριόBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΓύροςΚοτόπουλοΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΓύροςΚοτόπουλοΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΓύροςΧοιρινόςΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΓύροςΧοιρινόςΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΕποχήςΜεΛάχανοΚαρότοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Salads\ΕποχήςΜεΛάχανοΚαρότοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΕποχήςΜεΜαρούλιBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Salads\ΕποχήςΜεΜαρούλιBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΚαλαμάκιΧοιρινόΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΚαλαμάκιΧοιρινόΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΚαλαμάκιΧοιρινόΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΛουκάνικοΧωριάτικοΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Νερό1_5ltBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\Νερό1.5ltBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\EditIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrashIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\TrashIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

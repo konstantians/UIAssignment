@@ -9,17 +9,25 @@
 
         public override bool Equals(object obj)
         {
-            //check if the other object is null or is of a different type
-            //and if yes return false
             if (obj == null || GetType() != obj.GetType())
                 return false;
 
-            //check the values
-            Television otherRadio = (Television)obj;
-            return TelevisionId == otherRadio.TelevisionId &&
-                   TelevisionProgram == otherRadio.TelevisionProgram &&
-                   TelevisionVolume == otherRadio.TelevisionVolume &&
-                   IsTelevisionOn == otherRadio.IsTelevisionOn;
+            Television otherTelevision = (Television)obj;
+
+            return TelevisionId == otherTelevision.TelevisionId &&
+                   TelevisionProgram == otherTelevision.TelevisionProgram &&
+                   TelevisionVolume == otherTelevision.TelevisionVolume &&
+                   IsTelevisionOn == otherTelevision.IsTelevisionOn;
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 17; // Choose a prime number as the initial hash code
+            hash = hash * 31 + TelevisionId.GetHashCode();
+            hash = hash * 31 + TelevisionProgram.GetHashCode();
+            hash = hash * 31 + TelevisionVolume.GetHashCode();
+            hash = hash * 31 + IsTelevisionOn.GetHashCode();
+            return hash;
         }
     }
 }
