@@ -2,7 +2,6 @@
 using DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Media;
 using System.Runtime.InteropServices;
@@ -10,19 +9,16 @@ using System.Windows.Forms;
 
 namespace UIAssignment.Forms.CommonForms
 {
-    public partial class RoomForm : ChildForm
+    public partial class InteractiveRoomForm : ChildForm
     {
         public int roomTemperature = 0;
         public Television television = new Television();
         public Radio radio = new Radio();
         public bool reverseRadioTimer = false;
         public SoundPlayer soundPlayer = new SoundPlayer();
-
-        public RoomForm()
+        public InteractiveRoomForm()
         {
             InitializeComponent();
-            panel1.BringToFront();
-            roomPictureBox.BringToFront();
             hiddenRadioSoundImage.SendToBack();
 
             if (ActiveUser.Customer != null)
@@ -66,6 +62,8 @@ namespace UIAssignment.Forms.CommonForms
                 roomTemperatureTitleValueLabel.Text = $"{roomTemperature}C";
                 translateRoomTemperature();
             }
+
+            //playRadioSoundOrCloseIt();
         }
 
         public void setRoomLighting()
@@ -201,16 +199,22 @@ namespace UIAssignment.Forms.CommonForms
                     !EqualityComparer<Television>.Default.Equals(ActiveUser.Customer.Room.Television, television)
                     )
                 {
-                    DialogResult result = MessageBox.Show("Οι αλλαγές σας δεν έχουν αποθηκευτεί. Είστε σίγουροι ότι θέλετε να κλείσετε την φόρμα?",
-                        "Μη Αποθηκευμένες Αλλαγές", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult result = MessageBox.Show("Οι αλλαγές σας είναι προσωρινές και θα σβηστούν σε περίπτωση κλήσης της φόρμας.\n" +
+                        "Θέλετε να αποθηκευτούν πριν κλείσει ή φόρμα?",
+                        "Μη Αποθηκευμένες Αλλαγές", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Cancel)
                     {
                         return true; // Unsaved changes detected
                     }
+
+                    if (result == DialogResult.Yes)
+                    {
+                        saveChanges();
+                    }
                 }
                 soundPlayer.Stop();
-                return false; // No unsaved changes
+                return false; // No unsaved changes or the user chose the no or the yes option
             }
 
             //TODO here do the logic for the employee
@@ -227,7 +231,7 @@ namespace UIAssignment.Forms.CommonForms
             translateRoomTemperature(true);
         }
 
-        
+
         private void tvSoundTrackBar_Scroll(object sender, EventArgs e)
         {
             television.TelevisionVolume = tvSoundTrackBar.Value;
@@ -287,7 +291,7 @@ namespace UIAssignment.Forms.CommonForms
             roomRadioStateTitleValueLabel.Text = radioState;
             if (radio.IsRadioOn)
                 hiddenRadioSoundImage.BackgroundImage = Properties.Resources.radioOn;
-            else 
+            else
                 hiddenRadioSoundImage.BackgroundImage = Properties.Resources.radioOff;
             hiddenRadioTimer.Enabled = true;
 
@@ -296,7 +300,7 @@ namespace UIAssignment.Forms.CommonForms
 
         private void playRadioSoundOrCloseIt()
         {
-            
+
             if (radio.IsRadioOn)
             {
                 string selectedItem = (string)radioSongsComboBox.SelectedItem;
@@ -339,7 +343,7 @@ namespace UIAssignment.Forms.CommonForms
         private void hiddenRadioTimer_Tick(object sender, EventArgs e)
         {
             //edge case
-            if(roomLightingTrackBar.Value == 0)
+            if (roomLightingTrackBar.Value == 0)
             {
                 hiddenRadioTimer.Enabled = false;
                 return;
@@ -406,12 +410,12 @@ namespace UIAssignment.Forms.CommonForms
             }
         }
 
-        private void saveChangesButton_Click(object sender, EventArgs e)
+        private void saveChanges()
         {
             //update the radio and the tv
             RoomDataAccess.UpdateRadio(radio.RadioId, radio);
             RoomDataAccess.UpdateTelevision(television.TelevisionId, television);
-            
+
             //then update the room
             Room room = new Room();
             room.RoomLighting = roomLightingTrackBar.Value;
@@ -431,10 +435,7 @@ namespace UIAssignment.Forms.CommonForms
 
             }
             //TODO do this for the employee too
-
-            MessageBox.Show("Changes have been successfully saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
 
         // magic to change the volume of the sound player
         // the below code is copy pasted and I have no idea how it works
@@ -450,21 +451,79 @@ namespace UIAssignment.Forms.CommonForms
             waveOutSetVolume(IntPtr.Zero, (uint)newVolume);
         }
 
-        private void saveChangesButton_MouseEnter(object sender, EventArgs e)
+        private void nonInteractiveModeButton_Click(object sender, EventArgs e)
         {
-            saveChangesButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
-            saveChangesButton.TextColor = Color.White;
+            ActiveUser.SwapToInteractive = InteractiveModeEnum.NonInteractiveMode;
         }
 
-        private void saveChangesButton_MouseLeave(object sender, EventArgs e)
+        private void lightingHoverTransparentPictureBoxOne_Click(object sender, EventArgs e)
         {
-            saveChangesButton.BackgroundImage = null;
-            saveChangesButton.TextColor = Color.Black;
+            if (roomLightingHiddenPanel.Visible == false)
+                roomLightingHiddenPanel.Visible = true;
+            else
+                roomLightingHiddenPanel.Visible = false;
         }
 
-        private void interactiveModeButton_Click(object sender, EventArgs e)
+        private void lightingHoverTransparentPictureBoxTwo_Click(object sender, EventArgs e)
         {
-            ActiveUser.SwapToInteractive = InteractiveModeEnum.InteractiveMode;
+            if (roomLightingHiddenPanelTwo.Visible == false)
+                roomLightingHiddenPanelTwo.Visible = true;
+            else
+                roomLightingHiddenPanelTwo.Visible = false;
+        }
+
+        private void aircoditionHoverTransparentPictureBox_Click(object sender, EventArgs e)
+        {
+            if (roomtemperatureHiddenPanel.Visible == false)
+                roomtemperatureHiddenPanel.Visible = true;
+            else
+                roomtemperatureHiddenPanel.Visible = false;
+        }
+
+        private void televisionHoverTransparentPictureBox_Click(object sender, EventArgs e)
+        {
+            if (televisionControlsHiddenPanel.Visible == false)
+                televisionControlsHiddenPanel.Visible = true;
+            else
+                televisionControlsHiddenPanel.Visible = false;
+        }
+
+        private void radioHoverTransparentPictureBox_Click(object sender, EventArgs e)
+        {
+            if (radioControlsHiddenPanel.Visible == false)
+                radioControlsHiddenPanel.Visible = true;
+            else
+                radioControlsHiddenPanel.Visible = false;
+        }
+
+        private void hiddenRoomLightingXButton_Click(object sender, EventArgs e)
+        {
+            roomLightingHiddenPanel.Visible = false;
+        }
+
+        private void hiddenRoomTemperatureXButton_Click(object sender, EventArgs e)
+        {
+            roomtemperatureHiddenPanel.Visible = false;
+        }
+
+        private void hiddenRoomTelevisionControlsXButton_Click(object sender, EventArgs e)
+        {
+            televisionControlsHiddenPanel.Visible = false;
+        }
+
+        private void hiddenRoomLightingXButtonTwo_Click(object sender, EventArgs e)
+        {
+            roomLightingHiddenPanelTwo.Visible = false;
+        }
+
+        private void hiddenRoomRadioControlsXButton_Click(object sender, EventArgs e)
+        {
+            radioControlsHiddenPanel.Visible = false;
+        }
+
+        private void InteractiveRoomForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

@@ -19,5 +19,6 @@ namespace UIAssignment
         public static bool OpenCartForm { get; set; } = false;
         public static bool NeedsToBeNotifiedAboutOrder { get; set; } = false;
         public static bool OpenOrderForm { get; set; } = false;   
+        public static InteractiveModeEnum SwapToInteractive { get; set; } = InteractiveModeEnum.None;
     }
 }

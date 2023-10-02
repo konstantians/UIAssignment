@@ -107,7 +107,6 @@ namespace UIAssignment.Forms.CustomerForms
 
             activeForm = childForm;
             ActiveUser.OpenCartForm = false;
-            //ActiveUser.OpenMainForm = false;
 
             if (typeof(MainForm) != childForm.GetType() && typeof(LoadingForm) != childForm.GetType())
             {
@@ -218,6 +217,18 @@ namespace UIAssignment.Forms.CustomerForms
                 openChildForm(new CartForm());
             else if(ActiveUser.OpenOrderForm)
                 openChildForm(new OrdersForm());
+            //the line ActiveUser.SwapToInteractive = InteractiveModeEnum.None; is added to avoid a bug where multiple warning appear 
+            //if the user does not click fast enough a choice on the warning
+            else if (ActiveUser.SwapToInteractive == InteractiveModeEnum.InteractiveMode)
+            {
+                ActiveUser.SwapToInteractive = InteractiveModeEnum.None;
+                openChildForm(new InteractiveRoomForm());
+            }
+            else if (ActiveUser.SwapToInteractive == InteractiveModeEnum.NonInteractiveMode)
+            {
+                ActiveUser.SwapToInteractive = InteractiveModeEnum.None;
+                openChildForm(new RoomForm());
+            }
         }
     }
 }

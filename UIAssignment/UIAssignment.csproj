@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveUser.cs" />
+    <Compile Include="InteractiveModeEnum.cs" />
     <Compile Include="ChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DoubleBufferingForForms.cs" />
+    <Compile Include="Forms\CommonForms\InteractiveRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\InteractiveRoomForm.Designer.cs">
+      <DependentUpon>InteractiveRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerForms\AddFoodForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\InteractiveRoomForm.resx">
+      <DependentUpon>InteractiveRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\AddFoodForm.resx">
       <DependentUpon>AddFoodForm.cs</DependentUpon>
@@ -313,6 +323,7 @@
     <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίτα.PNG" />
     <Content Include="Resources\hourglassLoadingScreen.gif" />
     <Content Include="Resources\Icons\EditIcon.png" />
+    <Content Include="Resources\Icons\SwapModeIcon.png" />
     <Content Include="Resources\Icons\TrashIcon.png" />
     <Content Include="Resources\LogoImages\FullLogo.PNG" />
     <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
