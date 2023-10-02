@@ -96,6 +96,12 @@
     <Compile Include="Forms\CommonForms\AddFoodForm.Designer.cs">
       <DependentUpon>AddFoodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CommonForms\DrivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\DrivingForm.Designer.cs">
+      <DependentUpon>DrivingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CommonForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="Forms\CommonForms\RoomForm.Designer.cs">
       <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CommonForms\TrojanHorseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\TrojanHorseForm.Designer.cs">
+      <DependentUpon>TrojanHorseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CustomerForms\SidebarCustomerForm.cs">
       <SubType>Form</SubType>
@@ -181,6 +193,9 @@
     <EmbeddedResource Include="Forms\CommonForms\AddFoodForm.resx">
       <DependentUpon>AddFoodForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\DrivingForm.resx">
+      <DependentUpon>DrivingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +205,9 @@
     <EmbeddedResource Include="Forms\CommonForms\RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\TrojanHorseForm.resx">
+      <DependentUpon>TrojanHorseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\SidebarCustomerForm.resx">
       <DependentUpon>SidebarCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\PrivatePoolForm.resx">
       <DependentUpon>PrivatePoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeForms\SidebarEmployeeForm.resx">
+      <DependentUpon>SidebarEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -233,12 +254,20 @@
     <None Include="Resources\Icons\CutleryIcon.png" />
     <None Include="Resources\Icons\TrojanHorseIcon.png" />
     <None Include="Resources\Icons\PoolIcon.png" />
+    <None Include="Resources\aaaaa.png" />
+    <None Include="Resources\aaaaa1.png" />
+    <None Include="Resources\1aaaaa.png" />
+    <None Include="Resources\2aaaaa.png" />
     <Content Include="Resources\AlarmSounds\basicAlarm.wav" />
     <Content Include="Resources\AlarmSounds\criticalAlarm.wav" />
     <Content Include="Resources\AlarmSounds\scifyAlarm.wav" />
     <Content Include="Resources\BlackMarbleBackground.jpg" />
+    <None Include="Resources\closed.png" />
     <Content Include="Resources\ColumnHorizontalTransparent.png" />
     <Content Include="Resources\ColumnTransparent.png" />
+    <None Include="Resources\dfgvbnjk.png" />
+    <None Include="Resources\ejyd75shbt6.png" />
+    <None Include="Resources\download %282%29.png" />
     <Content Include="Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο.PNG" />
     <Content Include="Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιο.PNG" />
     <Content Include="Resources\FoodImages\Burgers\ClubSandwichClassic.PNG" />
@@ -261,12 +290,18 @@
     <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίτα.PNG" />
     <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίτα.PNG" />
     <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίτα.PNG" />
+    <None Include="Resources\GPS.png" />
+    <None Include="Resources\hdbtgfnu.png" />
+    <None Include="Resources\hgytfrde.png" />
+    <None Include="Resources\images %282%29.png" />
     <Content Include="Resources\LogoImages\FullLogo.PNG" />
     <Content Include="Resources\LogoImages\TranspareFullLogo.png" />
     <Content Include="Resources\LogoImages\TranspareWithoutTextLogo.png" />
     <Content Include="Resources\LogoImages\WithoutSloganLogo.png" />
     <Content Include="Resources\MaiandrosSquareBlackImage.png" />
     <Content Include="Resources\MaiandrosSquareImage.png" />
+    <None Include="Resources\png-transparent-dialogue-window-bubble-squared-solid-line-tablet-quote-thinking-chat-blank.png" />
+    <None Include="Resources\open.png" />
     <Content Include="Resources\PoolImages\Pool0Percent.jpg" />
     <Content Include="Resources\PoolImages\Pool100Percent.jpg" />
     <Content Include="Resources\PoolImages\Pool10Percent.jpg" />
@@ -280,6 +315,7 @@
     <Content Include="Resources\PoolImages\Pool90Percent.jpg" />
     <Content Include="Resources\potentional logo.png" />
     <Content Include="Resources\LogoImages\WithoutTextLogo.PNG" />
+    <None Include="Resources\qwerty.png" />
     <Content Include="Resources\RadioSongs\EnasAetos.wav" />
     <Content Include="Resources\RadioSongs\Itia.wav" />
     <Content Include="Resources\RadioSongs\MiloMouKokkino.wav" />
@@ -292,9 +328,18 @@
     <Content Include="Resources\RoomImages\radioOff.png" />
     <Content Include="Resources\RoomImages\radioOn.png" />
     <Content Include="Resources\Icons\ShoppingCart.png" />
+    <None Include="Resources\sdfghj.png" />
+    <None Include="Resources\s.png" />
+    <None Include="Resources\Semi-Fully-open-large-1.jpg" />
+    <None Include="Resources\Semi-Hopen-White-BG-remote-1-768x667.png" />
+    <None Include="Resources\semiopen.png" />
     <Content Include="Resources\TemperatureDecreaseImage.png" />
     <Content Include="Resources\TemperatureIncreaseImage.png" />
     <Content Include="Resources\WhiteMarbleBackground.jpg" />
+    <None Include="Resources\zxcvbnm.png" />
+    <None Include="Resources\zertgh.png" />
+    <None Include="Resources\ωωω.png" />
+    <None Include="Resources\WhiteMarbleBackground1.jpg" />
     <Content Include="UIAssignmentDatabase.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

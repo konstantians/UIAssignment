@@ -29,6 +29,7 @@ namespace UIAssignment.Forms.CustomerForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SidebarCustomerForm));
             this.foreignFormPanel = new System.Windows.Forms.Panel();
             this.hiddenTroyanHorsePanel = new System.Windows.Forms.Panel();
@@ -56,6 +57,7 @@ namespace UIAssignment.Forms.CustomerForms
             this.apartmentIconPictureBox = new System.Windows.Forms.PictureBox();
             this.apartmentSectionButton = new UIAssignment.Resources.Cool_button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.foreignFormPanel.SuspendLayout();
             this.hiddenTroyanHorsePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.troyanHorsePictureBox)).BeginInit();
@@ -469,6 +471,10 @@ namespace UIAssignment.Forms.CustomerForms
             this.panelLogo.Size = new System.Drawing.Size(268, 100);
             this.panelLogo.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // SidebarCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -478,7 +484,7 @@ namespace UIAssignment.Forms.CustomerForms
             this.ClientSize = new System.Drawing.Size(1540, 711);
             this.Controls.Add(this.foreignFormPanel);
             this.Controls.Add(this.panelSideMenu);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1533, 749);
             this.Name = "SidebarCustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -536,5 +542,6 @@ namespace UIAssignment.Forms.CustomerForms
         private System.Windows.Forms.Panel poolSectionPanel;
         private System.Windows.Forms.Panel troyanHorseSectionPanel;
         private System.Windows.Forms.Panel LogoutAndHelpSectionPanel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

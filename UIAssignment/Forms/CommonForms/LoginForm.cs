@@ -4,7 +4,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using UIAssignment.Forms.CustomerForms;
-
+using UIAssignment.Forms.EmployeeForms;
 
 namespace UIAssignment.Forms.CommonForms
 {
@@ -198,7 +198,8 @@ namespace UIAssignment.Forms.CommonForms
             this.Hide();
             if (ActiveUser.Customer == null)
             {
-
+                SidebarEmployeeForm mapForm = new SidebarEmployeeForm();
+                mapForm.Show();
             }
             else
             {

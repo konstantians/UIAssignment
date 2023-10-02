@@ -134,20 +134,24 @@ namespace UIAssignment.Forms.CustomerForms
         private void apartmentSectionButton_Click(object sender, EventArgs e)
         {
             openChildForm(new RoomForm());
+            timer1.Enabled = false;
         }
 
         private void restaurantSectionButton_Click(object sender, EventArgs e)
         {
             openChildForm(new RestaurantForm());
+            timer1.Enabled = false;
         }
 
         private void poolSectionButton_Click(object sender, EventArgs e)
         {
             openChildForm(new PrivatePoolForm());
+            timer1.Enabled = false;
         }
         private void trojanHorseSectionButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new TrojanHorseForm());
+            timer1.Enabled = true;
         }
 
         private void SidebarCustomerForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -170,15 +174,32 @@ namespace UIAssignment.Forms.CustomerForms
         {
             if (activeForm.GetType() == typeof(PrivatePoolForm))
             {
-                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs30.htm");
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs30.htm");
             }
             else if (activeForm.GetType() == typeof(RoomForm))
             {
-                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs20.htm");
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs20.htm");
+            }
+            else if (activeForm.GetType() == typeof(RestaurantForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs50.htm");
             }
             else
             {
-                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs17.htm");
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs17.htm");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (ActiveUser.InGps == true && activeForm.GetType() == typeof(TrojanHorseForm))
+            {
+                openChildForm(new DrivingForm());
+            }
+            else if (ActiveUser.InGps == false && activeForm.GetType() == typeof(DrivingForm))
+            {
+                openChildForm(new TrojanHorseForm());
+                MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
             }
         }
     }

@@ -63,6 +63,46 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1aaaaa {
+            get {
+                object obj = ResourceManager.GetObject("1aaaaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2aaaaa {
+            get {
+                object obj = ResourceManager.GetObject("2aaaaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aaaaa {
+            get {
+                object obj = ResourceManager.GetObject("aaaaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aaaaa1 {
+            get {
+                object obj = ResourceManager.GetObject("aaaaa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AmstelΦιάλη500ml {
             get {
                 object obj = ResourceManager.GetObject("AmstelΦιάλη500ml", resourceCulture);
@@ -202,6 +242,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closed {
+            get {
+                object obj = ResourceManager.GetObject("closed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ClubSandwichClassic {
             get {
                 object obj = ResourceManager.GetObject("ClubSandwichClassic", resourceCulture);
@@ -281,9 +331,39 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dfgvbnjk {
+            get {
+                object obj = ResourceManager.GetObject("dfgvbnjk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DoubleBedIcon {
             get {
                 object obj = ResourceManager.GetObject("DoubleBedIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__2_ {
+            get {
+                object obj = ResourceManager.GetObject("download (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ejyd75shbt6 {
+            get {
+                object obj = ResourceManager.GetObject("ejyd75shbt6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -294,6 +374,46 @@ namespace UIAssignment.Properties {
         internal static System.IO.UnmanagedMemoryStream EnasAetos {
             get {
                 return ResourceManager.GetStream("EnasAetos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GPS {
+            get {
+                object obj = ResourceManager.GetObject("GPS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdbtgfnu {
+            get {
+                object obj = ResourceManager.GetObject("hdbtgfnu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hgytfrde {
+            get {
+                object obj = ResourceManager.GetObject("hgytfrde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__2_ {
+            get {
+                object obj = ResourceManager.GetObject("images (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -358,6 +478,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap open {
+            get {
+                object obj = ResourceManager.GetObject("open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pepsi330ml {
             get {
                 object obj = ResourceManager.GetObject("Pepsi330ml", resourceCulture);
@@ -371,6 +501,17 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap PepsiMax330ml {
             get {
                 object obj = ResourceManager.GetObject("PepsiMax330ml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_dialogue_window_bubble_squared_solid_line_tablet_quote_thinking_chat_blank {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-dialogue-window-bubble-squared-solid-line-tablet-quote-thinking-c" +
+                        "hat-blank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -518,6 +659,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap qwerty {
+            get {
+                object obj = ResourceManager.GetObject("qwerty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap radioOff {
             get {
                 object obj = ResourceManager.GetObject("radioOff", resourceCulture);
@@ -546,11 +697,61 @@ namespace UIAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s {
+            get {
+                object obj = ResourceManager.GetObject("s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream scifyAlarm {
             get {
                 return ResourceManager.GetStream("scifyAlarm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sdfghj {
+            get {
+                object obj = ResourceManager.GetObject("sdfghj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Semi_Fully_open_large_1 {
+            get {
+                object obj = ResourceManager.GetObject("Semi-Fully-open-large-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Semi_Hopen_White_BG_remote_1_768x667 {
+            get {
+                object obj = ResourceManager.GetObject("Semi-Hopen-White-BG-remote-1-768x667", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap semiopen {
+            get {
+                object obj = ResourceManager.GetObject("semiopen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -637,9 +838,39 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WhiteMarbleBackground1 {
+            get {
+                object obj = ResourceManager.GetObject("WhiteMarbleBackground1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WithoutSloganLogo {
             get {
                 object obj = ResourceManager.GetObject("WithoutSloganLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zertgh {
+            get {
+                object obj = ResourceManager.GetObject("zertgh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zxcvbnm {
+            get {
+                object obj = ResourceManager.GetObject("zxcvbnm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -760,6 +991,16 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap Νερό1_5lt {
             get {
                 object obj = ResourceManager.GetObject("Νερό1_5lt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ωωω {
+            get {
+                object obj = ResourceManager.GetObject("ωωω", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

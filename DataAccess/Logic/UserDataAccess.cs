@@ -54,7 +54,8 @@ namespace DataAccess.Logic
 
         public static List<string> GetCustomersUsernames()
         {
-            ConnectionClass.connection.Open();
+            bool shouldClose = HelperMethods.CheckConnectionAndOpenIfNecessary();
+            //ConnectionClass.connection.Open();
             string sqlQuery = "SELECT Username FROM User WHERE UserType = 'Customer';";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
@@ -65,7 +66,8 @@ namespace DataAccess.Logic
             {
                 usernames.Add(reader.GetString(0));
             }
-            ConnectionClass.connection.Close();
+            HelperMethods.CloseConnectionOrDoNothing(shouldClose);
+            //ConnectionClass.connection.Close();
 
             return usernames;
         }

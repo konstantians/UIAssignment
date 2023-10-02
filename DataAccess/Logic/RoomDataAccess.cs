@@ -10,7 +10,8 @@ namespace DataAccess.Logic
         
         public static List<Room> GetRooms()
         {
-            ConnectionClass.connection.Open();
+            bool shouldClose = HelperMethods.CheckConnectionAndOpenIfNecessary();
+            //ConnectionClass.connection.Open();
             string sqlQuery = "SELECT RoomId, RoomTemperature, RoomLighting FROM Room;";
             SQLiteCommand command = new SQLiteCommand(sqlQuery, ConnectionClass.connection);
 
@@ -32,7 +33,8 @@ namespace DataAccess.Logic
                 rooms.Add(room);
             }
 
-            ConnectionClass.connection.Close();
+            HelperMethods.CloseConnectionOrDoNothing(shouldClose);
+            //ConnectionClass.connection.Close();
 
             return rooms;
         }
