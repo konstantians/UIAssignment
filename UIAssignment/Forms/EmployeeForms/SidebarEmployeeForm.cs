@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using UIAssignment.Forms.CommonForms;
+using UIAssignment.Forms.CustomerForms;
 
 namespace UIAssignment.Forms.EmployeeForms
 {

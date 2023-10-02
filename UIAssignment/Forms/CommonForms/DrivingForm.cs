@@ -87,7 +87,8 @@ namespace UIAssignment.Forms.CommonForms
             //    var g = Regex.Replace(ActiveUser.Customer.Room.TroyanHorse.Location, @"[\{\}a-zA-Z=]", "").Split(',');
             //    myTrojanHorse.Location = new Point(int.Parse(g[0]), int.Parse(g[1]));
             //}
-
+            timer1.Enabled = true;
+            timerStopArrows.Enabled = true;
         }
 
         private void myTrojanHorse_MouseEnter(object sender, EventArgs e)

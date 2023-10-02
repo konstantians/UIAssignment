@@ -272,9 +272,9 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap closed {
+        internal static System.Drawing.Bitmap ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger {
             get {
-                object obj = ResourceManager.GetObject("closed", resourceCulture);
+                object obj = ResourceManager.GetObject("ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -282,9 +282,9 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger {
+        internal static System.Drawing.Bitmap closed {
             get {
-                object obj = ResourceManager.GetObject("ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger", resourceCulture);
+                object obj = ResourceManager.GetObject("closed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -441,6 +441,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EditIcon {
+            get {
+                object obj = ResourceManager.GetObject("EditIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ejyd75shbt6 {
             get {
                 object obj = ResourceManager.GetObject("ejyd75shbt6", resourceCulture);
@@ -483,6 +493,16 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap hgytfrde {
             get {
                 object obj = ResourceManager.GetObject("hgytfrde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hourglassLoadingScreen {
+            get {
+                object obj = ResourceManager.GetObject("hourglassLoadingScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -591,6 +611,16 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap PepsiMax330ml {
             get {
                 object obj = ResourceManager.GetObject("PepsiMax330ml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PepsiMax330mlBigger {
+            get {
+                object obj = ResourceManager.GetObject("PepsiMax330mlBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1221,6 +1251,16 @@ namespace UIAssignment.Properties {
         internal static System.Drawing.Bitmap Νερό1_5lt {
             get {
                 object obj = ResourceManager.GetObject("Νερό1_5lt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Νερό1_5ltBigger {
+            get {
+                object obj = ResourceManager.GetObject("Νερό1_5ltBigger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
