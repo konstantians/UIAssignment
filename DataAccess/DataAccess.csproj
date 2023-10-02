@@ -87,6 +87,7 @@
     <Compile Include="Logic\TroyanHorseDataAccess.cs" />
     <Compile Include="Logic\UserDataAccess.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DataModels\OrderDataModel.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Models\Order.cs" />

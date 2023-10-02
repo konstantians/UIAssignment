@@ -21,5 +21,15 @@
                    RadioVolume == otherRadio.RadioVolume &&
                    IsRadioOn == otherRadio.IsRadioOn;
         }
+
+        public override int GetHashCode()
+        {
+            int hash = 17; // Choose a prime number as the initial hash code
+            hash = hash * 31 + RadioId.GetHashCode();
+            hash = hash * 31 + RadioSong.GetHashCode();
+            hash = hash * 31 + RadioVolume.GetHashCode();
+            hash = hash * 31 + IsRadioOn.GetHashCode();
+            return hash;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using UIAssignment.Forms.CommonForms;
 
@@ -13,8 +14,14 @@ namespace UIAssignment.Forms.CustomerForms
         public SidebarCustomerForm()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
-            //apartmentIconPictureBox.BringToFront();
+            DoubleBufferingForForms.SetDoubleBuffer(panelSideMenu, true);
+            DoubleBufferingForForms.SetDoubleBuffer(panelLogo, true);
+            DoubleBufferingForForms.SetDoubleBuffer(apartmentSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(restaurantSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(poolSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(trojanHorseSectionButton, true);
+            DoubleBufferingForForms.SetDoubleBuffer(LogoutAndHelpSectionPanel, true);
+
             openChildForm(new MainForm());
         }
 
@@ -91,13 +98,35 @@ namespace UIAssignment.Forms.CustomerForms
             Application.OpenForms[0].Show();
         }
 
-        private void openChildForm(ChildForm childForm)
+        private async void openChildForm(ChildForm childForm)
         {
             if (activeForm != null && activeForm.UnsavedChangesDetected())
                 return;
             if (activeForm != null)
                 activeForm.Close();
+
             activeForm = childForm;
+            ActiveUser.OpenCartForm = false;
+
+            if (typeof(MainForm) != childForm.GetType() && typeof(LoadingForm) != childForm.GetType())
+            {
+                LoadingForm loadingForm = new LoadingForm();
+                loadingForm.Size = this.Size;
+                loadingForm.Show();
+                await Task.Delay(200);
+
+                openChildFormHelperMethod(activeForm);
+
+                await Task.Delay(1600);
+                loadingForm.Close();
+                return;
+            }
+
+            openChildFormHelperMethod(activeForm);
+        }
+
+        private void openChildFormHelperMethod(ChildForm childForm)
+        {
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -200,6 +229,26 @@ namespace UIAssignment.Forms.CustomerForms
             {
                 openChildForm(new TrojanHorseForm());
                 MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
+            }
+        }
+
+        private void checkStaticChangesTimer_Tick(object sender, EventArgs e)
+        {
+            if (ActiveUser.OpenCartForm)
+                openChildForm(new CartForm());
+            else if(ActiveUser.OpenOrderForm)
+                openChildForm(new OrdersForm());
+            //the line ActiveUser.SwapToInteractive = InteractiveModeEnum.None; is added to avoid a bug where multiple warning appear 
+            //if the user does not click fast enough a choice on the warning
+            else if (ActiveUser.SwapToInteractive == InteractiveModeEnum.InteractiveMode)
+            {
+                ActiveUser.SwapToInteractive = InteractiveModeEnum.None;
+                openChildForm(new InteractiveRoomForm());
+            }
+            else if (ActiveUser.SwapToInteractive == InteractiveModeEnum.NonInteractiveMode)
+            {
+                ActiveUser.SwapToInteractive = InteractiveModeEnum.None;
+                openChildForm(new RoomForm());
             }
         }
     }

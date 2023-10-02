@@ -132,31 +132,32 @@ namespace UIAssignment.Forms.CommonForms
 
         private void signInButton_Click(object sender, EventArgs e)
         {
-            if (usernameTextbox.Text == "" && passwordTextbox.Text == "")
+            if (usernameTextbox.Text.Trim() == "" && passwordTextbox.Text.Trim() == "")
             {
                 MessageBox.Show("The username and password field are empty, please fill al the fields.", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (usernameTextbox.Text == "")
+            else if (usernameTextbox.Text.Trim() == "")
             {
                 MessageBox.Show("The username field is empty, please fill al the fields.", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (passwordTextbox.Text == "")
+            else if (passwordTextbox.Text.Trim() == "")
             {
                 MessageBox.Show("The password field is empty, please fill al the fields.","Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if(UserDataAccess.GetUser(usernameTextbox.Text).Item2 == "Customer")
+            if(UserDataAccess.CheckTypeOfUser(usernameTextbox.Text.Trim()) == "Customer")
             {
-                ActiveUser.User = UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+                
                 ActiveUser.Customer = (Customer)UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+                ActiveUser.User = ActiveUser.Customer;
             }
             else
             {
-                ActiveUser.User = UserDataAccess.GetUser(usernameTextbox.Text).Item1;
                 ActiveUser.Employee = (Employee)UserDataAccess.GetUser(usernameTextbox.Text).Item1;
+                ActiveUser.User = ActiveUser.Employee;   
             }
 
             if(ActiveUser.User == null)

@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveUser.cs" />
+    <Compile Include="InteractiveModeEnum.cs" />
     <Compile Include="ChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +91,24 @@
     <Compile Include="CustomToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\CommonForms\AddFoodForm.cs">
+    <Compile Include="DoubleBufferingForForms.cs" />
+    <Compile Include="Forms\CommonForms\InteractiveRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CommonForms\AddFoodForm.Designer.cs">
+    <Compile Include="Forms\CommonForms\InteractiveRoomForm.Designer.cs">
+      <DependentUpon>InteractiveRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\AddFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\AddFoodForm.Designer.cs">
       <DependentUpon>AddFoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CommonForms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CommonForms\DrivingForm.cs">
       <SubType>Form</SubType>
@@ -108,10 +122,22 @@
     <Compile Include="Forms\CommonForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CommonForms\RestaurantForm.cs">
+    <Compile Include="Forms\CustomerForms\CartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CommonForms\RestaurantForm.Designer.cs">
+    <Compile Include="Forms\CustomerForms\CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\RestaurantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\RestaurantForm.Designer.cs">
       <DependentUpon>RestaurantForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CommonForms\RoomForm.cs">
@@ -190,8 +216,14 @@
     <EmbeddedResource Include="CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CommonForms\AddFoodForm.resx">
+    <EmbeddedResource Include="Forms\CommonForms\InteractiveRoomForm.resx">
+      <DependentUpon>InteractiveRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForms\AddFoodForm.resx">
       <DependentUpon>AddFoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\DrivingForm.resx">
       <DependentUpon>DrivingForm.cs</DependentUpon>
@@ -199,7 +231,13 @@
     <EmbeddedResource Include="Forms\CommonForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CommonForms\RestaurantForm.resx">
+    <EmbeddedResource Include="Forms\CustomerForms\CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForms\OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForms\RestaurantForm.resx">
       <DependentUpon>RestaurantForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\RoomForm.resx">
@@ -268,28 +306,54 @@
     <None Include="Resources\dfgvbnjk.png" />
     <None Include="Resources\ejyd75shbt6.png" />
     <None Include="Resources\download %282%29.png" />
+    <Content Include="Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG" />
     <Content Include="Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο.PNG" />
+    <Content Include="Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG" />
     <Content Include="Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιο.PNG" />
+    <Content Include="Resources\FoodImages\Burgers\ClubSandwichClassicBigger.PNG" />
     <Content Include="Resources\FoodImages\Burgers\ClubSandwichClassic.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\PepsiMax330mlBigger.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\AmstelΦιάλη500mlBigger.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\CocaColaZero330mlBigger.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\CocaCola330mlBigger.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\Corona330mlBigger.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\Pepsi330mlBigger.PNG" />
     <Content Include="Resources\FoodImages\Drinks\PepsiMax330ml.PNG" />
     <Content Include="Resources\FoodImages\Drinks\AmstelΦιάλη500ml.PNG" />
     <Content Include="Resources\FoodImages\Drinks\CocaCola330ml.PNG" />
     <Content Include="Resources\FoodImages\Drinks\CocaColaZero330ml.PNG" />
     <Content Include="Resources\FoodImages\Drinks\Corona330ml.PNG" />
     <Content Include="Resources\FoodImages\Drinks\Pepsi330ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\ΆλφαΦιάλη500mlBigger.PNG" />
     <Content Include="Resources\FoodImages\Drinks\ΆλφαΦιάλη500ml.PNG" />
+    <Content Include="Resources\FoodImages\Drinks\Νερό1.5ltBigger.PNG" />
     <Content Include="Resources\FoodImages\Drinks\Νερό1.5lt.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδαBigger.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδαBigger.PNG" />
     <Content Include="Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδα.PNG" />
     <Content Include="Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδα.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΚαλαμάκιΧοιρινόΜερίδαBigger.PNG" />
     <Content Include="Resources\FoodImages\Merides\ΚαλαμάκιΧοιρινόΜερίδα.PNG" />
+    <Content Include="Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδαBigger.PNG" />
     <Content Include="Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδα.PNG" />
     <Content Include="Resources\FoodImages\Salads\Caesars.PNG" />
+    <Content Include="Resources\FoodImages\Salads\CaesarsBigger.PNG" />
+    <Content Include="Resources\FoodImages\Salads\ΑπόΤοΧωριόBigger.PNG" />
     <Content Include="Resources\FoodImages\Salads\ΑπόΤοΧωριό.PNG" />
+    <Content Include="Resources\FoodImages\Salads\ΕποχήςΜεΜαρούλιBigger.PNG" />
+    <Content Include="Resources\FoodImages\Salads\ΕποχήςΜεΛάχανοΚαρότοBigger.PNG" />
     <Content Include="Resources\FoodImages\Salads\ΕποχήςΜεΛάχανοΚαρότο.PNG" />
     <Content Include="Resources\FoodImages\Salads\ΕποχήςΜεΜαρούλι.PNG" />
+    <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίταBigger.PNG" />
+    <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίταBigger.PNG" />
     <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίτα.PNG" />
     <Content Include="Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίτα.PNG" />
+    <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίταBigger.PNG" />
     <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίτα.PNG" />
+    <Content Include="Resources\hourglassLoadingScreen.gif" />
+    <Content Include="Resources\Icons\EditIcon.png" />
+    <Content Include="Resources\Icons\SwapModeIcon.png" />
+    <Content Include="Resources\Icons\TrashIcon.png" />
     <None Include="Resources\GPS.png" />
     <None Include="Resources\hdbtgfnu.png" />
     <None Include="Resources\hgytfrde.png" />
@@ -335,6 +399,7 @@
     <None Include="Resources\semiopen.png" />
     <Content Include="Resources\TemperatureDecreaseImage.png" />
     <Content Include="Resources\TemperatureIncreaseImage.png" />
+    <Content Include="Resources\test.gif" />
     <Content Include="Resources\WhiteMarbleBackground.jpg" />
     <None Include="Resources\zxcvbnm.png" />
     <None Include="Resources\zertgh.png" />

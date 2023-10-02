@@ -2,11 +2,13 @@
 using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Resources;
+using System.Windows.Forms;
 using UIAssignment.Resources;
 
-namespace UIAssignment.Forms.CommonForms
+namespace UIAssignment.Forms.CustomerForms
 {
     public partial class RestaurantForm : ChildForm
     {
@@ -19,80 +21,93 @@ namespace UIAssignment.Forms.CommonForms
         public RestaurantForm()
         {
             InitializeComponent();
+            DoubleBufferingForForms.SetDoubleBuffer(foodsPanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(filtersPanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(firstFoodPanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(secondFoodPanel, true);
+            DoubleBufferingForForms.SetDoubleBuffer(thirdFoodPanel, true);
+
             allFoods = OrderDataAccess.GetFoods();
             loadedFoods = allFoods;
+
             loadSpecificFoodsBasedOnLimit(0,loadedFoods);
         }
 
         public override bool UnsavedChangesDetected()
         {
+            if(ActiveUser.Customer.FoodAndCountPairs.Count > 0 && !ActiveUser.OpenCartForm && ActiveUser.NeedsToBeNotifiedAboutOrder)
+            {
+                MessageBox.Show("Έχετε αντικείμενα στο καλάθι σας.\nΘα παραμείνουν εκεί μέχρι να αποσυνδεθείτε ή να ολοκληρώσετε την παραγγελία σας.", 
+                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ActiveUser.NeedsToBeNotifiedAboutOrder = false;
+            }
             return false;
         }
 
-        private void firstFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void firstFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 0;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(0, loadedFoods);
         }
 
-        private void secondFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void secondFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 3;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(3, loadedFoods);
         }
 
-        private void thirdFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void thirdFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 6;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(6, loadedFoods);
         }
 
-        private void fourthFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void fourthFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 9;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(9, loadedFoods);
         }
 
-        private void fifthFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void fifthFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 12;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(12, loadedFoods);
         }
 
-        private void sixthFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void sixthFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 15;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(15, loadedFoods);
         }
 
-        private void seventhFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void seventhFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 18;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(18, loadedFoods);
         }
 
-        private void eighthfoodSectionButton_Click(object sender, System.EventArgs e)
+        private void eighthfoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 21;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(21, loadedFoods);
         }
 
-        private void ninthFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void ninthFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 24;
             setStyleForCurrentSectionButton();
             loadSpecificFoodsBasedOnLimit(24, loadedFoods);
         }
 
-        private void tenthFoodSectionButton_Click(object sender, System.EventArgs e)
+        private void tenthFoodSectionButton_Click(object sender, EventArgs e)
         {
             currentStartingPoint = 27;
             setStyleForCurrentSectionButton();
@@ -127,36 +142,39 @@ namespace UIAssignment.Forms.CommonForms
         private void setFoodSection(int sectionNumber, Food food, bool doNotFill)
         {
 
-            System.Windows.Forms.Panel panel = new System.Windows.Forms.Panel();
+            Panel panel = new Panel();
             
             if (sectionNumber == 0)
-                panel = foodsPanel.Controls.OfType<System.Windows.Forms.Panel>().FirstOrDefault(tempPanel => tempPanel.Name == "firstFoodPanel");
+                panel = foodsPanel.Controls.OfType<Panel>().FirstOrDefault(tempPanel => tempPanel.Name == "firstFoodPanel");
             
             else if(sectionNumber == 1)
-                panel = foodsPanel.Controls.OfType<System.Windows.Forms.Panel>().FirstOrDefault(tempPanel => tempPanel.Name == "secondFoodPanel");
+                panel = foodsPanel.Controls.OfType<Panel>().FirstOrDefault(tempPanel => tempPanel.Name == "secondFoodPanel");
             
             else
-                panel = foodsPanel.Controls.OfType<System.Windows.Forms.Panel>().FirstOrDefault(tempPanel => tempPanel.Name == "thirdFoodPanel");
+                panel = foodsPanel.Controls.OfType<Panel>().FirstOrDefault(tempPanel => tempPanel.Name == "thirdFoodPanel");
 
             if (doNotFill)
             {
-                panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("TitleValueLabel")).Text = "";
-                panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("PriceValueLabel")).Text = "";
-                panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("IngredientsValueLabel")).Text = "";
-                panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("TimeValueLabel")).Text = "";
-                panel.Controls.OfType<System.Windows.Forms.PictureBox>().FirstOrDefault().BackgroundImage = null;
+                panel.Enabled = false;
+                panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("TitleValueLabel")).Text = "";
+                panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("PriceValueLabel")).Text = "";
+                panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("IngredientsValueLabel")).Text = "";
+                panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("TimeValueLabel")).Text = "";
+                panel.Controls.OfType<PictureBox>().FirstOrDefault().BackgroundImage = null;
                 return;
             }
 
-            System.Drawing.Image resourceObject = (System.Drawing.Image)resourceManager.GetObject(food.FoodImage);
-            panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("TitleValueLabel")).Text = food.FoodName;
-            panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("PriceValueLabel")).Text = $"{food.PricePerUnit}\u20AC";
+            if (!panel.Enabled)
+                panel.Enabled = true;
+            Image resourceObject = (Image)resourceManager.GetObject(food.FoodImage);
+            panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("TitleValueLabel")).Text = food.FoodName;
+            panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("PriceValueLabel")).Text = $"{food.PricePerUnit}\u20AC";
             string formattedFoodDescription = food.Description.Replace("\\n", Environment.NewLine);
-            panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("IngredientsValueLabel")).Text = formattedFoodDescription;
-            panel.Controls.OfType<System.Windows.Forms.Label>().FirstOrDefault(label => label.Name.Contains("TimeValueLabel")).Text = $"{food.PreparationTime} λεπτά";
-            panel.Controls.OfType<System.Windows.Forms.PictureBox>().FirstOrDefault().BackgroundImage = resourceObject;
-            panel.Controls.OfType<System.Windows.Forms.PictureBox>().FirstOrDefault().BackgroundImageLayout = 
-                    food.Category == "Νερά Και Αναψυκτικά" || food.Category == "Μπύρες" ? System.Windows.Forms.ImageLayout.Center : System.Windows.Forms.ImageLayout.Stretch;
+            panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("IngredientsValueLabel")).Text = formattedFoodDescription;
+            panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("TimeValueLabel")).Text = $"{food.PreparationTime} λεπτά";
+            panel.Controls.OfType<PictureBox>().FirstOrDefault().BackgroundImage = resourceObject;
+            panel.Controls.OfType<PictureBox>().FirstOrDefault().BackgroundImageLayout = 
+                    food.Category == "Νερά Και Αναψυκτικά" || food.Category == "Μπύρες" ? ImageLayout.Center : ImageLayout.Stretch;
         }
 
         private void predeterminedFilterRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -247,19 +265,19 @@ namespace UIAssignment.Forms.CommonForms
             foreach (Cool_button sectionButton in sectionButtons)
             {
                 //found the previous
-                if (sectionButton.BackgroundImage != null)
-                {
-                    sectionButton.BackgroundImage = null;
-                    sectionButton.TextColor = System.Drawing.Color.Black;
-                    sectionButton.BorderColor = System.Drawing.Color.Black;
-                }
-                //found the current
-                else if (counter == currentStartingPoint)
+                if (counter == currentStartingPoint)
                 {
                     sectionButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
-                    sectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                    sectionButton.TextColor = System.Drawing.Color.White;
-                    sectionButton.BorderColor = System.Drawing.Color.Gray;
+                    sectionButton.BackgroundImageLayout = ImageLayout.Stretch;
+                    sectionButton.TextColor = Color.White;
+                    sectionButton.BorderColor = Color.Gray;
+                }
+                //found the current
+                else if (sectionButton.BackgroundImage != null)
+                {
+                    sectionButton.BackgroundImage = null;
+                    sectionButton.TextColor = Color.Black;
+                    sectionButton.BorderColor = Color.Black;
                 }
 
                 counter += 3;
@@ -277,18 +295,56 @@ namespace UIAssignment.Forms.CommonForms
         private void firstFoodPanel_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            AddFoodForm addFoodForm = new AddFoodForm();
+            Application.OpenForms[1].Enabled = false;
+            AddFoodForm addFoodForm = new AddFoodForm(setUpAddFoodForm(firstFoodPanel));
             addFoodForm.Show();
         }
 
         private void secondFoodPanel_Click(object sender, EventArgs e)
         {
-
+            this.Enabled = false;
+            Application.OpenForms[1].Enabled = false;
+            AddFoodForm addFoodForm = new AddFoodForm(setUpAddFoodForm(secondFoodPanel));
+            addFoodForm.Show();
         }
 
         private void thirdFoodPanel_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            Application.OpenForms[1].Enabled = false;
+            AddFoodForm addFoodForm = new AddFoodForm(setUpAddFoodForm(thirdFoodPanel));
+            addFoodForm.Show();
+        }
 
+        private Food setUpAddFoodForm(Panel panel)
+        {
+            Food food = new Food();
+            food.FoodName = panel.Controls.OfType<Label>().FirstOrDefault(label => label.Name.Contains("TitleValueLabel")).Text;
+            return food;
+        }
+
+        private void applyFiltersButton_MouseEnter(object sender, EventArgs e)
+        {
+            applyFiltersButton.BackgroundImage = Properties.Resources.BlackMarbleBackground;
+            applyFiltersButton.TextColor = Color.White;
+        }
+
+        private void applyFiltersButton_MouseLeave(object sender, EventArgs e)
+        {
+            applyFiltersButton.BackgroundImage = null;
+            applyFiltersButton.TextColor = Color.Black;
+        }
+
+        private void shoppingCartButton_Click(object sender, EventArgs e)
+        {
+
+            if (ActiveUser.Customer.FoodAndCountPairs.Count == 0)
+            {
+                MessageBox.Show("Το καλάθι αγορών σας είναι άδειο.\nΠαρακαλώ προσθέστε προϊόντα στο καλάθι σας πριν συνεχίσετε.", 
+                    "Άδειο Καλάθι", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            ActiveUser.OpenCartForm = true;
         }
     }
 }

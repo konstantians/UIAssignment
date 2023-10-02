@@ -17,5 +17,9 @@ namespace UIAssignment
         /// has the additional information if the user is an customer. If the user is an employee then this must be null.
         /// </summary>
         public static Customer Customer { get; set; } = null;
+        public static bool OpenCartForm { get; set; } = false;
+        public static bool NeedsToBeNotifiedAboutOrder { get; set; } = false;
+        public static bool OpenOrderForm { get; set; } = false;   
+        public static InteractiveModeEnum SwapToInteractive { get; set; } = InteractiveModeEnum.None;
     }
 }
