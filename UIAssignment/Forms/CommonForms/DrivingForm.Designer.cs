@@ -105,6 +105,7 @@
             this.myTrojanHorsee = new System.Windows.Forms.PictureBox();
             this.ZeusPalacee = new System.Windows.Forms.PictureBox();
             this.Khpoi = new System.Windows.Forms.PictureBox();
+            this.StairsAndDoors = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -187,9 +188,10 @@
             this.TrojanHorse7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse7.Location = new System.Drawing.Point(1204, 217);
             this.TrojanHorse7.Name = "TrojanHorse7";
-            this.TrojanHorse7.Size = new System.Drawing.Size(22, 23);
+            this.TrojanHorse7.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse7.TabIndex = 39;
             this.TrojanHorse7.UseVisualStyleBackColor = false;
+            this.TrojanHorse7.Click += new System.EventHandler(this.TrojanHorse7_Click);
             this.TrojanHorse7.MouseEnter += new System.EventHandler(this.TrojanHorse7_MouseEnter);
             this.TrojanHorse7.MouseLeave += new System.EventHandler(this.TrojanHorse7_MouseLeave);
             // 
@@ -200,9 +202,10 @@
             this.TrojanHorse6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse6.Location = new System.Drawing.Point(1157, 217);
             this.TrojanHorse6.Name = "TrojanHorse6";
-            this.TrojanHorse6.Size = new System.Drawing.Size(22, 23);
+            this.TrojanHorse6.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse6.TabIndex = 38;
             this.TrojanHorse6.UseVisualStyleBackColor = false;
+            this.TrojanHorse6.Click += new System.EventHandler(this.TrojanHorse6_Click);
             this.TrojanHorse6.MouseEnter += new System.EventHandler(this.TrojanHorse6_MouseEnter);
             this.TrojanHorse6.MouseLeave += new System.EventHandler(this.TrojanHorse6_MouseLeave);
             // 
@@ -213,9 +216,10 @@
             this.TrojanHorse5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse5.Location = new System.Drawing.Point(1115, 217);
             this.TrojanHorse5.Name = "TrojanHorse5";
-            this.TrojanHorse5.Size = new System.Drawing.Size(22, 23);
+            this.TrojanHorse5.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse5.TabIndex = 37;
             this.TrojanHorse5.UseVisualStyleBackColor = false;
+            this.TrojanHorse5.Click += new System.EventHandler(this.TrojanHorse5_Click);
             this.TrojanHorse5.MouseEnter += new System.EventHandler(this.TrojanHorse5_MouseEnter);
             this.TrojanHorse5.MouseLeave += new System.EventHandler(this.TrojanHorse5_MouseLeave);
             // 
@@ -226,9 +230,10 @@
             this.TrojanHorse4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse4.Location = new System.Drawing.Point(1245, 217);
             this.TrojanHorse4.Name = "TrojanHorse4";
-            this.TrojanHorse4.Size = new System.Drawing.Size(22, 23);
+            this.TrojanHorse4.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse4.TabIndex = 36;
             this.TrojanHorse4.UseVisualStyleBackColor = false;
+            this.TrojanHorse4.Click += new System.EventHandler(this.TrojanHorse4_Click);
             this.TrojanHorse4.MouseEnter += new System.EventHandler(this.TrojanHorse4_MouseEnter);
             this.TrojanHorse4.MouseLeave += new System.EventHandler(this.TrojanHorse4_MouseLeave);
             // 
@@ -239,9 +244,10 @@
             this.TrojanHorse3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse3.Location = new System.Drawing.Point(1043, 80);
             this.TrojanHorse3.Name = "TrojanHorse3";
-            this.TrojanHorse3.Size = new System.Drawing.Size(22, 23);
+            this.TrojanHorse3.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse3.TabIndex = 35;
             this.TrojanHorse3.UseVisualStyleBackColor = false;
+            this.TrojanHorse3.Click += new System.EventHandler(this.TrojanHorse3_Click);
             this.TrojanHorse3.MouseEnter += new System.EventHandler(this.TrojanHorse3_MouseEnter);
             this.TrojanHorse3.MouseLeave += new System.EventHandler(this.TrojanHorse3_MouseLeave);
             // 
@@ -252,9 +258,10 @@
             this.TrojanHorse2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse2.Location = new System.Drawing.Point(1043, 51);
             this.TrojanHorse2.Name = "TrojanHorse2";
-            this.TrojanHorse2.Size = new System.Drawing.Size(22, 23);
+            this.TrojanHorse2.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse2.TabIndex = 34;
             this.TrojanHorse2.UseVisualStyleBackColor = false;
+            this.TrojanHorse2.Click += new System.EventHandler(this.TrojanHorse2_Click);
             this.TrojanHorse2.MouseEnter += new System.EventHandler(this.TrojanHorse2_MouseEnter);
             this.TrojanHorse2.MouseLeave += new System.EventHandler(this.TrojanHorse2_MouseLeave);
             // 
@@ -265,9 +272,10 @@
             this.TrojanHorse1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TrojanHorse1.Location = new System.Drawing.Point(1043, 10);
             this.TrojanHorse1.Name = "TrojanHorse1";
-            this.TrojanHorse1.Size = new System.Drawing.Size(22, 25);
+            this.TrojanHorse1.Size = new System.Drawing.Size(25, 27);
             this.TrojanHorse1.TabIndex = 33;
             this.TrojanHorse1.UseVisualStyleBackColor = false;
+            this.TrojanHorse1.Click += new System.EventHandler(this.TrojanHorse1_Click);
             this.TrojanHorse1.MouseEnter += new System.EventHandler(this.TrojanHorse1_MouseEnter);
             this.TrojanHorse1.MouseLeave += new System.EventHandler(this.TrojanHorse1_MouseLeave);
             // 
@@ -281,6 +289,7 @@
             this.myTrojanHorse.Size = new System.Drawing.Size(25, 27);
             this.myTrojanHorse.TabIndex = 32;
             this.myTrojanHorse.UseVisualStyleBackColor = false;
+            this.myTrojanHorse.Click += new System.EventHandler(this.myTrojanHorse_Click);
             this.myTrojanHorse.MouseEnter += new System.EventHandler(this.myTrojanHorse_MouseEnter);
             this.myTrojanHorse.MouseLeave += new System.EventHandler(this.myTrojanHorse_MouseLeave);
             // 
@@ -389,7 +398,7 @@
             // 
             this.Park.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Park.Image = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
-            this.Park.Location = new System.Drawing.Point(684, 102);
+            this.Park.Location = new System.Drawing.Point(479, 191);
             this.Park.Name = "Park";
             this.Park.Size = new System.Drawing.Size(353, 69);
             this.Park.TabIndex = 53;
@@ -406,6 +415,7 @@
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 54;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // pictureBox22
             // 
@@ -1010,6 +1020,18 @@
             this.Khpoi.TabStop = false;
             this.Khpoi.Click += new System.EventHandler(this.Khpoi_Click);
             // 
+            // StairsAndDoors
+            // 
+            this.StairsAndDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.StairsAndDoors.Image = global::UIAssignment.Properties.Resources.WhiteMarbleBackground;
+            this.StairsAndDoors.Location = new System.Drawing.Point(7, 42);
+            this.StairsAndDoors.Name = "StairsAndDoors";
+            this.StairsAndDoors.Size = new System.Drawing.Size(110, 183);
+            this.StairsAndDoors.TabIndex = 110;
+            this.StairsAndDoors.Text = "Μενού ελέγχου συσκευών του παρόντος Δουρείου Ίππου";
+            this.StairsAndDoors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StairsAndDoors.Click += new System.EventHandler(this.StairsAndDoors_Click);
+            // 
             // DrivingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1017,6 +1039,7 @@
             this.BackgroundImage = global::UIAssignment.Properties.Resources.GPS;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1270, 711);
+            this.Controls.Add(this.StairsAndDoors);
             this.Controls.Add(this.Khpoi);
             this.Controls.Add(this.ZeusPalacee);
             this.Controls.Add(this.myTrojanHorsee);
@@ -1241,5 +1264,6 @@
         private System.Windows.Forms.PictureBox myTrojanHorsee;
         private System.Windows.Forms.PictureBox ZeusPalacee;
         private System.Windows.Forms.PictureBox Khpoi;
+        private System.Windows.Forms.Label StairsAndDoors;
     }
 }

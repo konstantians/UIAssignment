@@ -13,9 +13,10 @@ namespace UIAssignment.Forms.CommonForms
 {
     public partial class DrivingForm : ChildForm
     {
-        Button focused = null;
+        Button previouslyfocused = null;
+        bool everythingParked = true;
         bool top, mid, bot, palace, garden, stop = true;//false;
-        bool parked=false,goLeft, goRight,goUp,goDown;
+        bool parked=true/*false*/,goLeft, goRight,goUp,goDown;
         int speed = 4, o = 1;//0,begin=1;
         Dictionary<string, List<PictureBox>> My_dict1 =
                        new Dictionary<string, List<PictureBox>>();
@@ -345,6 +346,140 @@ namespace UIAssignment.Forms.CommonForms
                 foreach (PictureBox arrow in My_dict1["MidTowardsGarden"])
                 {
                     arrow.Visible = true;
+                }
+            }
+        }
+
+        private void myTrojanHorse_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = myTrojanHorse;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse1_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse1;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse2_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse2;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse3_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse3;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse4_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse4;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse5_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse5;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse6_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse6;
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void TrojanHorse7_Click(object sender, EventArgs e)
+        {
+            if (everythingParked)
+            {
+                previouslyfocused = TrojanHorse7;
+                /*if(ActiveUser.Employee == null)
+                {
+                    parked = false;
+                }
+                else
+                {
+                    everythingParked = false;
+                }*/
+            }
+            else
+            {
+                previouslyfocused.Focus();
+                MessageBox.Show("Δεν μπορείς να εγκαταλείψεις έναν Δούρειο Ίππο. Πρέπει να τον παρκάρεις σε κάποια θέση στάθμευσης προτού επιλέξεις έναν άλλον.");
+            }
+        }
+
+        private void StairsAndDoors_Click(object sender, EventArgs e)
+        {
+            if(ActiveUser.Employee != null)
+            {
+                if (everythingParked)
+                    ActiveUser.InGps = false;
+                else
+                {
+                    MessageBox.Show("Στάθμευσε τον Δούρειο Ίππο προτού επιχειρήσεις να ανοίξεις το μενού τον συσκευών του.");
+                }
+            }
+            else
+            {
+                if (parked)
+                    ActiveUser.InGps = false;
+                else
+                {
+                    MessageBox.Show("Στάθμευσε τον Δούρειο Ίππο προτού επιχειρήσεις να ανοίξεις το μενού τον συσκευών του.");
                 }
             }
         }
@@ -752,21 +887,29 @@ namespace UIAssignment.Forms.CommonForms
             {
                 pictureBox7.Visible = true;
                 goLeft = true;
+                timer1.Enabled = true;
+                timerStopArrows.Enabled = true;
             }
             else if (e.KeyCode == Keys.D)
             {
                 pictureBox5.Visible = true;
                 goRight = true;
+                timer1.Enabled = true;
+                timerStopArrows.Enabled = true;
             }
             else if (e.KeyCode == Keys.W)
             {
                 pictureBox3.Visible = true;
                 goUp = true;
+                timer1.Enabled = true;
+                timerStopArrows.Enabled = true;
             }
             else if (e.KeyCode == Keys.S)
             {
                 pictureBox6.Visible = true;
                 goDown = true;
+                timer1.Enabled = true;
+                timerStopArrows.Enabled = true;
             }
         }
 
@@ -798,7 +941,22 @@ namespace UIAssignment.Forms.CommonForms
             {
                 if (((getFocused().Location.X >= 2) && (getFocused().Location.Y >= 388) && (getFocused().Location.X <= 90) && (getFocused().Location.Y <= 400)) || ((getFocused().Location.X >= 774) && (getFocused().Location.Y >= 0) && (getFocused().Location.X <= 790) && (getFocused().Location.Y <= 106)) || ((getFocused().Location.X >= 830) && (getFocused().Location.Y >= 164) && (getFocused().Location.X <= 938) && (getFocused().Location.Y <= 180)) || ((getFocused().Location.X >= 142) && (getFocused().Location.Y >= 444) && (getFocused().Location.X <= 158) && (getFocused().Location.Y <= 556)))
                 {
-                    parked = true;
+                    if (ActiveUser.Employee == null)
+                    {
+                        MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
+                        parked = true;
+                        ActiveUser.Parked = true;
+                        timer1.Enabled = false;
+                        timerStopArrows.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
+                        everythingParked = true;
+                        ActiveUser.Parked = true;
+                        timer1.Enabled = false;
+                        timerStopArrows.Enabled = false;
+                    }
                 }
                 /*if (((myTrojanHorse.Location.X >= 2) && (myTrojanHorse.Location.Y >= 388) && (myTrojanHorse.Location.X <= 90) && (myTrojanHorse.Location.Y <= 400)) || ((myTrojanHorse.Location.X >= 774) && (myTrojanHorse.Location.Y >= 0) && (myTrojanHorse.Location.X <= 790) && (myTrojanHorse.Location.Y <= 106)) || ((myTrojanHorse.Location.X >= 830) && (myTrojanHorse.Location.Y >= 164) && (myTrojanHorse.Location.X <= 938) && (myTrojanHorse.Location.Y <= 180)) || ((myTrojanHorse.Location.X >= 142) && (myTrojanHorse.Location.Y >= 444) && (myTrojanHorse.Location.X <= 158) && (myTrojanHorse.Location.Y <= 556)))
                 {
@@ -832,7 +990,9 @@ namespace UIAssignment.Forms.CommonForms
             label1.Text = getFocused().Location.X.ToString() + " " + getFocused().Location.Y.ToString();
             if (goLeft && getFocused().Location.X > 0 && isValiid(new Point(getFocused().Location.X - 4, getFocused().Location.Y)))
             {
+                ActiveUser.Parked = false;
                 parked = false;
+                everythingParked = false;
                 //int x = myTrojanHorse.Location.X;
                 //int y = myTrojanHorse.Location.Y;
                 //myTrojanHorse.Location = new Point(x-speed,y);// -= speed;
@@ -840,7 +1000,9 @@ namespace UIAssignment.Forms.CommonForms
             }
             if (goRight && getFocused().Location.X + 10 < this.Width && isValiid(new Point(getFocused().Location.X + 4, getFocused().Location.Y)))
             {
+                ActiveUser.Parked = false;
                 parked = false;
+                everythingParked = false;
                 getFocused().Left += speed;
                 //int x = myTrojanHorse.Location.X;
                 //int y = myTrojanHorse.Location.Y;
@@ -848,7 +1010,9 @@ namespace UIAssignment.Forms.CommonForms
             }
             if (goUp && getFocused().Location.Y > 0 && isValiid(new Point(getFocused().Location.X, getFocused().Location.Y - 4)))
             {
+                ActiveUser.Parked = false;
                 parked = false;
+                everythingParked = false;
                 getFocused().Top -= speed;
                 //int x = myTrojanHorse.Location.X;
                 //int y = myTrojanHorse.Location.Y;
@@ -856,7 +1020,9 @@ namespace UIAssignment.Forms.CommonForms
             }
             if (goDown && getFocused().Location.Y + 10 < this.Height && isValiid(new Point(getFocused().Location.X, getFocused().Location.Y + 4)))
             {
+                ActiveUser.Parked = false;
                 parked = false;
+                everythingParked = false;
                 getFocused().Top += speed;
                 //int x = myTrojanHorse.Location.X;
                 //int y = myTrojanHorse.Location.Y;
@@ -895,17 +1061,20 @@ namespace UIAssignment.Forms.CommonForms
                 //int y = myTrojanHorse.Location.Y;
                 //myTrojanHorse.Location = new Point(x , y+ speed);
             }*/
-            if (parked)
+            /*if (parked)
             {
                 //timer1.Enabled = false;
                 //ExitDrivingMode.PerformClick();
                 //MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
                 //timer1.Enabled = false;
                 ExitDrivingMode.PerformClick();
-            }
+            }*/
             if (((getFocused().Location.X >= 2) && (getFocused().Location.Y >= 388) && (getFocused().Location.X <= 90) && (getFocused().Location.Y <= 400)) || ((getFocused().Location.X >= 774) && (getFocused().Location.Y >= 0) && (getFocused().Location.X <= 790) && (getFocused().Location.Y <= 106)) || ((getFocused().Location.X >= 830) && (getFocused().Location.Y >= 164) && (getFocused().Location.X <= 938) && (getFocused().Location.Y <= 180)) || ((getFocused().Location.X >= 142) && (getFocused().Location.Y >= 444) && (getFocused().Location.X <= 158) && (getFocused().Location.Y <= 556)))
             {
-                Park.Visible = true;
+                if (!parked)
+                {
+                    Park.Visible = true;
+                }
             }
             if (!(((getFocused().Location.X >= 2) && (getFocused().Location.Y >= 388) && (getFocused().Location.X <= 90) && (getFocused().Location.Y <= 400)) || ((getFocused().Location.X >= 774) && (getFocused().Location.Y >= 0) && (getFocused().Location.X <= 790) && (getFocused().Location.Y <= 106)) || ((getFocused().Location.X >= 830) && (getFocused().Location.Y >= 164) && (getFocused().Location.X <= 938) && (getFocused().Location.Y <= 180)) || ((getFocused().Location.X >= 142) && (getFocused().Location.Y >= 444) && (getFocused().Location.X <= 158) && (getFocused().Location.Y <= 556))))
             {
@@ -922,6 +1091,18 @@ namespace UIAssignment.Forms.CommonForms
 
             if (myTrojanHorse.Focused)
             {
+                /*if (everythingParked)
+                {
+                    myTrojanHorse.BackColor = Color.FromArgb(0, 192, 192);
+                    TrojanHorse1.BackColor = Color.Red;
+                    TrojanHorse2.BackColor = Color.Red;
+                    TrojanHorse3.BackColor = Color.Red;
+                    TrojanHorse4.BackColor = Color.Red;
+                    TrojanHorse5.BackColor = Color.Red;
+                    TrojanHorse6.BackColor = Color.Red;
+                    TrojanHorse7.BackColor = Color.Red;
+                }
+                else*/
                 myTrojanHorse.BackColor = Color.FromArgb(0, 192, 192);
                 TrojanHorse1.BackColor = Color.Red;
                 TrojanHorse2.BackColor = Color.Red;

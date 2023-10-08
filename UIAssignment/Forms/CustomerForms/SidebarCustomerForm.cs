@@ -87,7 +87,23 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void logoutSectionButton_Click(object sender, EventArgs e)
         {
-            if (activeForm.UnsavedChangesDetected())
+            if (ActiveUser.Parked)
+            {
+                if (activeForm.UnsavedChangesDetected())
+                    return;
+                closedFromLogOut = true;
+                activeForm.Close();
+                this.Close();
+                ActiveUser.User = null;
+                ActiveUser.Customer = null;
+                ActiveUser.Employee = null;
+                Application.OpenForms[0].Show();
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού αποσυνδεθείς.");
+            }
+            /*if (activeForm.UnsavedChangesDetected())
               return;
             closedFromLogOut = true;
             activeForm.Close();
@@ -95,7 +111,7 @@ namespace UIAssignment.Forms.CustomerForms
             ActiveUser.User = null;
             ActiveUser.Customer = null;
             ActiveUser.Employee = null;
-            Application.OpenForms[0].Show();
+            Application.OpenForms[0].Show();*/
         }
 
         private async void openChildForm(ChildForm childForm)
@@ -162,24 +178,53 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void apartmentSectionButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new RoomForm());
-            timer1.Enabled = false;
+            if (ActiveUser.Parked)
+            {
+                openChildForm(new RoomForm());
+                timer1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού μεταβείς στο μενού του Διαμερίσματος.");
+            }
+            /*openChildForm(new RoomForm());
+            timer1.Enabled = false;*/
         }
 
         private void restaurantSectionButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new RestaurantForm());
-            timer1.Enabled = false;
+            if (ActiveUser.Parked)
+            {
+                openChildForm(new RestaurantForm());
+                timer1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού μεταβείς στο μενού του Εστιατορίου.");
+            }
+            /*openChildForm(new RestaurantForm());
+            timer1.Enabled = false;*/
         }
 
         private void poolSectionButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new PrivatePoolForm());
-            timer1.Enabled = false;
+            if (ActiveUser.Parked)
+            {
+                openChildForm(new PrivatePoolForm());
+                timer1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού μεταβείς στο μενού της Πισίνας.");
+            }
+            /*openChildForm(new PrivatePoolForm());
+            timer1.Enabled = false;*/
         }
         private void trojanHorseSectionButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new TrojanHorseForm());
+            openChildForm(new DrivingForm());
+            ActiveUser.InGps = true;
+            //openChildForm(new TrojanHorseForm());
             timer1.Enabled = true;
         }
 
@@ -228,7 +273,7 @@ namespace UIAssignment.Forms.CustomerForms
             else if (ActiveUser.InGps == false && activeForm.GetType() == typeof(DrivingForm))
             {
                 openChildForm(new TrojanHorseForm());
-                MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
+                //MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
             }
         }
 

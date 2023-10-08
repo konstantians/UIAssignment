@@ -121,6 +121,12 @@
   <data name="ΛουκάνικοΧωριάτικοΜερίδα" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pepsi330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\Pepsi330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="semiopen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\semiopen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dfgvbnjk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dfgvbnjk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +136,14 @@
   <data name="radioOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RoomImages\radioOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ΓύροςΚοτόπουλοΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ΓύροςΧοιρινόςΜερίδα" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PoolIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\PoolIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,11 +169,14 @@
   <data name="GPS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GPS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShoppingCart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\ShoppingCart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pool40Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool40Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WithoutSloganLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoImages\WithoutSloganLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ΚαλαμάκιΧοιρινόΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΚαλαμάκιΧοιρινόΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΚαλαμάκιΧοιρινόΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Caesars" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Salads\Caesars.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,9 +187,6 @@
   <data name="zxcvbnm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zxcvbnm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ColumnHorizontalTransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ColumnHorizontalTransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="png-transparent-dialogue-window-bubble-squared-solid-line-tablet-quote-thinking-chat-blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-dialogue-window-bubble-squared-solid-line-tablet-quote-thinking-chat-blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,11 +196,17 @@
   <data name="Pool70Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PoolImages\Pool70Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="closed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AmstelΦιάλη500mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\AmstelΦιάλη500mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ΑπόΤοΧωριό" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Salads\ΑπόΤοΧωριό.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pool40Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PoolImages\Pool40Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ΕποχήςΜεΛάχανοΚαρότοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Salads\ΕποχήςΜεΛάχανοΚαρότοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ΆλφαΦιάλη500ml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Drinks\ΆλφαΦιάλη500ml.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,11 +226,17 @@
   <data name="ΚαλαμάκιΧοιρινόΣεΠίτα" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίτα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Semi-Hopen-White-BG-remote-1-768x667" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Semi-Hopen-White-BG-remote-1-768x667.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ΓύροςΚοτόπουλοΜερίδα" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PepsiMax330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\PepsiMax330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ΓύροςΚοτόπουλοΣεΠίτα" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίτα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΛουκάνικοΧωριάτικοΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pool30Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PoolImages\Pool30Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,6 +250,9 @@
   <data name="Pool20Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PoolImages\Pool20Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SwapModeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\SwapModeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PepsiMax330ml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Drinks\PepsiMax330ml.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,6 +265,12 @@
   <data name="maiandros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maiandros.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TranspareWithoutTextLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoImages\TranspareWithoutTextLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Semi-Hopen-White-BG-remote-1-768x667" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Semi-Hopen-White-BG-remote-1-768x667.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CocaColaZero330ml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Drinks\CocaColaZero330ml.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,8 +280,14 @@
   <data name="ApartmentImageTVOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RoomImages\ApartmentImageTVOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ClubSandwichClassic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Burgers\ClubSandwichClassic.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WithoutSloganLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoImages\WithoutSloganLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΓύροςΧοιρινόςΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ΓύροςΚοτόπουλοΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zertgh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zertgh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,26 +298,50 @@
   <data name="Pool60Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PoolImages\Pool60Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pool80Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PoolImages\Pool80Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aaaaa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aaaaa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MaiandrosSquareBlackImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaiandrosSquareBlackImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Νερό1_5ltBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\Νερό1.5ltBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hdbtgfnu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hdbtgfnu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="potentional_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\potentional logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CocaColaZero330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\CocaColaZero330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="qwerty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\qwerty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ωωω" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ωωω.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TrashIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\TrashIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\Corona330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrojanHorseImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AreasImages\TrojanHorseImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ΓύροςΧοιρινόςΣεΠίτα" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίτα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RestaurantImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AreasImages\RestaurantImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,11 +361,20 @@
   <data name="PoolImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AreasImages\PoolImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ΓύροςΚοτόπουλοΜερίδα" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδα.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ColumnHorizontalTransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColumnHorizontalTransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="potentional_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\potentional logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShoppingCart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\ShoppingCart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CutleryIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\CutleryIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\editicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1aaaaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1aaaaa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,11 +385,17 @@
   <data name="DoubleBedIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\DoubleBedIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TrojanHorseIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\TrojanHorseIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scifyAlarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AlarmSounds\scifyAlarm.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="open1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ejyd75shbt6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ejyd75shbt6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,8 +409,8 @@
   <data name="ApartmentImageAirCoditionOnAndTVOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RoomImages\ApartmentImageAirCoditionOnAndTVOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TrojanHorseImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AreasImages\TrojanHorseImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ΓύροςΧοιρινόςΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2aaaaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2aaaaa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,20 +424,29 @@
   <data name="MaiandrosSquareImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaiandrosSquareImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="aaaaa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aaaaa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ClubSandwichClassic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\ClubSandwichClassic.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TranspareFullLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoImages\TranspareFullLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ΆλφαΦιάλη500mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\ΆλφαΦιάλη500mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ApartmentImageTVOnNetflix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RoomImages\ApartmentImageTVOnNetflix.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pool80Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PoolImages\Pool80Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Νερό1_5lt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Drinks\Νερό1.5lt.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιο.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ClubSandwichClassicBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Burgers\ClubSandwichClassicBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaesarsBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Salads\CaesarsBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lobby_Caesars_Palace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AreasImages\Lobby-Caesars-Palace.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,11 +466,14 @@
   <data name="radioOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RoomImages\radioOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hourglassLoadingScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hourglassLoadingScreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BlackMarbleBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlackMarbleBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TranspareWithoutTextLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoImages\TranspareWithoutTextLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CocaCola330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodImages\Drinks\CocaCola330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pool100Percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PoolImages\Pool100Percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -391,97 +481,19 @@
   <data name="Corona330ml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Drinks\Corona330ml.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="semiopen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\semiopen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hourglassLoadingScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hourglassLoadingScreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="test" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AmstelΦιάλη500mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\AmstelΦιάλη500mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Burgers\BaconCheeseburgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CaesarsBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Salads\CaesarsBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Burgers\ClassicBurgerΜεΜπιφτέκιΜοσχαρίσιοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ClubSandwichClassicBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Burgers\ClubSandwichClassicBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CocaCola330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\CocaCola330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CocaColaZero330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\CocaColaZero330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Corona330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\Corona330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pepsi330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\Pepsi330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PepsiMax330mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\PepsiMax330mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΆλφαΦιάλη500mlBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\ΆλφαΦιάλη500mlBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3958DAB600000578-0-Designed_by_Deture_Culsign_and_built_by_Artistree_the_resort_s_t-a-56_1476356733193" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3958DAB600000578-0-Designed_by_Deture_Culsign_and_built_by_Artistree_the_resort_s_t-a-56_1476356733193.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ΑπόΤοΧωριόBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Salads\ΑπόΤοΧωριόBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ΓύροςΚοτόπουλοΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Merides\ΓύροςΚοτόπουλοΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΓύροςΚοτόπουλοΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Souvlakia\ΓύροςΚοτόπουλοΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΓύροςΧοιρινόςΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Merides\ΓύροςΧοιρινόςΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΓύροςΧοιρινόςΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Souvlakia\ΓύροςΧοιρινόςΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΕποχήςΜεΛάχανοΚαρότοBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Salads\ΕποχήςΜεΛάχανοΚαρότοBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ΕποχήςΜεΜαρούλιBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FoodImages\Salads\ΕποχήςΜεΜαρούλιBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ΚαλαμάκιΧοιρινόΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Merides\ΚαλαμάκιΧοιρινόΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΚαλαμάκιΧοιρινόΣεΠίταBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίταBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ΛουκάνικοΧωριάτικοΜερίδαBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Merides\ΛουκάνικοΧωριάτικοΜερίδαBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Νερό1_5ltBigger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodImages\Drinks\Νερό1.5ltBigger.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TrashIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\TrashIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SwapModeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\SwapModeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EditIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icons\editicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="semiopen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\semiopen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

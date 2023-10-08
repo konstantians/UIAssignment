@@ -296,11 +296,13 @@
     <None Include="Resources\aaaaa1.png" />
     <None Include="Resources\1aaaaa.png" />
     <None Include="Resources\2aaaaa.png" />
+    <None Include="Resources\3958DAB600000578-0-Designed_by_Deture_Culsign_and_built_by_Artistree_the_resort_s_t-a-56_1476356733193.jpg" />
     <Content Include="Resources\AlarmSounds\basicAlarm.wav" />
     <Content Include="Resources\AlarmSounds\criticalAlarm.wav" />
     <Content Include="Resources\AlarmSounds\scifyAlarm.wav" />
     <Content Include="Resources\BlackMarbleBackground.jpg" />
     <None Include="Resources\closed.png" />
+    <None Include="Resources\closed1.png" />
     <Content Include="Resources\ColumnHorizontalTransparent.png" />
     <Content Include="Resources\ColumnTransparent.png" />
     <None Include="Resources\dfgvbnjk.png" />
@@ -366,6 +368,7 @@
     <Content Include="Resources\MaiandrosSquareImage.png" />
     <None Include="Resources\png-transparent-dialogue-window-bubble-squared-solid-line-tablet-quote-thinking-chat-blank.png" />
     <None Include="Resources\open.png" />
+    <None Include="Resources\open1.png" />
     <Content Include="Resources\PoolImages\Pool0Percent.jpg" />
     <Content Include="Resources\PoolImages\Pool100Percent.jpg" />
     <Content Include="Resources\PoolImages\Pool10Percent.jpg" />
@@ -397,6 +400,7 @@
     <None Include="Resources\Semi-Fully-open-large-1.jpg" />
     <None Include="Resources\Semi-Hopen-White-BG-remote-1-768x667.png" />
     <None Include="Resources\semiopen.png" />
+    <None Include="Resources\semiopen1.png" />
     <Content Include="Resources\TemperatureDecreaseImage.png" />
     <Content Include="Resources\TemperatureIncreaseImage.png" />
     <Content Include="Resources\test.gif" />

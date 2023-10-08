@@ -149,7 +149,8 @@ namespace UIAssignment.Forms.EmployeeForms
         }*/
         private void trojanHorseSectionButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new TrojanHorseForm());
+            openChildForm(new DrivingForm());
+            //openChildForm(new TrojanHorseForm());
             timer1.Enabled = true;
         }
 
@@ -211,7 +212,7 @@ namespace UIAssignment.Forms.EmployeeForms
             else if (ActiveUser.InGps == false && activeForm.GetType() == typeof(DrivingForm))
             {
                 openChildForm(new TrojanHorseForm());
-                MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
+                //MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
             }
         }
 
@@ -251,8 +252,15 @@ namespace UIAssignment.Forms.EmployeeForms
 
         private void apartmentSectionButton_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new RoomForm());
-            timer1.Enabled = false;
+            if (ActiveUser.Parked)
+            {
+                openChildForm(new RoomForm());
+                timer1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού μεταβείς στο μενού του Διαμερίσματος.");
+            }
         }
 
         private void apartmentSectionButton_MouseEnter_1(object sender, EventArgs e)
@@ -265,14 +273,32 @@ namespace UIAssignment.Forms.EmployeeForms
 
         private void poolSectionButton_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new PrivatePoolForm());
-            timer1.Enabled = false;
+            if (ActiveUser.Parked)
+            {
+                openChildForm(new PrivatePoolForm());
+                timer1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού μεταβείς στο μενού της Πισίνας.");
+            }
+            /*openChildForm(new PrivatePoolForm());
+            timer1.Enabled = false;*/
         }
 
         private void restaurantSectionButton_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new RestaurantForm());
-            timer1.Enabled = false;
+            if (ActiveUser.Parked)
+            {
+                openChildForm(new RestaurantForm());
+                timer1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού μεταβείς στο μενού του Εστιατορίου.");
+            }
+            /*openChildForm(new RestaurantForm());
+            timer1.Enabled = false;*/
         }
 
         private void helpSectionButton_MouseLeave_1(object sender, EventArgs e)
@@ -301,7 +327,23 @@ namespace UIAssignment.Forms.EmployeeForms
 
         private void logoutSectionButton_Click_1(object sender, EventArgs e)
         {
-            if (activeForm.UnsavedChangesDetected())
+            if (ActiveUser.Parked)
+            {
+                if (activeForm.UnsavedChangesDetected())
+                    return;
+                closedFromLogOut = true;
+                activeForm.Close();
+                this.Close();
+                ActiveUser.User = null;
+                ActiveUser.Customer = null;
+                ActiveUser.Employee = null;
+                Application.OpenForms[0].Show();
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να σταθμεύσεις όλους τους Δούρειους Ίππους προτού αποσυνδεθείς.");
+            }
+            /*if (activeForm.UnsavedChangesDetected())
                 return;
             closedFromLogOut = true;
             activeForm.Close();
@@ -309,7 +351,7 @@ namespace UIAssignment.Forms.EmployeeForms
             ActiveUser.User = null;
             ActiveUser.Customer = null;
             ActiveUser.Employee = null;
-            Application.OpenForms[0].Show();
+            Application.OpenForms[0].Show();*/
         }
 
         private void trojanHorseSectionButton_MouseLeave_1(object sender, EventArgs e)

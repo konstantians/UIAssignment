@@ -35,8 +35,11 @@ namespace UIAssignment.Forms.CommonForms
         {
             if (Open.Checked)
             {
-                pictureBox4.Size = new Size(108, 161);
-                pictureBox4.Image = Image.FromFile("../../Resources/open.png");
+                pictureBox4.Location = new Point(740, 135);
+                //pictureBox4.Location = new Point(1030, 253);
+                pictureBox4.Size = new Size(215, 358);
+                //pictureBox4.Size = new Size(108, 161);
+                pictureBox4.Image = Image.FromFile("../../Resources/open1.png");
                 NotFullyOpened.Checked = false;
                 Closed.Checked = false;
             }
@@ -46,8 +49,11 @@ namespace UIAssignment.Forms.CommonForms
         {
             if (NotFullyOpened.Checked)
             {
-                pictureBox4.Size = new Size(100, 153);
-                pictureBox4.Image = Image.FromFile("../../Resources/semiopen.png");
+                pictureBox4.Location = new Point(740, 180);
+                //pictureBox4.Location = new Point(1030, 253);
+                pictureBox4.Size = new Size(188, 312);
+                //pictureBox4.Size = new Size(100, 153);
+                pictureBox4.Image = Image.FromFile("../../Resources/semiopen1.png");
                 Open.Checked = false;
                 Closed.Checked = false;
             }
@@ -57,8 +63,11 @@ namespace UIAssignment.Forms.CommonForms
         {
             if (Closed.Checked)
             {
-                pictureBox4.Size = new Size(92, 146);
-                pictureBox4.Image = Image.FromFile("../../Resources/closed.png");
+                pictureBox4.Location = new Point(740, 180);
+                //pictureBox4.Location = new Point(1027, 224);
+                pictureBox4.Size = new Size(179, 298);
+                //pictureBox4.Size = new Size(92, 146);
+                pictureBox4.Image = Image.FromFile("../../Resources/closed1.png");
                 Open.Checked = false;
                 NotFullyOpened.Checked = false;
             }

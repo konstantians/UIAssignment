@@ -4,7 +4,8 @@ namespace UIAssignment
 {
     public static class ActiveUser
     {
-        public static bool InGps { get; set; } = false;
+        public static bool InGps { get; set; } = true;
+        public static bool Parked { get; set; } = true;
         /// <summary>
         /// has the basic information and is used to avoid duplication in specific cases
         /// </summary>
