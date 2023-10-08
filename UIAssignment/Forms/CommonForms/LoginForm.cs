@@ -197,6 +197,11 @@ namespace UIAssignment.Forms.CommonForms
             MessageBox.Show($"Welcome back {ActiveUser.User.Username}!");
             
             this.Hide();
+            //reset the login form
+            usernameTextbox.Text = "";
+            passwordTextbox.Text = "";
+            customerRadioButton.Checked = true;
+            employeeRadioButton.Checked = false;
             if (ActiveUser.Customer == null)
             {
                 SidebarEmployeeForm mapForm = new SidebarEmployeeForm();

@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveUser.cs" />
+    <Compile Include="Forms\CommonForms\MiniLoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommonForms\MiniLoadingForm.Designer.cs">
+      <DependentUpon>MiniLoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\EmployeeOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\EmployeeOrdersForm.Designer.cs">
+      <DependentUpon>EmployeeOrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmployeeForms\PoolSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +243,9 @@
     <EmbeddedResource Include="Forms\CommonForms\InteractiveRoomForm.resx">
       <DependentUpon>InteractiveRoomForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommonForms\MiniLoadingForm.resx">
+      <DependentUpon>MiniLoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\AddFoodForm.resx">
       <DependentUpon>AddFoodForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\PrivatePoolForm.resx">
       <DependentUpon>PrivatePoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeForms\EmployeeOrdersForm.resx">
+      <DependentUpon>EmployeeOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForms\PoolSelectionForm.resx">
       <DependentUpon>PoolSelectionForm.cs</DependentUpon>
@@ -369,6 +387,7 @@
     <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίταBigger.PNG" />
     <Content Include="Resources\FoodImages\Souvlakia\ΚαλαμάκιΧοιρινόΣεΠίτα.PNG" />
     <Content Include="Resources\hourglassLoadingScreen.gif" />
+    <Content Include="Resources\Icons\CompleteOrderIcon.png" />
     <Content Include="Resources\Icons\EditIcon.png" />
     <Content Include="Resources\Icons\SwapModeIcon.png" />
     <Content Include="Resources\Icons\TrashIcon.png" />

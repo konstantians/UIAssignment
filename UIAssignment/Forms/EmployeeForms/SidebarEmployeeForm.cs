@@ -121,7 +121,7 @@ namespace UIAssignment.Forms.EmployeeForms
 
         private void restaurantSectionButton_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new RestaurantForm());
+            openChildForm(new EmployeeOrdersForm());
             //checkStaticChangesTimer.Enabled = false;
         }
 

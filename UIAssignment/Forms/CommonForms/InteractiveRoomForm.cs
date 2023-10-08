@@ -41,6 +41,7 @@ namespace UIAssignment.Forms.CommonForms
 
                 //set the lighting value of the slider and the title labels
                 roomLightingTrackBar.Value = ActiveUser.Customer.Room.RoomLighting;
+                roomLightingTrackBarTwo.Value = ActiveUser.Customer.Room.RoomLighting;
 
                 //set the temperature value of the slider and the title labels
                 roomTemperature = ActiveUser.Customer.Room.RoomTemperature;
@@ -66,13 +67,14 @@ namespace UIAssignment.Forms.CommonForms
 
                 //set the lighting value of the slider and the title labels
                 roomLightingTrackBar.Value = Room.RoomLighting;
+                roomLightingTrackBarTwo.Value = Room.RoomLighting;
 
                 //set the temperature value of the slider and the title labels
                 roomTemperature = Room.RoomTemperature;
             }
 
             roomLightingTitleValueLabel.Text = $"{roomLightingTrackBar.Value * 20}%";
-            setRoomLighting();
+            setRoomLighting(roomLightingTrackBar.Value);
 
             roomTemperatureTitleValueLabel.Text = $"{roomTemperature}C";
             translateRoomTemperature();
@@ -93,9 +95,9 @@ namespace UIAssignment.Forms.CommonForms
             SetVolume(radio.RadioVolume * 20);
         }
 
-        public void setRoomLighting()
+        public void setRoomLighting(int trackBarValue)
         {
-            switch (roomLightingTrackBar.Value)
+            switch (trackBarValue)
             {
                 case 0:
                     roomLightingTitleValueLabel.Text = "0%";
@@ -262,7 +264,10 @@ namespace UIAssignment.Forms.CommonForms
 
         private void roomLightingTrackBar_Scroll(object sender, EventArgs e)
         {
-            setRoomLighting();
+            TrackBar trackBar = (TrackBar)sender;
+            roomLightingTrackBar.Value = trackBar.Value;
+            roomLightingTrackBarTwo.Value = trackBar.Value;
+            setRoomLighting(trackBar.Value);
         }
 
         private void roomTemperatureTrackBar_Scroll(object sender, EventArgs e)
