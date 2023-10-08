@@ -30,13 +30,13 @@ namespace UIAssignment.Forms.CommonForms
         {
             /*if (myTrojanHorse.Focused)
             {
-                ActiveUser.Customer.Room.TroyanHorse.Location = myTrojanHorse.Location.ToString();
+                ActiveUser.Customer.Rooms.TroyanHorse.Location = myTrojanHorse.Location.ToString();
             }
             else if (TrojanHorse1.Focused)
             {
-                ActiveUser.Customer.Room.TroyanHorse.Location = myTrojanHorse.Location.ToString();
+                ActiveUser.Customer.Rooms.TroyanHorse.Location = myTrojanHorse.Location.ToString();
             }*/
-            //ActiveUser.Customer.Room.TroyanHorse.Location = myTrojanHorse.Location.ToString();
+            //ActiveUser.Customer.Rooms.TroyanHorse.Location = myTrojanHorse.Location.ToString();
             ActiveUser.InGps = false;
         }
         public override bool UnsavedChangesDetected()
@@ -77,14 +77,14 @@ namespace UIAssignment.Forms.CommonForms
             //ArrayOfArrows[4] = [pictureBox10, pictureBox13, pictureBox15, pictureBox17, pictureBox19, pictureBox51, pictureBox49];
             My_dict1.Add("BotTowardsGarden", new List<PictureBox>() { pictureBox28, pictureBox29, pictureBox45, pictureBox46, pictureBox47, pictureBox44, pictureBox35 });
             //ArrayOfArrows[5] = [pictureBox28, pictureBox29, pictureBox45, pictureBox46, pictureBox47, pictureBox44, pictureBox35];
-            //ActiveUser.Customer.Room.TroyanHorse.Location.
-            //if (ActiveUser.Customer.Room.TroyanHorse.Location == "Starting")
+            //ActiveUser.Customer.Rooms.TroyanHorse.Location.
+            //if (ActiveUser.Customer.Rooms.TroyanHorse.Location == "Starting")
             //{
             //    //myTrojanHorse.Location = new Point(, );
             //}
             //else
             //{
-            //    var g = Regex.Replace(ActiveUser.Customer.Room.TroyanHorse.Location, @"[\{\}a-zA-Z=]", "").Split(',');
+            //    var g = Regex.Replace(ActiveUser.Customer.Rooms.TroyanHorse.Location, @"[\{\}a-zA-Z=]", "").Split(',');
             //    myTrojanHorse.Location = new Point(int.Parse(g[0]), int.Parse(g[1]));
             //}
             timer1.Enabled = true;

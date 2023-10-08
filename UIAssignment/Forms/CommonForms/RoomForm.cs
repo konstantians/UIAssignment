@@ -12,11 +12,13 @@ namespace UIAssignment.Forms.CommonForms
 {
     public partial class RoomForm : ChildForm
     {
-        public int roomTemperature = 0;
-        public Television television = new Television();
-        public Radio radio = new Radio();
-        public bool reverseRadioTimer = false;
-        public SoundPlayer soundPlayer = new SoundPlayer();
+        private int roomTemperature = 0;
+        private Television television = new Television();
+        private Radio radio = new Radio();
+        private bool reverseRadioTimer = false;
+        private SoundPlayer soundPlayer = new SoundPlayer();
+        private Room Room = ActiveUser.ChosenRoom;
+        private bool doNotDoUnsavedChanges = false;
 
         public RoomForm()
         {
@@ -34,14 +36,6 @@ namespace UIAssignment.Forms.CommonForms
                 radio.RadioSong = ActiveUser.Customer.Room.Radio.RadioSong;
                 radio.RadioId = ActiveUser.Customer.Room.Radio.RadioId;
 
-                string radioStateValue = radio.IsRadioOn ? "Ανοιχτό" : "Κλειστό";
-                roomRadioStateTitleValueLabel.Text = radioStateValue;
-                roomRadioSoundLevelTitleValueLabel.Text = $"{radio.RadioVolume * 20}%";
-                roomRadioSongTitleValueLabel.Text = radio.RadioSong;
-                activateDeactivateRadioToggleButton.Checked = radio.IsRadioOn;
-                radioSoundTrackBar.Value = radio.RadioVolume;
-                SetVolume(radio.RadioVolume * 20);
-
                 //set television for warning checking and the general labels and television combobox and the radio toggle box
                 tvProgramsComboBox.SelectedItem = ActiveUser.Customer.Room.Television.TelevisionProgram;
                 television.IsTelevisionOn = ActiveUser.Customer.Room.Television.IsTelevisionOn;
@@ -49,23 +43,59 @@ namespace UIAssignment.Forms.CommonForms
                 television.TelevisionProgram = ActiveUser.Customer.Room.Television.TelevisionProgram;
                 television.TelevisionId = ActiveUser.Customer.Room.Television.TelevisionId;
 
-                string televisionStateValue = television.IsTelevisionOn ? "Ανοιχτή" : "Κλειστή";
-                roomTelevisionStateTitleValueLabel.Text = televisionStateValue;
-                roomTelevisionSoundLevelTitleValueLabel.Text = $"{television.TelevisionVolume * 20}%";
-                roomTelevisionProgramTitleValueLabel.Text = television.TelevisionProgram;
-                activateDeactivateTVToggleButton.Checked = television.IsTelevisionOn;
-                tvSoundTrackBar.Value = television.TelevisionVolume;
-
                 //set the lighting value of the slider and the title labels
                 roomLightingTrackBar.Value = ActiveUser.Customer.Room.RoomLighting;
-                roomLightingTitleValueLabel.Text = $"{roomLightingTrackBar.Value * 20}%";
-                setRoomLighting();
 
                 //set the temperature value of the slider and the title labels
                 roomTemperature = ActiveUser.Customer.Room.RoomTemperature;
-                roomTemperatureTitleValueLabel.Text = $"{roomTemperature}C";
-                translateRoomTemperature();
             }
+            //employee logic
+            else
+            {
+                //set the information label Id
+                roomInformationLabel.Text = $"Πληροφορίες Δωματίου {Room.RoomId}";
+
+                //set radio for warning checking and the general labels and television combobox and the tv toggle box
+                radioSongsComboBox.SelectedItem = Room.Radio.RadioSong;
+                radio.IsRadioOn = Room.Radio.IsRadioOn;
+                radio.RadioVolume = Room.Radio.RadioVolume;
+                radio.RadioSong = Room.Radio.RadioSong;
+                radio.RadioId = Room.Radio.RadioId;
+
+                //set television for warning checking and the general labels and television combobox and the radio toggle box
+                tvProgramsComboBox.SelectedItem = Room.Television.TelevisionProgram;
+                television.IsTelevisionOn = Room.Television.IsTelevisionOn;
+                television.TelevisionVolume = Room.Television.TelevisionVolume;
+                television.TelevisionProgram = Room.Television.TelevisionProgram;
+                television.TelevisionId = Room.Television.TelevisionId;
+
+                //set the lighting value of the slider and the title labels
+                roomLightingTrackBar.Value = Room.RoomLighting;
+
+                //set the temperature value of the slider and the title labels
+                roomTemperature = Room.RoomTemperature;
+            }
+
+            roomLightingTitleValueLabel.Text = $"{roomLightingTrackBar.Value * 20}%";
+            setRoomLighting();
+
+            roomTemperatureTitleValueLabel.Text = $"{roomTemperature}C";
+            translateRoomTemperature();
+
+            string radioStateValue = radio.IsRadioOn ? "Ανοιχτό" : "Κλειστό";
+            roomRadioStateTitleValueLabel.Text = radioStateValue;
+            roomRadioSoundLevelTitleValueLabel.Text = $"{radio.RadioVolume * 20}%";
+            roomRadioSongTitleValueLabel.Text = radio.RadioSong;
+            activateDeactivateRadioToggleButton.Checked = radio.IsRadioOn;
+            radioSoundTrackBar.Value = radio.RadioVolume;
+            SetVolume(radio.RadioVolume * 20);
+
+            string televisionStateValue = television.IsTelevisionOn ? "Ανοιχτή" : "Κλειστή";
+            roomTelevisionStateTitleValueLabel.Text = televisionStateValue;
+            roomTelevisionSoundLevelTitleValueLabel.Text = $"{television.TelevisionVolume * 20}%";
+            roomTelevisionProgramTitleValueLabel.Text = television.TelevisionProgram;
+            activateDeactivateTVToggleButton.Checked = television.IsTelevisionOn;
+            tvSoundTrackBar.Value = television.TelevisionVolume;
         }
 
         public void setRoomLighting()
@@ -103,7 +133,8 @@ namespace UIAssignment.Forms.CommonForms
         {
             if (!reverse)
             {
-                switch (ActiveUser.Customer.Room.RoomTemperature)
+                int roomTemperatureValue = ActiveUser.Customer != null ? ActiveUser.Customer.Room.RoomTemperature : Room.RoomTemperature;
+                switch (roomTemperatureValue)
                 {
                     case 27:
                         roomTemperatureTrackBar.Value = 0;
@@ -193,6 +224,9 @@ namespace UIAssignment.Forms.CommonForms
 
         public override bool UnsavedChangesDetected()
         {
+            if (doNotDoUnsavedChanges)
+                return false;
+
             //logic for customer
             if (ActiveUser.Customer != null)
             {
@@ -212,9 +246,22 @@ namespace UIAssignment.Forms.CommonForms
                 soundPlayer.Stop();
                 return false; // No unsaved changes
             }
+            //employee logic
+            if (roomLightingTrackBar.Value != Room.RoomLighting || roomTemperature != Room.RoomTemperature ||
+                    !EqualityComparer<Radio>.Default.Equals(Room.Radio, radio) ||
+                    !EqualityComparer<Television>.Default.Equals(Room.Television, television)
+                    )
+            {
+                DialogResult result = MessageBox.Show("Οι αλλαγές σας δεν έχουν αποθηκευτεί. Είστε σίγουροι ότι θέλετε να κλείσετε την φόρμα?",
+                    "Μη Αποθηκευμένες Αλλαγές", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            //TODO here do the logic for the employee
-            return false;
+                if (result == DialogResult.Cancel)
+                {
+                    return true; // Unsaved changes detected
+                }
+            }
+            soundPlayer.Stop();
+            return false; // No unsaved changes
         }
 
         private void roomLightingTrackBar_Scroll(object sender, EventArgs e)
@@ -408,16 +455,21 @@ namespace UIAssignment.Forms.CommonForms
 
         private void saveChangesButton_Click(object sender, EventArgs e)
         {
+            saveChangesHelper();
+            MessageBox.Show("Changes have been successfully saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void saveChangesHelper()
+        {
             //update the radio and the tv
             RoomDataAccess.UpdateRadio(radio.RadioId, radio);
             RoomDataAccess.UpdateTelevision(television.TelevisionId, television);
-            
+
             //then update the room
             Room room = new Room();
             room.RoomLighting = roomLightingTrackBar.Value;
             room.RoomTemperature = roomTemperature;
-            //TODO fix the following line for the employee
-            room.RoomId = ActiveUser.Customer != null ? ActiveUser.Customer.Room.RoomId : 0;
+            room.RoomId = ActiveUser.Customer != null ? ActiveUser.Customer.Room.RoomId : Room.RoomId;
             RoomDataAccess.UpdateRoom(room);
 
             //if the user is a customer
@@ -428,11 +480,16 @@ namespace UIAssignment.Forms.CommonForms
                 ActiveUser.Customer.Room.Television = television;
                 ActiveUser.Customer.Room.RoomLighting = roomLightingTrackBar.Value;
                 ActiveUser.Customer.Room.RoomTemperature = roomTemperature;
-
             }
-            //TODO do this for the employee too
-
-            MessageBox.Show("Changes have been successfully saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                //update the active user
+                Room.Radio = radio;
+                Room.Television = television;
+                Room.RoomLighting = roomLightingTrackBar.Value;
+                Room.RoomTemperature = roomTemperature;
+                ActiveUser.Employee.Rooms[Room.RoomId - 1] = Room;
+            }
         }
 
 
@@ -464,6 +521,47 @@ namespace UIAssignment.Forms.CommonForms
 
         private void interactiveModeButton_Click(object sender, EventArgs e)
         {
+            //customer logic
+            if (ActiveUser.Customer != null)
+            {
+                if (roomLightingTrackBar.Value != ActiveUser.Customer.Room.RoomLighting || roomTemperature != ActiveUser.Customer.Room.RoomTemperature ||
+                    !EqualityComparer<Radio>.Default.Equals(ActiveUser.Customer.Room.Radio, radio) ||
+                    !EqualityComparer<Television>.Default.Equals(ActiveUser.Customer.Room.Television, television)
+                    )
+                {
+                    DialogResult result = MessageBox.Show("Οι αλλαγές σας δεν έχουν αποθηκευτεί. Είστε σίγουροι ότι θέλετε να κλείσετε την φόρμα?",
+                        "Μη Αποθηκευμένες Αλλαγές", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    //if cancel just do not do anything
+                    if (result == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                
+            }
+            //employee logic
+            else
+            {
+                if (roomLightingTrackBar.Value != Room.RoomLighting || roomTemperature != Room.RoomTemperature ||
+                    !EqualityComparer<Radio>.Default.Equals(Room.Radio, radio) ||
+                    !EqualityComparer<Television>.Default.Equals(Room.Television, television)
+                    )
+                {
+                    DialogResult result = MessageBox.Show("Οι αλλαγές σας δεν έχουν αποθηκευτεί. Είστε σίγουροι ότι θέλετε να κλείσετε την φόρμα?",
+                        "Μη Αποθηκευμένες Αλλαγές", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    //if cancel just do not do anything
+                    if (result == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+            //if all ok do typical save changes procedures
+            saveChangesHelper();
+            doNotDoUnsavedChanges = true;
+            soundPlayer.Stop();
+            if (ActiveUser.Customer == null)
+                ActiveUser.ChosenRoom = Room;
             ActiveUser.SwapToInteractive = InteractiveModeEnum.InteractiveMode;
         }
     }

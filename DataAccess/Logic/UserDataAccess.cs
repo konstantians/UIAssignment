@@ -41,7 +41,7 @@ namespace DataAccess.Logic
                     employee.Phone = !reader.IsDBNull(3) ? reader.GetString(3) : "";
                     employee.RecoveryQuestion = reader.GetString(4);
                     employee.RecoveryAnswer = reader.GetString(5);
-                    employee.Room = RoomDataAccess.GetRooms();
+                    employee.Rooms = RoomDataAccess.GetRooms();
                     employee.Orders = OrderDataAccess.GetAllCustomerOrders();
                 }
             }

@@ -4,7 +4,6 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Media;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace UIAssignment.Forms.CommonForms
@@ -13,9 +12,11 @@ namespace UIAssignment.Forms.CommonForms
     {
         private double poolTemperature = 0.0;
         private bool reverseTimer = false;
+        private Pool Pool = ActiveUser.ChosenPool;
         public PrivatePoolForm()
         {
             InitializeComponent();
+            ActiveUser.ChosenPool = null;
             DoubleBufferingForForms.SetDoubleBuffer(poolUtilitiesOnePanel, true);
             DoubleBufferingForForms.SetDoubleBuffer(poolUtilitiesTwoPanel, true);
             DoubleBufferingForForms.SetDoubleBuffer(waterLevelControlPanel, true);
@@ -50,6 +51,27 @@ namespace UIAssignment.Forms.CommonForms
                 else
                     alarmSoundTrackCustomComboBox.SelectedIndex = 2;
                 activateDeactivateToggleButton.Checked = ActiveUser.Customer.Room.Pool.PoolAlert.IsPoolAlertOn ? true : false;
+            }
+            //employee
+            else
+            {
+                //set the pool value of the slider
+                translationHelper();
+                poolTemperature = Pool.PoolTemperature;
+
+                //set the water level value of the slider
+                poolWaterLevelTrackBar.Value = Pool.WaterLevel;
+                checkWaterLevel();
+
+                fromAlertCustomDateTimePicker.Value = Pool.PoolAlert.From;
+                untilAlertCustomDateTimePicker.Value = Pool.PoolAlert.Until;
+                if (Pool.PoolAlert.SoundTrack == "Simple")
+                    alarmSoundTrackCustomComboBox.SelectedIndex = 0;
+                else if (Pool.PoolAlert.SoundTrack == "Simple2")
+                    alarmSoundTrackCustomComboBox.SelectedIndex = 1;
+                else
+                    alarmSoundTrackCustomComboBox.SelectedIndex = 2;
+                activateDeactivateToggleButton.Checked = Pool.PoolAlert.IsPoolAlertOn ? true : false;
             }
         }
 
@@ -130,7 +152,8 @@ namespace UIAssignment.Forms.CommonForms
         {
             if (!reverse)
             {
-                switch (ActiveUser.Customer.Room.Pool.PoolTemperature)
+                double poolTemperatureValue = Pool == null ? ActiveUser.Customer.Room.Pool.PoolTemperature : Pool.PoolTemperature; 
+                switch (poolTemperatureValue)
                 {
                     case 27.0:
                         poolTemperatureTrackBar.Value = 0;
@@ -272,6 +295,20 @@ namespace UIAssignment.Forms.CommonForms
                 ActiveUser.Customer.Room.Pool = pool;
                 ActiveUser.Customer.Room.Pool.PoolAlert = poolAlert;
             }
+            //employee
+            else
+            {
+                poolAlert.PoolAlertId = Pool.PoolAlert.PoolAlertId;
+                //update pool alert and pool
+                PoolDataAccess.UpdatePoolAlert(poolAlert);
+                PoolDataAccess.UpdatePool(Pool.PoolId, pool);
+
+                //update the active pool
+                pool.PoolId = Pool.PoolId;
+                Pool = pool;
+                Pool.PoolAlert = poolAlert;
+                ActiveUser.Employee.Rooms.Find(room => room.RoomId == pool.PoolId).Pool = pool;
+            }
 
             MessageBox.Show("Changes have been successfully saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -279,16 +316,17 @@ namespace UIAssignment.Forms.CommonForms
 
         public override bool UnsavedChangesDetected()
         {
+            bool isAlarmActiveSameState = false;
+            string soundTrack;
+
             //logic for customer
-            if(ActiveUser.Customer != null)
+            if (ActiveUser.Customer != null)
             {
-                bool isAlarmActiveSameState = false;
                 if (ActiveUser.Customer.Room.Pool.PoolAlert.IsPoolAlertOn && activateDeactivateToggleButton.Checked)
                     isAlarmActiveSameState = true;
                 else if (!ActiveUser.Customer.Room.Pool.PoolAlert.IsPoolAlertOn && !activateDeactivateToggleButton.Checked)
                     isAlarmActiveSameState = true;
 
-                string soundTrack;
                 if (ActiveUser.Customer.Room.Pool.PoolAlert.SoundTrack == "Simple")
                     soundTrack = "Απλός";
                 else if (ActiveUser.Customer.Room.Pool.PoolAlert.SoundTrack == "Simple2")
@@ -312,7 +350,32 @@ namespace UIAssignment.Forms.CommonForms
                 return false; // No unsaved changes
             }
 
-            //TODO here do the logic for the employee
+            //employee portion
+            if (Pool.PoolAlert.IsPoolAlertOn && activateDeactivateToggleButton.Checked)
+                isAlarmActiveSameState = true;
+            else if (!Pool.PoolAlert.IsPoolAlertOn && !activateDeactivateToggleButton.Checked)
+                isAlarmActiveSameState = true;
+
+            if (Pool.PoolAlert.SoundTrack == "Simple")
+                soundTrack = "Απλός";
+            else if (Pool.PoolAlert.SoundTrack == "Simple2")
+                soundTrack = "Απλός 2";
+            else
+                soundTrack = "Scify";
+
+            if (poolTemperature != Pool.PoolTemperature || (poolWaterLevelTrackBar.Value) != Pool.WaterLevel ||
+                (fromAlertCustomDateTimePicker.Value.Hour != Pool.PoolAlert.From.Hour || fromAlertCustomDateTimePicker.Value.Minute != Pool.PoolAlert.From.Minute) ||
+                (untilAlertCustomDateTimePicker.Value.Hour != Pool.PoolAlert.Until.Hour || untilAlertCustomDateTimePicker.Value.Minute != Pool.PoolAlert.Until.Minute) ||
+                (string)alarmSoundTrackCustomComboBox.SelectedItem != soundTrack || !isAlarmActiveSameState
+                )
+            {
+                DialogResult result = MessageBox.Show("There are unsaved changes. Are you sure you want to leave?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Cancel)
+                {
+                    return true; // Unsaved changes detected
+                }
+            }
             return false;
         }
 
