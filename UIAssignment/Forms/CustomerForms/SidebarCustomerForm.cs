@@ -258,6 +258,10 @@ namespace UIAssignment.Forms.CustomerForms
             {
                 Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs50.htm");
             }
+            else if ((activeForm.GetType() == typeof(DrivingForm)) || (activeForm.GetType() == typeof(TrojanHorseForm)))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs40.htm");
+            }
             else
             {
                 Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs17.htm");

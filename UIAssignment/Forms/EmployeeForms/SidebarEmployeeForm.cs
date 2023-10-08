@@ -63,7 +63,7 @@ namespace UIAssignment.Forms.EmployeeForms
         {
             openChildForm(new DrivingForm());
             //openChildForm(new TrojanHorseForm());
-            timer1.Enabled = true;
+            //timer1.Enabled = true;
         }
 
         /*private void SidebarCustomerForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -127,12 +127,40 @@ namespace UIAssignment.Forms.EmployeeForms
             }
             else if (activeForm.GetType() == typeof(RestaurantForm))
             {
-                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs50.htm");
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs80.htm");
+            }
+            else if ((activeForm.GetType() == typeof(DrivingForm)) || (activeForm.GetType() == typeof(TrojanHorseForm)))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs40.htm");
+            }
+            else if (activeForm.GetType() == typeof(PoolSelectionForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs35.htm");
+            }
+            else if (activeForm.GetType() == typeof(RoomSelectionForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\HelpScribble\\On-line_Help.chm::/html/hs25.htm");
             }
             else
             {
                 Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs17.htm");
             }
+            /*if (activeForm.GetType() == typeof(PrivatePoolForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs30.htm");
+            }
+            else if (activeForm.GetType() == typeof(RoomForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs20.htm");
+            }
+            else if (activeForm.GetType() == typeof(RestaurantForm))
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs50.htm");
+            }
+            else
+            {
+                Help.ShowHelp(this, "../On-line_Help.chm", HelpNavigator.Topic, "mk:@MSITStore:D:\\ΠΑ.ΠΕΙ\\5οΕξάμηνο\\Αλληλεπίδραση_Ανθρώπου_Υπολογιστή\\Project4\\UIAssignment\\bin\\On-line_Help.chm::/html/hs17.htm");
+            }*/
         }
 
         private void SidebarEmployeeForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -153,8 +181,8 @@ namespace UIAssignment.Forms.EmployeeForms
         {
             if (ActiveUser.Parked)
             {
-                openChildForm(new RoomForm());
-                timer1.Enabled = false;
+                openChildForm(new RoomSelectionForm());
+                //timer1.Enabled = false;
             }
             else
             {
@@ -175,7 +203,7 @@ namespace UIAssignment.Forms.EmployeeForms
             if (ActiveUser.Parked)
             {
                 openChildForm(new PoolSelectionForm());
-                timer1.Enabled = false;
+                //timer1.Enabled = false;
             }
             else
             {
@@ -190,7 +218,7 @@ namespace UIAssignment.Forms.EmployeeForms
             if (ActiveUser.Parked)
             {
                 openChildForm(new RestaurantForm());
-                timer1.Enabled = false;
+                //timer1.Enabled = false;
             }
             else
             {
