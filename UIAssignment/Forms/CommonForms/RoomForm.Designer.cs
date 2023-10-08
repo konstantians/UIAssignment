@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.interactiveModeButton = new UIAssignment.Resources.Cool_button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.roomInformationLabel = new System.Windows.Forms.Label();
             this.roomRadioSongTitleValueLabel = new System.Windows.Forms.Label();
             this.roomRadioSongTitleLabel = new System.Windows.Forms.Label();
             this.roomRadioSoundLevelTitleValueLabel = new System.Windows.Forms.Label();
@@ -49,10 +49,10 @@
             this.roomTemperatureTitleLabel = new System.Windows.Forms.Label();
             this.roomLightingTitleLabel = new System.Windows.Forms.Label();
             this.roomPictureBoxPanel = new System.Windows.Forms.Panel();
-            this.hiddenRadioTimer = new System.Windows.Forms.Timer(this.components);
             this.roomPictureBox = new UIAssignment.TransparentPictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.hiddenRadioSoundImage = new UIAssignment.TransparentPictureBox();
+            this.hiddenRadioTimer = new System.Windows.Forms.Timer(this.components);
             this.roomUtilitiesOnePanel = new System.Windows.Forms.Panel();
             this.roomUtilitiesTwoPanel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -120,7 +120,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.interactiveModeButton);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.roomInformationLabel);
             this.panel1.Controls.Add(this.roomRadioSongTitleValueLabel);
             this.panel1.Controls.Add(this.roomRadioSongTitleLabel);
             this.panel1.Controls.Add(this.roomRadioSoundLevelTitleValueLabel);
@@ -167,17 +167,17 @@
             this.interactiveModeButton.UseVisualStyleBackColor = false;
             this.interactiveModeButton.Click += new System.EventHandler(this.interactiveModeButton_Click);
             // 
-            // label2
+            // roomInformationLabel
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 23);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Πληροφορίες Δωματίου";
+            this.roomInformationLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roomInformationLabel.AutoSize = true;
+            this.roomInformationLabel.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomInformationLabel.Location = new System.Drawing.Point(80, 8);
+            this.roomInformationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.roomInformationLabel.Name = "roomInformationLabel";
+            this.roomInformationLabel.Size = new System.Drawing.Size(232, 23);
+            this.roomInformationLabel.TabIndex = 26;
+            this.roomInformationLabel.Text = "Πληροφορίες Δωματίου";
             // 
             // roomRadioSongTitleValueLabel
             // 
@@ -360,11 +360,6 @@
             this.roomPictureBoxPanel.Size = new System.Drawing.Size(388, 351);
             this.roomPictureBoxPanel.TabIndex = 12;
             // 
-            // hiddenRadioTimer
-            // 
-            this.hiddenRadioTimer.Interval = 50;
-            this.hiddenRadioTimer.Tick += new System.EventHandler(this.hiddenRadioTimer_Tick);
-            // 
             // roomPictureBox
             // 
             this.roomPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -402,6 +397,11 @@
             this.hiddenRadioSoundImage.Size = new System.Drawing.Size(42, 40);
             this.hiddenRadioSoundImage.TabIndex = 27;
             this.hiddenRadioSoundImage.TabStop = false;
+            // 
+            // hiddenRadioTimer
+            // 
+            this.hiddenRadioTimer.Interval = 50;
+            this.hiddenRadioTimer.Tick += new System.EventHandler(this.hiddenRadioTimer_Tick);
             // 
             // roomUtilitiesOnePanel
             // 
@@ -1078,7 +1078,7 @@
         private TransparentPictureBox hiddenRadioSoundImage;
         private System.Windows.Forms.Timer hiddenRadioTimer;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label roomInformationLabel;
         private Resources.Cool_button interactiveModeButton;
     }
 }

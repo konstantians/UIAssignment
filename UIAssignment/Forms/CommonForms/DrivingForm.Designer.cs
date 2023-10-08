@@ -419,6 +419,7 @@
             // 
             // pictureBox22
             // 
+            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox22.Image = global::UIAssignment.Properties.Resources.s;
             this.pictureBox22.Location = new System.Drawing.Point(321, 188);

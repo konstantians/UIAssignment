@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveUser.cs" />
+    <Compile Include="Forms\EmployeeForms\PoolSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\PoolSelectionForm.Designer.cs">
+      <DependentUpon>PoolSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\RoomSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\RoomSelectionForm.Designer.cs">
+      <DependentUpon>RoomSelectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InteractiveModeEnum.cs" />
     <Compile Include="ChildForm.cs">
       <SubType>Form</SubType>
@@ -254,6 +266,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CommonForms\PrivatePoolForm.resx">
       <DependentUpon>PrivatePoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeForms\PoolSelectionForm.resx">
+      <DependentUpon>PoolSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeForms\RoomSelectionForm.resx">
+      <DependentUpon>RoomSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForms\SidebarEmployeeForm.resx">
       <DependentUpon>SidebarEmployeeForm.cs</DependentUpon>

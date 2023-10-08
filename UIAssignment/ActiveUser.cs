@@ -20,7 +20,9 @@ namespace UIAssignment
         public static Customer Customer { get; set; } = null;
         public static bool OpenCartForm { get; set; } = false;
         public static bool NeedsToBeNotifiedAboutOrder { get; set; } = false;
-        public static bool OpenOrderForm { get; set; } = false;   
+        public static bool OpenOrderForm { get; set; } = false;
+        public static Pool ChosenPool { get; set;} = null;
+        public static Room ChosenRoom { get; set; } = null;
         public static InteractiveModeEnum SwapToInteractive { get; set; } = InteractiveModeEnum.None;
     }
 }

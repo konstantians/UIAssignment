@@ -98,7 +98,7 @@
             this.hiddenRadioSoundImage = new UIAssignment.TransparentPictureBox();
             this.roomInformationTitlesPanel = new System.Windows.Forms.Panel();
             this.nonInteractiveModeButton = new UIAssignment.Resources.Cool_button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.roomInformationLabel = new System.Windows.Forms.Label();
             this.roomRadioSongTitleValueLabel = new System.Windows.Forms.Label();
             this.roomRadioSongTitleLabel = new System.Windows.Forms.Label();
             this.roomRadioSoundLevelTitleValueLabel = new System.Windows.Forms.Label();
@@ -1012,7 +1012,7 @@
             // 
             this.roomInformationTitlesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.roomInformationTitlesPanel.Controls.Add(this.nonInteractiveModeButton);
-            this.roomInformationTitlesPanel.Controls.Add(this.label1);
+            this.roomInformationTitlesPanel.Controls.Add(this.roomInformationLabel);
             this.roomInformationTitlesPanel.Controls.Add(this.roomRadioSongTitleValueLabel);
             this.roomInformationTitlesPanel.Controls.Add(this.roomRadioSongTitleLabel);
             this.roomInformationTitlesPanel.Controls.Add(this.roomRadioSoundLevelTitleValueLabel);
@@ -1059,17 +1059,17 @@
             this.nonInteractiveModeButton.UseVisualStyleBackColor = false;
             this.nonInteractiveModeButton.Click += new System.EventHandler(this.nonInteractiveModeButton_Click);
             // 
-            // label1
+            // roomInformationLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(314, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 23);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Πληροφορίες Δωματίου";
+            this.roomInformationLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roomInformationLabel.AutoSize = true;
+            this.roomInformationLabel.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomInformationLabel.Location = new System.Drawing.Point(314, 8);
+            this.roomInformationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.roomInformationLabel.Name = "roomInformationLabel";
+            this.roomInformationLabel.Size = new System.Drawing.Size(232, 23);
+            this.roomInformationLabel.TabIndex = 26;
+            this.roomInformationLabel.Text = "Πληροφορίες Δωματίου";
             // 
             // roomRadioSongTitleValueLabel
             // 
@@ -1308,7 +1308,7 @@
         private TransparentPictureBox hiddenRadioSoundImage;
         private System.Windows.Forms.Panel roomInformationTitlesPanel;
         private Resources.Cool_button nonInteractiveModeButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label roomInformationLabel;
         private System.Windows.Forms.Label roomRadioSongTitleValueLabel;
         private System.Windows.Forms.Label roomRadioSongTitleLabel;
         private System.Windows.Forms.Label roomRadioSoundLevelTitleValueLabel;

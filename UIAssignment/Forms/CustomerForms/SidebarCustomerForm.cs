@@ -266,15 +266,7 @@ namespace UIAssignment.Forms.CustomerForms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (ActiveUser.InGps == true && activeForm.GetType() == typeof(TrojanHorseForm))
-            {
-                openChildForm(new DrivingForm());
-            }
-            else if (ActiveUser.InGps == false && activeForm.GetType() == typeof(DrivingForm))
-            {
-                openChildForm(new TrojanHorseForm());
-                //MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
-            }
+            
         }
 
         private void checkStaticChangesTimer_Tick(object sender, EventArgs e)
@@ -294,6 +286,15 @@ namespace UIAssignment.Forms.CustomerForms
             {
                 ActiveUser.SwapToInteractive = InteractiveModeEnum.None;
                 openChildForm(new RoomForm());
+            }
+            else if (ActiveUser.InGps == true && activeForm.GetType() == typeof(TrojanHorseForm))
+            {
+                openChildForm(new DrivingForm());
+            }
+            else if (ActiveUser.InGps == false && activeForm.GetType() == typeof(DrivingForm))
+            {
+                openChildForm(new TrojanHorseForm());
+                MessageBox.Show("Επιτυχής στάθμευση Δουρείου Ίππου!");
             }
         }
     }
