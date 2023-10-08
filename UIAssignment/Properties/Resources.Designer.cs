@@ -393,6 +393,16 @@ namespace UIAssignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CompleteOrderIcon {
+            get {
+                object obj = ResourceManager.GetObject("CompleteOrderIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Corona330ml {
             get {
                 object obj = ResourceManager.GetObject("Corona330ml", resourceCulture);

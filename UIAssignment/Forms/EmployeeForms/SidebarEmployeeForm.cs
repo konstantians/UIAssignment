@@ -217,7 +217,7 @@ namespace UIAssignment.Forms.EmployeeForms
         {
             if (ActiveUser.Parked)
             {
-                openChildForm(new RestaurantForm());
+                openChildForm(new EmployeeOrdersForm());
                 //timer1.Enabled = false;
             }
             else
